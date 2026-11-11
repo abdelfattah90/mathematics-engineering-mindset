@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measurement, Units - القياس والوحدات</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#math-8"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">M1 · Basic Mathematics · 8</div>
+          <h1 class="hero__title">Measurement, Units - القياس والوحدات</h1>
+          <p class="hero__lead">
+            كل رقم في الهندسة والبرمجة يحمل وحدة، وإن غابت الوحدة نقص معناه: هل المهلة 30 ثانية أم 30 ms؟ وهل الوصلة 100 Mbps أم 100 MB/s؟ تبني هذه الصفحة على الكسور والنسبة والقوى ثلاثة أشياء: لغة القياس (الطول والكتلة والسعة والزمن)، وحساب المحيط والمساحة للأشكال البسيطة والمركبة، وتحويل الوحدات بطريقة تُلغي فيها الوحدات بعضها فتصير فحصًا للجواب، وصولًا إلى أحجام البيانات.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <div class="topic-block" id="length-mass-capacity-time">
+              <h3 class="topic-block__title">Length, Mass, Capacity &amp; Time - الطول والكتلة والسعة والزمن</h3>
+              <p>الرقم وحده لا يكفي: «3» ما معناها؟ لا نعرف قبل أن نعرف «3 ماذا؟». لذلك نحتاج مرجعًا ثابتًا نقيس به، ثم نعدّ كم مرة يتسع هذا المرجع في الكمية.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Unit</strong> (وحدة القياس): كمية ثابتة من نوع الكمية المقيسة، اتُّفق عليها لتكون مرجعًا للمقارنة. القياس إذن عدد مضروب في وحدة: 3.5 km تعني 3.5 مرة طول الوحدة km.</p>
+              </div>
+
+              <p>الحدس: حين نقيس غرفة بخطواتنا فالخطوة هي الوحدة، وعدد الخطوات هو القياس. وإذا غيّرنا الوحدة تغيّر العدد وبقيت المسافة نفسها: 3.5 km و3,500 m هما المسافة ذاتها. ينكسر التشبيه في موضعين: خطوتك تتفاوت من مرة لأخرى بينما الوحدة المعيارية ثابتة بالتعريف، والخطوة لا تقيس إلا الطول بينما فكرة الوحدة تصلح لكل كمية.</p>
+
+              <p>نقيس هنا أربع كميات: الطول (المسافة بين نقطتين)، والكتلة (مقدار المادة)، والسعة (كمية السائل التي يتسع لها وعاء)، والزمن. أما علاقة السعة بالحجم فتُدرس مع المجسمات في المرحلة 20.</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>الكمية</th>
+                      <th>وحدات شائعة</th>
+                      <th>علاقات تُحفظ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>الطول</td>
+                      <td>mm, cm, m, km</td>
+                      <td>1 m = 100 cm = 1,000 mm ، 1 km = 1,000 m</td>
+                    </tr>
+                    <tr>
+                      <td>الكتلة</td>
+                      <td>mg, g, kg, t</td>
+                      <td>1 g = 1,000 mg ، 1 kg = 1,000 g ، 1 t = 1,000 kg</td>
+                    </tr>
+                    <tr>
+                      <td>السعة</td>
+                      <td>mL, L</td>
+                      <td>1 L = 1,000 mL</td>
+                    </tr>
+                    <tr>
+                      <td>الزمن</td>
+                      <td>ms, s, min, h, day</td>
+                      <td>1 min = 60 s ، 1 h = 60 min ، 1 day = 24 h</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>أغلب العلاقات في الجدول 10 أو 100 أو 1,000. هذه ليست صدفة، بل بنية اسمها البادئات المترية.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Metric Prefix</strong> (بادئة مترية): مقطع يُكتب قبل اسم الوحدة فيضربها في قوة ثابتة للعدد 10. مثلًا kilo تعني \(10^{3}\)، فـ 1 km = \(10^{3}\) m.</p>
+              </div>
+
+              <p>تذكير: Power هو ضرب العدد في نفسه عددًا من المرات؛ \(10^{n}\) يعني ضرب 10 في نفسه n مرة، و\(10^{-n} = \frac{1}{10^{n}}\).</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Prefix</th>
+                      <th>Symbol</th>
+                      <th>Factor</th>
+                      <th>القيمة</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>giga</td><td>G</td><td>\(10^{9}\)</td><td>1,000,000,000</td></tr>
+                    <tr><td>mega</td><td>M</td><td>\(10^{6}\)</td><td>1,000,000</td></tr>
+                    <tr><td>kilo</td><td>k</td><td>\(10^{3}\)</td><td>1,000</td></tr>
+                    <tr><td>centi</td><td>c</td><td>\(10^{-2}\)</td><td>0.01</td></tr>
+                    <tr><td>milli</td><td>m</td><td>\(10^{-3}\)</td><td>0.001</td></tr>
+                    <tr><td>micro</td><td>µ</td><td>\(10^{-6}\)</td><td>0.000001</td></tr>
+                    <tr><td>nano</td><td>n</td><td>\(10^{-9}\)</td><td>0.000000001</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>الحرف الكبير والصغير يغيّران المعنى: M تعني \(10^{6}\) وm تعني \(10^{-3}\)، والفرق بينهما \(10^{9}\) ضعف.</p>
+
+              <p>تذكير: Decimal عدد مكتوب بفاصلة عشرية، وضربه في \(10^{k}\) يزيح الفاصلة k خانة إلى اليمين (والقسمة تزيحها إلى اليسار) بمنطق القيمة المكانية نفسه. لهذا يكون التحويل بين الوحدات المترية إزاحة فاصلة لا أكثر.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>عند التحويل إلى وحدة أصغر يكبر العدد (نحتاج خطوات أكثر)، وعند التحويل إلى وحدة أكبر يصغر العدد. أما الكمية نفسها فلا تتغير.</p>
+              </div>
+
+              <p>الزمن يخرج عن هذا النظام العشري فيما فوق الثانية: 1 min = 60 s و1 h = 60 min و1 day = 24 h. وبالضرب المتسلسل:</p>
+              <div class="math-block">\[ 1\ \text{day} = 24 \times 60 \times 60\ \text{s} = 86{,}400\ \text{s} \]</div>
+              <p>التحقق: 24 × 60 = 1,440 دقيقة، و1,440 × 60 = 86,400. أما ما دون الثانية فمتري: ms وµs وns.</p>
+
+              <p>تذكير: Scientific Notation كتابة العدد على الصورة \(a \times 10^{n}\) حيث \(1 \le a \lt 10\).</p>
+              <p>توقّع: كم µs في 2.5 ms؟ هل الجواب أكبر من 2.5 أم أصغر؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>حوّل 2.5 ms إلى µs واكتب الناتج بالكتابة العلمية.</p>
+                  <ol>
+                    <li>1 ms = 0.001 s و1 µs = 0.000001 s، فالميلي ثانية أكبر من الميكرو ثانية بمقدار 0.001 ÷ 0.000001 = 1,000 مرة. إذن 1 ms = 1,000 µs.</li>
+                    <li>نضرب: \(2.5 \times 1{,}000 = 2{,}500\) µs.</li>
+                    <li>بالكتابة العلمية: \(2.5 \times 10^{3}\) µs.</li>
+                  </ol>
+                  <p class="example__answer">الجواب: 2,500 µs، وهو أكبر من 2.5 كما توقعنا لأن µs وحدة أصغر. التحقق: \(2{,}500 \times 10^{-6} = 0.0025\) s = \(2.5 \times 10^{-3}\) s = 2.5 ms ✓.</p>
+                </div>
+              </div>
+
+              <p><strong>لماذا يهمّ مهندس البرمجيات؟</strong> الخلط بين وحدتين متجاورتين خطأ بعامل 1,000. قد تعني timeout = 30 في مكتبة 30 s وفي أخرى 30 ms. وأزمنة الاستجابة تُقاس بمئات ns للذاكرة، وبعشرات µs لقراءة SSD، وبعدة ms لطلب شبكة، فمن لا يحسّ بهذا التدرج لا يفهم تقارير الأداء.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: قراءة 2.5 h على أنها 2 ساعة و50 دقيقة، أي 120 + 50 = 170 min. النتيجة خاطئة بـ 20 دقيقة. التصحيح: الساعة 60 دقيقة لا 100، فـ 0.5 h = 0.5 × 60 = 30 min، إذن 2.5 h = 2 h 30 min = 150 min. التحقق: 150 ÷ 60 = 2.5 ✓. فالجزء العشري من الساعة يُضرب في 60 ليصير دقائق.</p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="perimeter-area">
+              <h3 class="topic-block__title">Perimeter &amp; Area - المحيط والمساحة</h3>
+              <p>سور الحديقة وعشبها كميتان مختلفتان: السور يُقاس بطول حدودها، والعشب بالسطح الذي يغطيه. ولكل منهما تعريف ووحدة.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Perimeter</strong> (المحيط): الطول الكلي لحدود شكل مغلق، أي مجموع أطوال أضلاعه. وحدته وحدة طول مثل cm وm.</p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Area</strong> (المساحة): مقدار السطح الذي يغطيه الشكل، وتُقاس بعدد مربعات الوحدة التي تتسع داخله، ومربع الوحدة مربع طول ضلعه وحدة واحدة. وحدتها وحدة طول مربّعة مثل cm² وm².</p>
+              </div>
+
+              <p>الحدس: كسوة أرضية ببلاط مربع ضلعه 1 m؛ عدد البلاطات هو المساحة بالمتر المربع. ينكسر التشبيه عند الأطراف: المساحة لا تشترط أن تتسع بلاطات كاملة، فقد تكون 2.5 m² بتقسيم بلاطة.</p>
+
+              <p>نبدأ بالمستطيل الذي طوله \(l\) وعرضه \(w\). نصفّ مربعات الوحدة في صفوف وأعمدة: شبكة 4 × 3 فيها 3 صفوف في كل صف 4 مربعات، أي 12 مربعًا. ومع الأطوال غير الصحيحة نقسّم الوحدة إلى مربعات أصغر فتبقى القاعدة نفسها. والمربع حالة خاصة ضلعه \(s\).</p>
+              <div class="math-block">\[ A_{\text{rect}} = l \times w, \qquad P_{\text{rect}} = 2(l + w) \]</div>
+              <div class="math-block">\[ A_{\text{square}} = s \times s, \qquad P_{\text{square}} = 4s \]</div>
+              <p>الحروف هنا أسماء لقياسات نعوّض بها أعدادًا، وليست مجاهيل نحلّها.</p>
+
+              <p>في الأشكال المائلة تظهر عقبة: الضلع المائل ليس هو ما يحدّد المساحة، فنحتاج مفهوم الارتفاع.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>متوازي الأضلاع شكل بأربعة أضلاع كل ضلعين متقابلين فيه متوازيان (لا يلتقيان مهما امتدا). ارتفاعه \(h\) هو طول الخط العمودي بين ضلعين متوازيين، والعمودي هو المتعامد معهما بزاوية قائمة كركن الورقة (تُدرس الزوايا لاحقًا).</p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">صيغة</span>
+                <p>مساحة متوازي أضلاع قاعدته \(b\) وارتفاعه \(h\):</p>
+                <div class="math-block">\[ A = b \times h \]</div>
+              </div>
+
+              <figure class="figure">
+                <svg viewBox="0 0 480 220" width="480" role="img" aria-label="Parallelogram with base 10, perpendicular height 4 and slanted side 5">
+                  <path class="fg-line" d="M40 190H340L430 70H130Z" />
+                  <path class="fg-grid" d="M130 70V190" />
+                  <path class="fg-axis" d="M130 178H142V190" />
+                  <text class="fg-text" x="185" y="212">10</text>
+                  <text class="fg-text" x="112" y="136">4</text>
+                  <text class="fg-text" x="402" y="140">5</text>
+                </svg>
+                <figcaption>متوازي أضلاع قاعدته 10 وارتفاعه العمودي 4 وضلعه المائل 5. الارتفاع هو الخط العمودي الواصل بين القاعدة والضلع المقابل لها، لا الضلع المائل.</figcaption>
+              </figure>
+
+              <div class="callout callout--note">
+                <span class="callout__label">برهان</span>
+                <p><strong>الفكرة:</strong> نعيد ترتيب قطع الشكل لنحوّله إلى مستطيل، والنقل لا يغيّر المساحة.</p>
+                <ol>
+                  <li>نرسم من الرأس العلوي الأيسر خطًا عموديًا على القاعدة، فينفصل مثلث عند الطرف الأيسر.</li>
+                  <li>ننقل هذا المثلث إلى الطرف الأيمن؛ يلتصق تمامًا لأن الضلعين المائلين متوازيان ومتساويان في الطول.</li>
+                  <li>يصير الشكل مستطيلًا قاعدته \(b\) وارتفاعه \(h\)، فمساحته \(b \times h\).</li>
+                </ol>
+                <p><strong>لماذا يكفي؟</strong> لأن القطع نفسها ما زالت تغطي السطح نفسه. واكتفينا بالحالة المرسومة التي يقع فيها العمود داخل القاعدة.</p>
+              </div>
+
+              <p>المثلث نصف متوازي أضلاع: ندير نسخة منه نصف دورة ونلصقها بالأصل على أحد أضلاعه، فينتج متوازي أضلاع قاعدته \(b\) وارتفاعه \(h\)، ومساحة المثلث نصف مساحته. أما شبه المنحرف فشكل بأربعة أضلاع فيه ضلعان متوازيان على الأقل (القاعدتان \(a\) و\(b\))، وارتفاعه \(h\) هو المسافة العمودية بينهما. ندير نسخة منه نصف دورة ونلصقها على ضلعه المائل، فينتج متوازي أضلاع قاعدته \(a + b\) وارتفاعه \(h\)، ومساحة شبه المنحرف نصف مساحته.</p>
+              <div class="math-block">\[ A_{\text{triangle}} = \frac{b \times h}{2}, \qquad A_{\text{trapezoid}} = \frac{a + b}{2} \times h \]</div>
+              <p>الحدس في شبه المنحرف: \(\frac{a+b}{2}\) متوسط العرضين، فالمساحة = متوسط العرض × الارتفاع.</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>الشكل</th>
+                      <th>المساحة</th>
+                      <th>المحيط</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>مستطيل</td><td>\(l \times w\)</td><td>\(2(l + w)\)</td></tr>
+                    <tr><td>مربع</td><td>\(s \times s\)</td><td>\(4s\)</td></tr>
+                    <tr><td>مثلث</td><td>\(\frac{b \times h}{2}\)</td><td>مجموع الأضلاع الثلاثة</td></tr>
+                    <tr><td>متوازي أضلاع</td><td>\(b \times h\)</td><td>\(2(b + c)\) حيث c الضلع المائل</td></tr>
+                    <tr><td>شبه منحرف</td><td>\(\frac{a + b}{2} \times h\)</td><td>مجموع الأضلاع الأربعة</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>توقّع: شبه منحرف ضلعاه المتوازيان 8 و12 وارتفاعه 5. هل مساحته أقرب إلى 8 × 5 = 40، أم إلى 12 × 5 = 60، أم بينهما؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب مساحة شبه المنحرف الذي ضلعاه المتوازيان 8 و12 وارتفاعه 5.</p>
+                  <ol>
+                    <li>متوسط العرضين: \(\frac{8 + 12}{2} = 10\).</li>
+                    <li>نضربه في الارتفاع: \(10 \times 5 = 50\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: 50 وحدة مربعة، وهي بين 40 و60 تمامًا في المنتصف لأن 10 متوسط 8 و12. التحقق: نسختان تكوّنان متوازي أضلاع قاعدته \(8 + 12 = 20\) وارتفاعه 5، فمساحته 100، ونصفه 50 ✓.</p>
+                </div>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Composite Shape</strong> (شكل مركّب): شكل يتكوّن من ضم أشكال بسيطة أو من حذف جزء بسيط من شكل بسيط. مساحته مجموع مساحات الأجزاء (طريقة التقسيم) أو فرق المساحات (طريقة الطرح).</p>
+              </div>
+
+              <p>توقّع: شكل L نحصل عليه بقطع ركن مستطيل 4 × 3 من مستطيل 10 × 6. هل محيطه أصغر من محيط المستطيل الأصلي، أم يساويه، أم أكبر؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب مساحة الشكل L ومحيطه.</p>
+                  <ol>
+                    <li>طريقة الطرح: مساحة المستطيل الكبير \(10 \times 6 = 60\)، والركن المقطوع \(4 \times 3 = 12\)، فالمساحة \(60 - 12 = 48\).</li>
+                    <li>طريقة التقسيم (للتحقق): نقسم الشكل بخط رأسي إلى مستطيل \(6 \times 6 = 36\) ومستطيل \(4 \times 3 = 12\)، ومجموعهما 48.</li>
+                    <li>المحيط: نمشي حول الحدود فنجمع \(10 + 3 + 4 + 3 + 6 + 6 = 32\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: المساحة 48 والمحيط 32، وهو يساوي محيط المستطيل الأصلي \(2(10 + 6) = 32\). السبب: الأضلاع الأفقية العلوية 6 + 4 تعوّض القاعدة 10، والأضلاع الرأسية اليمنى 3 + 3 تعوّض الضلع الأيسر 6، فلم يتغير مجموع الأطوال. وطريقتا الطرح والتقسيم أعطتا 48 ✓.</p>
+                </div>
+              </div>
+
+              <figure class="figure">
+                <svg viewBox="0 0 400 250" width="400" role="img" aria-label="L-shaped figure split into two rectangles with side lengths 10, 6, 3, 4">
+                  <path class="fg-line" d="M50 210H350V120H230V30H50Z" />
+                  <path class="fg-grid" d="M230 120V210" />
+                  <text class="fg-text" x="195" y="232">10</text>
+                  <text class="fg-text" x="30" y="125">6</text>
+                  <text class="fg-text" x="135" y="22">6</text>
+                  <text class="fg-text" x="238" y="80">3</text>
+                  <text class="fg-text" x="285" y="112">4</text>
+                  <text class="fg-text" x="360" y="170">3</text>
+                  <text class="fg-text" x="135" y="125">36</text>
+                  <text class="fg-text" x="280" y="170">12</text>
+                </svg>
+                <figcaption>الشكل L بأطوال أضلاعه، والخط الفاصل يقسمه إلى مستطيلين تظهر مساحتاهما داخلهما: 36 و12.</figcaption>
+              </figure>
+
+              <p><strong>لماذا يهمّ مهندس البرمجيات؟</strong> مساحة الصورة بالبكسل هي عدد بكسلاتها: \(1920 \times 1080 = 2{,}073{,}600\) pixel. وإذا ضاعفنا البعدين معًا إلى \(3840 \times 2160\) ضاعفت المساحة 4 أضعاف لا مرتين، لأن كل مربع يصير 2 × 2 مربعات. ومثل ذلك في مستطيلات الإحاطة (bounding boxes) في الرسوميات وتخطيط الواجهات: التكلفة تتبع المساحة لا الطول.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: حساب مساحة متوازي الأضلاع في الشكل بضرب القاعدة في الضلع المائل: \(10 \times 5 = 50\). النتيجة أكبر من الحقيقة. التصحيح: الارتفاع هو العمودي لا المائل، فالمساحة \(10 \times 4 = 40\). التحقق: بقصّ المثلث الجانبي ونقله نحصل على مستطيل \(10 \times 4\). والضلع المائل أطول من الارتفاع دائمًا، فاستعماله يضخّم المساحة. ولا نستخرج الارتفاع الآن من الضلع المائل؛ ذلك يحتاج نظرية فيثاغورس (المرحلة 19)، ولذلك يُعطى الارتفاع هنا دائمًا، وكذلك مساحة الدائرة وπ تأتي في المرحلة 20.</p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="unit-conversion-data-sizes">
+              <h3 class="topic-block__title">Unit Conversion &amp; Data Sizes - تحويل الوحدات وأحجام البيانات</h3>
+              <p>كثيرًا ما تأتي الكمية بوحدة ونحتاجها بوحدة أخرى: ملف بـ MB ووصلة بـ Mbps، ومساحة بـ m² ومخطط بـ cm². والتحويل بالحفظ يكثر فيه الخطأ، فنحتاج طريقة تكشف الخطأ بنفسها.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Unit Conversion</strong> (تحويل الوحدات): إعادة التعبير عن الكمية نفسها بوحدة أخرى. يتغير العدد والوحدة وتبقى الكمية كما هي.</p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Conversion Factor</strong>: نسبة بين كميتين متساويتين مكتوبتين بوحدتين مختلفتين، فقيمتها 1. مثلًا:</p>
+                <div class="math-block">\[ \frac{1000\ \text{m}}{1\ \text{km}} = 1 \]</div>
+              </div>
+
+              <p>تذكير: Ratio مقارنة كميتين بالقسمة، وProportion مساواة نسبتين. وعامل التحويل نسبة تساوي 1 لأن بسطها ومقامها كمية واحدة بوحدتين.</p>
+
+              <p>الحدس: الضرب في 1 لا يغيّر القيمة، بل يغيّر صورتها فقط. نختار العامل أو مقلوبه بحيث تقع الوحدة القديمة في المقام، فتُلغي الوحدة القديمة في البسط. هذا يشبه سعر الصرف: نضرب المبلغ في نسبة فتتغير العملة وتبقى القيمة. ينكسر التشبيه في أن سعر الصرف يتقلب وتُخصم منه عمولة، أما عامل التحويل فثابت ودقيق.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>لتحويل قياس نضربه في عامل (أو أكثر) تقع وحدته القديمة في المقام ووحدته الجديدة في البسط، ونكرر حتى تبقى الوحدة المطلوبة وحدها. فإن بقيت وحدة غير مطلوبة فالسلسلة خاطئة.</p>
+                <div class="math-block">\[ 3.5\ \text{km} \times \frac{1000\ \text{m}}{1\ \text{km}} = 3500\ \text{m} \]</div>
+              </div>
+
+              <p>وهذا هو Proportion نفسه: \(1\ \text{km} : 1000\ \text{m} = 3.5\ \text{km} : x\)، فيكون \(x = 3500\) m.</p>
+
+              <p>توقّع: عند تحويل 54 km/h إلى m/s، هل يصير العدد أكبر من 54 أم أصغر؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>حوّل سرعة 54 km/h إلى m/s.</p>
+                  <ol>
+                    <li>نحتاج تبديل وحدتين: km إلى m، وh إلى s. إذن عاملان.</li>
+                    <li>1 h = 60 × 60 = 3,600 s. نكتب العاملين بحيث تقع km وh في المقامين:</li>
+                  </ol>
+                  <div class="math-block">\[ 54\ \frac{\text{km}}{\text{h}} \times \frac{1000\ \text{m}}{1\ \text{km}} \times \frac{1\ \text{h}}{3600\ \text{s}} = \frac{54 \times 1000}{3600}\ \frac{\text{m}}{\text{s}} = 15\ \frac{\text{m}}{\text{s}} \]</div>
+                  <p class="example__answer">الجواب: 15 m/s، والعدد أصغر من 54 لأن m/s وحدة سرعة أكبر. التحقق: الوحدة المتبقية m/s كما أردنا، وبالعكس \(15 \times 3600 = 54{,}000\) m/h = 54 km/h ✓.</p>
+                </div>
+              </div>
+
+              <p>توقّع: كم cm² في 1 m²؟</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: بما أن 1 m = 100 cm يُظن أن 1 m² = 100 cm²، فيصير 3 m² = 300 cm². النتيجة أصغر من الحقيقة 100 مرة. التصحيح: المتر المربع مربع ضلعه 1 m = 100 cm، فيتسع فيه 100 صف في كل صف 100 مربع صغير مساحة كل منه 1 cm². فعامل تحويل الطول يدخل مرتين لأن المساحة حاصل ضرب طولين:</p>
+                <div class="math-block">\[ 1\ \text{m}^2 = (100\ \text{cm})^2 = 100\ \text{cm} \times 100\ \text{cm} = 10{,}000\ \text{cm}^2 \]</div>
+                <p>إذن 3 m² = 30,000 cm². التحقق: مربع ضلعه 1 cm مساحته \(0.01 \times 0.01 = 0.0001\) m²، و\(10{,}000 \times 0.0001 = 1\) ✓.</p>
+              </div>
+
+              <p>ننتقل إلى حجم البيانات. نحتاج وحدتين أساسيتين:</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Bit</strong>: أصغر وحدة لقياس كمية البيانات، وتحمل واحدًا من احتمالين (0 أو 1). أما كيف يُمثَّل العدد أو النص بالـ bit فموضوع المرحلة 35.</p>
+                <p><strong>Byte</strong>: وحدة قياس تساوي 8 Bit، أي \(1\ \text{Byte} = 8\ \text{bit}\).</p>
+              </div>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>الحرف الصغير b يعني bit والكبير B يعني Byte. فـ Mbps هي ميغابت في الثانية، و MB/s هي ميغابايت في الثانية. تُعلَن سرعات الشبكات غالبًا بالـ bit وأحجام الملفات بالـ Byte.</p>
+              </div>
+
+              <p>البادئات المترية نفسها تنطبق على الـ Byte، فتنتج وحدات عشرية: 1 KB = 1,000 B و1 MB = \(10^{6}\) B و1 GB = \(10^{9}\) B (الرمز الرسمي للكيلو k الصغيرة، لكن تُكتب KB كثيرًا). لكن هناك عائلة ثانية:</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Binary Prefix</strong> (بادئة ثنائية): بادئة تضرب الـ Byte في قوة للعدد 2 بدل 10، وتحمل حرف i في اسمها: KiB وMiB وGiB.</p>
+                <div class="math-block">\[ 1\ \text{KiB} = 2^{10}\ \text{B} = 1{,}024\ \text{B} \]</div>
+                <div class="math-block">\[ 1\ \text{MiB} = 2^{20}\ \text{B} = 1{,}048{,}576\ \text{B} \]</div>
+                <div class="math-block">\[ 1\ \text{GiB} = 2^{30}\ \text{B} = 1{,}073{,}741{,}824\ \text{B} \]</div>
+              </div>
+
+              <p>لماذا ظهرت عائلتان؟ لأن \(2^{10} = 1{,}024\) قريب من 1,000، فاستُعمل اسم kilo قديمًا للعدد 1,024 وحدث التباس. ولذلك وُضعت أسماء مستقلة (kibi وmebi وgibi). والفرق يتراكم: ننظر إليه بالنسبة المئوية.</p>
+
+              <p>تذكير: Percent نسبة من 100. GiB أكبر من GB بنحو 7.37% (1.073741824 مقابل 1)، وهذا يفسّر مثال القرص التالي.</p>
+
+              <p>توقّع: قرص مكتوب عليه 500 GB، هل يعرضه نظام يستعمل GiB بسعة أكبر من 500 أم أصغر؟ وبكم تقريبًا؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>كم GiB في قرص سعته 500 GB؟ وبأي نسبة تبدو السعة أقل؟</p>
+                  <ol>
+                    <li>500 GB = \(500 \times 10^{9}\) B = 500,000,000,000 B (عشري).</li>
+                    <li>1 GiB = 1,073,741,824 B = \(1.073741824 \times 10^{9}\) B.</li>
+                    <li>عدد GiB: \(\frac{500}{1.073741824} \approx 465.66\).</li>
+                    <li>النقص الظاهري: \(500 - 465.66 = 34.34\) GiB، و\(\frac{34.34}{500} \approx 0.0687\) أي نحو 6.9%.</li>
+                  </ol>
+                  <p class="example__answer">الجواب: نحو 465.7 GiB، أي أقل بنحو 6.9% كما توقعنا لأن GiB وحدة أكبر. لم يضِع بايت واحد؛ تغيّر الاسم فقط. التحقق: \(465.66 \times 1.0737 \approx 500\) ✓.</p>
+                </div>
+              </div>
+
+              <p><strong>لماذا يهمّ مهندس البرمجيات؟</strong> سرعة الوصلة تُعلن بالـ bit وحجم الملف بالـ Byte، فـ 100 Mbps تساوي \(\frac{100 \times 10^{6}}{8} = 12.5 \times 10^{6}\) B/s = 12.5 MB/s لا 100 MB/s. التحقق: \(12.5 \times 8 = 100\) ✓. وفي أزمنة الاستجابة 1 ms = 1,000 µs = 1,000,000 ns، فكل درجة بعامل 1,000.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="comparison">
+        <div class="container">
+          <div class="content-section__eyebrow">مقارنة</div>
+          <h2 class="content-section__title">Decimal vs Binary Prefixes - البادئات العشرية والثنائية</h2>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>الميزة</th>
+                  <th>عشرية (kB, MB, GB)</th>
+                  <th>ثنائية (KiB, MiB, GiB)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الأساس</td>
+                  <td>قوى العدد 10</td>
+                  <td>قوى العدد 2</td>
+                </tr>
+                <tr>
+                  <td>الكيلو</td>
+                  <td>\(1\ \text{kB} = 10^{3} = 1{,}000\ \text{B}\)</td>
+                  <td>\(1\ \text{KiB} = 2^{10} = 1{,}024\ \text{B}\)</td>
+                </tr>
+                <tr>
+                  <td>الميغا</td>
+                  <td>\(1\ \text{MB} = 10^{6} = 1{,}000{,}000\ \text{B}\)</td>
+                  <td>\(1\ \text{MiB} = 2^{20} = 1{,}048{,}576\ \text{B}\)</td>
+                </tr>
+                <tr>
+                  <td>الجيغا</td>
+                  <td>\(1\ \text{GB} = 10^{9} = 1{,}000{,}000{,}000\ \text{B}\)</td>
+                  <td>\(1\ \text{GiB} = 2^{30} = 1{,}073{,}741{,}824\ \text{B}\)</td>
+                </tr>
+                <tr>
+                  <td>زيادة الثنائية على العشرية</td>
+                  <td>الأساس للمقارنة</td>
+                  <td>2.4% (K) ثم 4.86% (M) ثم 7.37% (G)</td>
+                </tr>
+                <tr>
+                  <td>أين تظهر غالبًا</td>
+                  <td>عبوات الأقراص ومواصفات التخزين</td>
+                  <td>الذاكرة وبعض أنظمة التشغيل وأدواتها</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>القرار عند قراءة رقم: وجود الحرف i في الاختصار يعني ثنائيًا؛ وغيابه يعني عشريًا إن التزمت الجهة بالمعيار، وإلا فتحقق من مصدر الرقم قبل أن تعتمد عليه في حساب سعة أو زمن.</p>
+        </div>
+      </section>
+
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>ماذا تعني البادئة milli؟ حوّل 350 ms إلى ثوانٍ ثم إلى µs، وتحقق من الجواب.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>البادئة milli تضرب الوحدة في \(10^{-3}\)، فـ \(350\ \text{ms} = 350 \times 0.001 = 0.35\) s. وبما أن 1 ms = 1,000 µs فإن 350 ms = 350,000 µs. التحقق: \(350{,}000 \times 10^{-6} = 0.35\) ✓ (راجع: Length, Mass, Capacity &amp; Time).</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q2">
+              <h3 class="topic-block__title">سؤال 2</h3>
+              <p>شكل على هيئة منزل: مستطيل 6 × 4 فوقه مثلث قاعدته الضلع العلوي للمستطيل (طوله 6) وارتفاعه 2. احسب مساحة الشكل كله، وتحقق بطريقة ثانية.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>نقسّم الشكل: المستطيل \(6 \times 4 = 24\)، والمثلث \(\frac{6 \times 2}{2} = 6\)، والمجموع 30. التحقق: مثلثان مثل هذا يكوّنان متوازي أضلاع قاعدته 6 وارتفاعه 2 فمساحته 12، ونصفه 6 ✓. ولا نسأل عن المحيط لأنه يحتاج طولي الضلعين المائلين، ولا نحسبهما الآن (راجع: Perimeter &amp; Area).</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q3">
+              <h3 class="topic-block__title">سؤال 3</h3>
+              <p>حسب زميلك مساحة متوازي أضلاع قاعدته 12 cm وضلعه المائل 5 cm وارتفاعه العمودي 3 cm، فكتب \(12 \times 5 = 60\) cm². اكتشف الخطأ وصحّحه.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>استعمل الضلع المائل بدل الارتفاع العمودي. الصحيح \(12 \times 3 = 36\) cm². التحقق: بقصّ المثلث الجانبي ونقله نحصل على مستطيل \(12 \times 3 = 36\)، والضلع المائل أطول من الارتفاع دائمًا فاستعماله يضخّم المساحة (راجع: Perimeter &amp; Area).</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q4">
+              <h3 class="topic-block__title">سؤال 4</h3>
+              <p>تريد نقل ملف حجمه 3 GB (عشري) عبر وصلة 200 Mbps ضمن مهلة 100 ثانية. هل تكفي المهلة؟ علّل بحساب وتحقق منه.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>200 Mbps = \(\frac{200}{8} = 25\) MB/s، والملف 3 GB = 3,000 MB، فالزمن \(\frac{3000}{25} = 120\) s وهو أكبر من 100 s، فلا تكفي المهلة، وهذا حد أدنى نظري لأننا لم نحسب أي تأخير. التحقق: \(25 \times 100 = 2{,}500\) MB وهو أقل من 3,000 MB (راجع: Unit Conversion &amp; Data Sizes).</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q5">
+              <h3 class="topic-block__title">سؤال 5</h3>
+              <p>اشرحها لغيرك: اشرح لزميل مهندس لماذا 1 m² = 10,000 cm² وليس 100، ولماذا يتكرر هذا الخطأ.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>المتر المربع مربع ضلعه 1 m = 100 cm، فيتسع فيه 100 صف في كل صف 100 مربع صغير مساحة كل منه 1 cm²، أي \(100 \times 100 = 10{,}000\). يتكرر الخطأ لأن 100 هو عامل تحويل الطول فقط، والمساحة حاصل ضرب طولين فيدخل العامل مرتين (راجع: Unit Conversion &amp; Data Sizes).</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">إرسال صورة خام عبر وصلة 100 Mbps</h2>
+
+          <div class="article-content">
+            <p>خدمة ترفع صورًا خامًا (بلا ضغط) من تطبيق إلى خادم عبر وصلة مخصصة لها بالكامل، ولا نحسب أي تأخير إضافي. لدينا المعطيات التالية:</p>
+
+            <div class="table-wrap table-wrap--fit">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>المعطى</th>
+                    <th>القيمة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>أبعاد الصورة</td><td>1920 × 1080 pixel</td></tr>
+                  <tr><td>حجم البكسل</td><td>3 Byte</td></tr>
+                  <tr><td>سرعة الوصلة</td><td>100 Mbps</td></tr>
+                  <tr><td>عدد الصور</td><td>1000</td></tr>
+                  <tr><td>المهلة المسموحة</td><td>5 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol>
+              <li>احسب عدد بكسلات الصورة (مساحتها بالبكسل)، ثم حجمها بالـ Byte، ثم بالـ MiB.</li>
+              <li>قسّم زميلك حجم الصورة بالـ Byte على 100,000,000 فخرج له زمن رفع أقل من 0.07 ثانية. أصلح خطأه، واحسب الزمن الصحيح لصورة واحدة، وتحقق بطريقة ثانية.</li>
+              <li>قرّر: هل تنتهي الـ 1000 صورة خلال المهلة؟ عبّر عن زمن الرفع الكلي بالدقائق والثواني.</li>
+              <li>اشرحها لغيرك: لو صارت الصورة 3840 × 2160 فماذا يحدث لحجمها وزمن رفعها ولماذا؟ ولماذا نكتب الوحدة في كل خطوة حسابية؟</li>
+            </ol>
+
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>حوّل سرعة الوصلة إلى Byte في الثانية قبل أي قسمة.</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <p><strong>الخطوة 1:</strong></p>
+                <div class="math-block">\[ 1920 \times 1080 = 2{,}073{,}600\ \text{pixel} \]</div>
+                <div class="math-block">\[ 2{,}073{,}600 \times 3 = 6{,}220{,}800\ \text{B} \]</div>
+                <div class="math-block">\[ \frac{6{,}220{,}800}{1{,}048{,}576} \approx 5.93\ \text{MiB} \]</div>
+                <p>التحقق: \(1920 \times 1000 + 1920 \times 80 = 1{,}920{,}000 + 153{,}600\) ✓. وبالعشري 6.2208 MB، و\(6.2208 \div 1.048576 \approx 5.93\) ✓.</p>
+
+                <p><strong>الخطوة 2:</strong> الخطأ أنه تعامل مع 100 Mbps كأنها 100 مليون Byte في الثانية، وهي 100 مليون bit؛ فخرج الزمن أصغر 8 مرات: \(6{,}220{,}800 \div 100{,}000{,}000 \approx 0.062\) s. الصحيح:</p>
+                <div class="math-block">\[ 100\ \text{Mbps} = \frac{100 \times 10^{6}}{8}\ \text{B/s} = 12{,}500{,}000\ \text{B/s} \]</div>
+                <div class="math-block">\[ t = \frac{6{,}220{,}800\ \text{B}}{12{,}500{,}000\ \text{B/s}} \approx 0.498\ \text{s} \]</div>
+                <p>التحقق بالبت: \(6{,}220{,}800 \times 8 = 49{,}766{,}400\) bit، و\(49{,}766{,}400 \div 100{,}000{,}000 = 0.497664\) s ✓. وهو يساوي 8 أضعاف 0.062208 ✓.</p>
+
+                <p><strong>الخطوة 3:</strong></p>
+                <div class="math-block">\[ 1000 \times 0.497664\ \text{s} = 497.664\ \text{s} \]</div>
+                <p>8 min = 480 s، والباقي \(497.664 - 480 \approx 17.7\) s، فالزمن نحو 8 min 18 s (وليس 8 min 29 s، لأن الجزء العشري 0.29 من الدقيقة يُضرب في 60). هذا أكبر من 5 min = 300 s، فلا تنتهي الصور في المهلة. التحقق: \(300 \div 0.497664 \approx 603\) صورة فقط تنتهي خلال المهلة، وهي أقل من 1000 ✓.</p>
+
+                <p><strong>عقلية المهندس:</strong> بمضاعفة البعدين تتضاعف المساحة 4 أضعاف: \(3840 \times 2160 = 8{,}294{,}400\) pixel وهو \(4 \times 2{,}073{,}600\)، فالحجم \(24{,}883{,}200\) B ≈ 23.7 MiB وزمن الرفع \(4 \times 0.4977 \approx 1.99\) s. اخترنا التحويل إلى B/s قبل القسمة لأن الوحدات تكشف الخطأ: زمن بالثواني ينتج عن \(\text{B} \div (\text{B/s})\)، وعندما كان المقام بالـ bit والبسط بالـ Byte لم تُلغِ الوحدات بعضها فكان الناتج خاطئًا. ولو كانت الوصلة 1 Gbps (أي 1,000 Mbps) لقسّم الزمن على 10.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>القياس عدد مضروب في Unit؛ تغيير الوحدة يغيّر العدد لا الكمية: إلى وحدة أصغر عدد أكبر، وإلى وحدة أكبر عدد أصغر.</li>
+              <li>Metric Prefix قوى للعدد 10 (kilo \(10^{3}\)، milli \(10^{-3}\)، micro \(10^{-6}\)، nano \(10^{-9}\))، والزمن ليس عشريًا: 1 h = 60 min و1 day = 86,400 s.</li>
+              <li>Perimeter مجموع الأضلاع بوحدة طول، وArea عدد مربعات الوحدة بوحدة مربعة؛ والارتفاع عمودي دائمًا لا الضلع المائل.</li>
+              <li>مساحات الأشكال: \(b \times h\) لمتوازي الأضلاع، و\(\frac{b \times h}{2}\) للمثلث، و\(\frac{a + b}{2} \times h\) لشبه المنحرف؛ والشكل المركّب يُقسَّم أو يُطرح ويُتحقق بالطريقة الأخرى.</li>
+              <li>Conversion Factor نسبة تساوي 1 تُلغي فيها الوحدات بعضها فيصير فحص الوحدات تحققًا مجانيًا؛ ووحدة المساحة تأخذ العامل مرتين: 1 m² = 10,000 cm².</li>
+              <li>1 Byte = 8 bit؛ البادئات العشرية (1 KB = 1,000 B) تختلف عن الثنائية (1 KiB = 1,024 B)، فـ 500 GB ≈ 465.7 GiB، و100 Mbps = 12.5 MB/s.</li>
+              <li>تمهيد: القياس استعمل كل أدواتنا السابقة (الكسور والنسبة والقوى والنسبة المئوية)، لكن المسائل الحقيقية لا تأتي جاهزة؛ فنحتاج منهجية للتعامل مع أي مسألة، وهذا موضوع الصفحة التالية.</li>
+              <li>عقلية المهندس: لا تثق برقم بلا وحدة، ولا تعتمد تحويلًا قبل أن تُلغي وحداته وتعيد حسابه بطريقة ثانية.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="07-powers-roots-real-numbers.html">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">Powers, Roots, Real Numbers - القوى والجذور والأعداد الحقيقية</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="09-problem-solving.html">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">Problem Solving - التفكير الرياضي وحل المسائل</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>

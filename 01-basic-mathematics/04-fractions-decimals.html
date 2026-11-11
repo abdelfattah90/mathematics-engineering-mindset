@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fractions, Decimals - الكسور والأعداد العشرية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#math-4"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">M1 · Basic Mathematics · 4</div>
+          <h1 class="hero__title">Fractions, Decimals - الكسور والأعداد العشرية</h1>
+          <p class="hero__lead">
+            بعد أن أتقنّا Whole Numbers وعواملها ومضاعفاتها، نواجه سؤالًا لا تجيب عنه وحدها: ماذا عن جزء من كل، أو عن ناتج 3 ÷ 4؟ تقدّم هذه الصفحة الكسور والأعداد العشرية بوصفهما طريقتين لكتابة العدد نفسه، وتبني بينهما جسرًا بالقسمة الطويلة، ثم تُجري العمليات الأربع عليهما بدقة مستعينةً بـ LCM للمقامات وبـ GCD للتبسيط. والكسر يعبّر كذلك عن مقارنة بين كميتين، وهذه الفكرة نوسّعها في الصفحة التالية إلى النسب والتناسب والمئويات.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <div class="topic-block" id="fractions-mixed-numbers">
+              <h3 class="topic-block__title">Fractions &amp; Mixed Numbers - الكسور والأعداد الكسرية</h3>
+              <p>
+                الأعداد الكلية تجيب عن سؤال «كم وحدة كاملة؟» لكنها لا تصف نصف رغيف، ولا حصة كل شخص حين تُوزَّع 3 أرغفة على 4 أشخاص. تذكير: Quotient هو ناتج القسمة؛ وهو هنا 0 ويبقى Remainder يساوي 3، فتضيع حصة كل واحد. نحتاج عددًا يعبّر عن «جزء من الوحدة».
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  الـ <strong>Fraction</strong> عدد يُكتب على الصورة \(\frac{a}{b}\)، حيث \(a\) من Whole Numbers و\(b\) من Whole Numbers وأكبر من 0، ويعني \(a\) جزءًا، كلٌّ منها \(\frac{1}{b}\) من الوحدة.
+                </p>
+                <p>
+                  الـ <strong>Numerator</strong> هو \(a\)، أي عدد الأجزاء المأخوذة. والـ <strong>Denominator</strong> هو \(b\)، أي عدد الأجزاء المتساوية التي قُسمت إليها الوحدة؛ ولا يكون صفرًا لأن تقسيم الوحدة إلى صفر جزء لا معنى له.
+                </p>
+              </div>
+
+              <p>للكسر الواحد ثلاثة وجوه مترابطة. خذ \(\frac{3}{4}\):</p>
+              <ul>
+                <li><strong>جزء من كل:</strong> نقسم الوحدة إلى 4 أجزاء متساوية ونأخذ 3 منها.</li>
+                <li>
+                  <strong>نقطة على Number Line:</strong> تذكير: Number Line مستقيم تُمثَّل عليه الأعداد بنقاط وتكبر قيمتها كلما اتجهنا يمينًا. نقسم المسافة بين 0 و1 إلى 4 أقسام متساوية، و\(\frac{3}{4}\) هي نقطة التقسيم الثالثة بدءًا من 0.
+                </li>
+                <li>
+                  <strong>ناتج قسمة:</strong> \(\frac{3}{4} = 3 \div 4\). لماذا؟ نقطّع كل رغيف من الأرغفة الثلاثة إلى 4 أرباع، ويأخذ كل شخص ربعًا من كل رغيف، فيكون نصيبه 3 أرباع.
+                </li>
+              </ul>
+
+              <figure class="figure">
+                <svg viewBox="0 0 400 100" width="400" role="img" aria-label="خط أعداد من 0 إلى 2 مقسّم إلى أرباع، وعليه نقطتان عند 3/4 و7/4">
+                  <path class="fg-grid" d="M87.5 40V60M125 40V60M162.5 40V60M237.5 40V60M275 40V60M312.5 40V60" />
+                  <path class="fg-axis" d="M30 50H380M50 38V62M200 38V62M350 38V62" />
+                  <circle class="fg-dot-accent" cx="162.5" cy="50" r="5" />
+                  <circle class="fg-dot-accent" cx="312.5" cy="50" r="5" />
+                  <text class="fg-text" x="46" y="82">0</text>
+                  <text class="fg-text" x="196" y="82">1</text>
+                  <text class="fg-text" x="346" y="82">2</text>
+                  <text class="fg-text" x="152" y="28">3/4</text>
+                  <text class="fg-text" x="302" y="28">7/4</text>
+                </svg>
+                <figcaption>
+                  Number Line من 0 إلى 2 مقسّمة إلى أرباع. النقطة \(\frac{3}{4}\) قبل 1، والنقطة \(\frac{7}{4}\) تقع بعد 1 بمقدار \(\frac{3}{4}\).
+                </figcaption>
+              </figure>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>
+                  الكسر يقارن عددين أيضًا: \(\frac{3}{4}\) تعني 3 أجزاء مقابل 4. هذه المقارنة بين كميتين هي مدخل النسب والتناسب والمئويات في الصفحة التالية.
+                </p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  الـ <strong>Improper Fraction</strong> كسر بسطه أكبر من مقامه أو يساويه، فقيمته 1 أو أكثر، مثل \(\frac{7}{4}\). أما الـ <strong>Mixed Number</strong> فهو Whole Number يليه كسر أصغر من 1، مثل \(1\frac{3}{4}\)، ومعناه \(1 + \frac{3}{4}\).
+                </p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>
+                  إذا كان \(a = q \cdot b + r\) مع \(0 \le r \lt b\) فإن \(\frac{a}{b} = q\frac{r}{b}\)، وبالعكس:
+                </p>
+                <div class="math-block">\[ q\frac{r}{b} = \frac{q \cdot b + r}{b} \]</div>
+              </div>
+
+              <p>
+                الحدس: \(q\) وحدة كاملة تحوي \(q \cdot b\) جزءًا من حجم \(\frac{1}{b}\)، ونضيف إليها \(r\) أجزاء أخرى. و\(q\) و\(r\) هما Quotient وRemainder لقسمة \(a\) على \(b\).
+              </p>
+
+              <p>
+                الكسر الواحد يُكتب بصور كثيرة: نصف الرغيف هو جزء واحد من جزأين، وهو أيضًا جزآن من أربعة.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>
+                  يقال لكسرين إنهما <strong>Equivalent Fractions</strong> إذا مثّلا القيمة نفسها (النقطة نفسها على Number Line). وإذا كان \(k\) من Whole Numbers وأكبر من 0 فإن:
+                </p>
+                <div class="math-block">\[ \frac{a}{b} = \frac{a \cdot k}{b \cdot k} \]</div>
+              </div>
+
+              <p>
+                <strong>لماذا يصح؟</strong> نقطّع كل جزء من الأجزاء الـ \(b\) إلى \(k\) قطعة متساوية، فيصير عدد القطع الكلي \(b \cdot k\)، وما أخذناه كان \(a\) جزءًا فصار \(a \cdot k\) قطعة. الكمية المأخوذة من الوحدة لم تتغير؛ تغيّر حجم القطعة فقط. والعكس صحيح: القسمة على عامل مشترك للبسط والمقام تحفظ القيمة.
+              </p>
+
+              <p>
+                للتحقق من تكافؤ كسرين \(\frac{a}{b}\) و\(\frac{c}{d}\) نقارن \(a \cdot d\) مع \(b \cdot c\): نوحّد المقامين إلى \(b \cdot d\) فيصيران \(\frac{a \cdot d}{b \cdot d}\) و\(\frac{c \cdot b}{b \cdot d}\)، ويتساويان حين يتساوى البسطان.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  يكون الكسر في <strong>Simplest Form</strong> إذا كان GCD لبسطه ومقامه يساوي 1. وللوصول إليه نقسم البسط والمقام على GCD لهما. تذكير: GCD لعددين هو أكبر عدد يقسم كليهما.
+                </p>
+              </div>
+
+              <p>
+                <strong>لماذا تكفي القسمة على GCD؟</strong> لو بقي بعد القسمة على \(g\) عامل مشترك \(d \gt 1\) بين البسط والمقام الجديدين، لكان \(g \cdot d\) عاملًا مشتركًا للعددين الأصليين وأكبر من \(g\)، وهذا يناقض كون \(g\) هو الأكبر.
+              </p>
+
+              <p>
+                <strong>توقّع ثم تحقّق:</strong> ماذا تتوقع للكسر \(\frac{42}{24}\): هل هو أكبر من 1 أم أصغر؟ وبين أي Whole Numbers تقع نقطته على Number Line؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>اكتب \(\frac{42}{24}\) في Simplest Form ثم حوّله إلى Mixed Number.</p>
+                  <ol>
+                    <li>نحلّل إلى عوامل أولية: \(42 = 2 \cdot 3 \cdot 7\) و\(24 = 2^{3} \cdot 3\)، فيكون \(\mathrm{GCD}(42, 24) = 2 \cdot 3 = 6\).</li>
+                    <li>نقسم البسط والمقام على 6: \(\frac{42}{24} = \frac{7}{4}\)، وهو في Simplest Form لأن \(\mathrm{GCD}(7, 4) = 1\).</li>
+                    <li>نقسم 7 على 4: \(7 = 1 \cdot 4 + 3\)، فالـ Quotient هو 1 والـ Remainder هو 3، إذن \(\frac{7}{4} = 1\frac{3}{4}\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(\frac{7}{4} = 1\frac{3}{4}\). التحقق بطريقة مختلفة: نقسم أولًا دون تبسيط، \(42 = 1 \cdot 24 + 18\) فنحصل على \(1\frac{18}{24}\)، ثم نقسم 18 و24 على 6 فنحصل على \(1\frac{3}{4}\) أيضًا. قارن بتوقعك: الكسر أكبر من 1 لأن \(42 \gt 24\)، وأصغر من 2 لأن \(42 \lt 48 = 2 \cdot 24\).
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> حين تُخزَّن كمية كسرية كزوج من Whole Numbers (بسط ومقام) فإن \(\frac{1}{2}\) و\(\frac{2}{4}\) قيمة واحدة بتمثيلين مختلفين، فيفشل فحص التساوي أو البحث في جدول ما لم نوحّد الصيغة بقسمة الطرفين على GCD. وبالمنطق نفسه تُختزل أبعاد الشاشة \(1920 \times 1080\) بقسمتها على \(\mathrm{GCD} = 120\) لنحصل على \(\frac{16}{9}\).
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: ظنّ أن إضافة العدد نفسه إلى البسط والمقام تحفظ القيمة، فنكتب \(\frac{1}{2} = \frac{1 + 2}{2 + 2} = \frac{3}{4}\). النتيجة خاطئة: \(\frac{1}{2}\) هي نقطة التقسيم الثانية من الأرباع و\(\frac{3}{4}\) هي الثالثة، فهما نقطتان مختلفتان. والتحقق: \(1 \cdot 4 = 4\) بينما \(2 \cdot 3 = 6\). التصحيح: الذي يحفظ القيمة هو الضرب أو القسمة بالعدد نفسه، لأنه يعيد تقطيع الأجزاء دون تغيير الكمية؛ أما الجمع فيغيّر عدد الأجزاء والكمية معًا.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="decimals-place-value">
+              <h3 class="topic-block__title">Decimals &amp; Place Value - الأعداد العشرية والقيمة المكانية</h3>
+              <p>
+                تذكير: Place Value تعني أن قيمة الرقم تتحدد بموضعه، وأن وزن كل موضع عشرة أضعاف وزن الموضع الذي على يمينه. إذا واصلنا هذا النمط إلى ما بعد خانة الآحاد صار لدينا مواضع أوزانها \(\frac{1}{10}\) و\(\frac{1}{100}\) وهكذا، فنكتب الأجزاء بالطريقة نفسها التي نكتب بها الأعداد الكبيرة.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  الـ <strong>Decimal</strong> كتابة للعدد بنظام Place Value ممتدًا يمين خانة الآحاد، تفصل بينهما الفاصلة العشرية، وكل موضع على يمينها يساوي عُشر الموضع الذي قبله: الأعشار \(\frac{1}{10}\)، ثم الأجزاء من مئة \(\frac{1}{100}\)، ثم الأجزاء من ألف \(\frac{1}{1000}\).
+                </p>
+              </div>
+
+              <p>فمثلًا العدد 0.875 يحمل في كل موضع رقمًا يُضرب في وزن موضعه:</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>الموضع</th>
+                      <th>وزنه</th>
+                      <th>الرقم</th>
+                      <th>مساهمته</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>الأعشار</td>
+                      <td>\(\frac{1}{10}\)</td>
+                      <td>8</td>
+                      <td>\(\frac{8}{10}\)</td>
+                    </tr>
+                    <tr>
+                      <td>الأجزاء من مئة</td>
+                      <td>\(\frac{1}{100}\)</td>
+                      <td>7</td>
+                      <td>\(\frac{7}{100}\)</td>
+                    </tr>
+                    <tr>
+                      <td>الأجزاء من ألف</td>
+                      <td>\(\frac{1}{1000}\)</td>
+                      <td>5</td>
+                      <td>\(\frac{5}{1000}\)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="math-block">\[ 0.875 = \frac{8}{10} + \frac{7}{100} + \frac{5}{1000} = \frac{800 + 70 + 5}{1000} = \frac{875}{1000} = \frac{7}{8} \]</div>
+
+              <p>
+                الخطوة الأخيرة قسمة البسط والمقام على \(\mathrm{GCD}(875, 1000) = 125\). هكذا نحوّل أي عشري منتهٍ إلى كسر: نقرأه كسرًا مقامه 10 أو 100 أو 1000 ثم نبسّطه. أما العكس، من كسر إلى عشري، فيقوم على أن الكسر ناتج قسمة: \(\frac{a}{b} = a \div b\)، فنقسم قسمة طويلة، وفي كل خطوة نضيف صفرًا إلى الباقي ونقسم على \(b\) فنحصل على رقم واحد من أرقام العشري.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  الـ <strong>Terminating Decimal</strong> عشري تنتهي أرقامه بعد عدد محدود منها، أي يصير الباقي في القسمة الطويلة 0. والـ <strong>Repeating Decimal</strong> عشري تتكرر فيه مجموعة من الأرقام إلى ما لا نهاية، وتسمى هذه المجموعة الدورة ونرمز إليها بخط فوقها، مثل \(0.\overline{142857}\).
+                </p>
+              </div>
+
+              <p>
+                <strong>توقّع ثم تحقّق:</strong> ماذا تتوقع أن يحدث عند تحويل \(\frac{7}{8}\) و\(\frac{1}{7}\) و\(\frac{5}{12}\) إلى عشري؟ أيها ينتهي؟ وكم رقمًا قد تحوي دورة \(\frac{1}{7}\)؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>حوّل \(\frac{7}{8}\) و\(\frac{1}{7}\) و\(\frac{5}{12}\) إلى أعداد عشرية بالقسمة الطويلة. نكتب في كل خطوة: الباقي مضروبًا في 10، ثم الرقم، ثم الباقي الجديد.</p>
+                  <ol>
+                    <li>\(\frac{7}{8}\): \(70 = 8 \cdot 8 + 6\)، ثم \(60 = 8 \cdot 7 + 4\)، ثم \(40 = 8 \cdot 5 + 0\). الباقي صار 0 فتوقفنا: \(0.875\).</li>
+                    <li>\(\frac{1}{7}\): \(10 = 7 \cdot 1 + 3\)، ثم \(30 = 7 \cdot 4 + 2\)، ثم \(20 = 7 \cdot 2 + 6\)، ثم \(60 = 7 \cdot 8 + 4\)، ثم \(40 = 7 \cdot 5 + 5\)، ثم \(50 = 7 \cdot 7 + 1\). عاد الباقي 1 الذي بدأنا به، فتتكرر الأرقام: \(0.\overline{142857}\) بدورة من 6 أرقام.</li>
+                    <li>\(\frac{5}{12}\): \(50 = 12 \cdot 4 + 2\)، ثم \(20 = 12 \cdot 1 + 8\)، ثم \(80 = 12 \cdot 6 + 8\). تكرر الباقي 8، فيتكرر الرقم 6: \(0.41\overline{6}\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(0.875\) منتهٍ، و\(0.\overline{142857}\) و\(0.41\overline{6}\) دوريان. التحقق: \(0.875 \times 8 = 7\)؛ و\(142857 \times 7 = 999999\) (فالقيمة قريبة جدًا من 1 لكنها ليست 1 لأن الدورة قُطعت بعد 6 أرقام)؛ و\(12 \times 0.41666 \approx 4.99992\) وهو يقترب من 5. قارن بتوقعك: الباقي في القسمة على 7 أصغر من 7، فأقصى طول للدورة هو 6، وقد بلغته \(\frac{1}{7}\).
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                لماذا لا تفلت أي قسمة من إحدى الحالتين: الانتهاء أو الدورة؟ لأن عدد الباقيات الممكنة محدود.
+              </p>
+
+              <div class="callout callout--note">
+                <span class="callout__label">برهان</span>
+                <p><strong>الفكرة:</strong> كل رقم جديد يتحدد بالباقي الحالي وحده، والباقيات الممكنة قليلة، فلا بد أن يتكرر باقٍ.</p>
+                <ol>
+                  <li>في كل خطوة نضرب الباقي الحالي في 10 ونقسم على \(b\)؛ فالرقم الناتج والباقي الجديد يتحددان بالباقي الحالي فقط.</li>
+                  <li>الباقي أصغر من المقسوم عليه دائمًا، فهو أحد الأعداد \(0, 1, \dots, b-1\).</li>
+                  <li>إن ظهر الباقي 0 انتهت القسمة: عشري منتهٍ.</li>
+                  <li>وإلا فالباقيات الممكنة \(b - 1\) عددًا غير صفري فقط، فبعد \(b\) خطوة على الأكثر يتكرر باقٍ ما، ومن عندها تتكرر الخطوات والأرقام نفسها إلى الأبد: عشري دوري.</li>
+                </ol>
+                <p><strong>لماذا يكفي؟</strong> لأن الباقي إما أن يصير 0 أو يتكرر، ولا احتمال ثالث؛ ولأن تكرار الباقي يحدد كل ما بعده، فالدورة طولها \(b - 1\) كحد أقصى.</p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>
+                  إذا كان الكسر في Simplest Form ولم يحوِ مقامه عوامل أولية غير 2 و5 فعشريه منتهٍ، وإلا فعشريه دوري. نقبل هذه القاعدة هنا دون برهان؛ وحدسها أن العشري المنتهي كسر مقامه \(10^{n} = 2^{n} \cdot 5^{n}\).
+                </p>
+              </div>
+
+              <p>
+                وتتفق القاعدة مع المثال: \(8 = 2^{3}\) فمنتهٍ، و7 عامل أولي مختلف فدوري، و\(12 = 2^{2} \cdot 3\) فيه العامل 3 فدوري. أما تحويل العشري الدوري إلى كسر فيحتاج المعادلات، وسيأتي في المرحلة 11.
+              </p>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> حين نخزّن مبلغًا مثل 19.99 نحفظه غالبًا Whole Number من الـ cents (1999) لأن Place Value تجعل التحويل دقيقًا بالضرب في 100. والحاسوب يخزّن الأعداد بالنظام الثنائي، فالعدد \(\frac{1}{10}\) عشري منتهٍ لكنه لا يُمثَّل ثنائيًا تمثيلًا دقيقًا، فيُقرَّب، ولذلك قد لا يساوي \(0.1 + 0.2\) العدد \(0.3\) تمامًا؛ يُفصَّل هذا في المرحلة 35 عند Floating Point.
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: الحكم على \(\frac{21}{60}\) بأنه دوري لأن مقامه \(60 = 2^{2} \cdot 3 \cdot 5\) يحوي العامل 3؛ والنتيجة المتوقعة أرقام لا تنتهي. المثال المضاد: \(\frac{21}{60} = \frac{7}{20}\) بعد القسمة على \(\mathrm{GCD} = 3\)، و\(20 = 2^{2} \cdot 5\)، وعشريه \(0.35\) منتهٍ؛ والتحقق: \(0.35 \times 60 = 21\). التصحيح: القاعدة مشروطة بالكسر المبسّط، فنبسّط أولًا ثم ننظر في عوامل المقام.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="operations-fractions-decimals">
+              <h3 class="topic-block__title">Operations on Fractions &amp; Decimals - العمليات على الكسور والأعداد العشرية</h3>
+              <p>
+                لا نجمع إلا أجزاءً متساوية الحجم. أجزاء \(\frac{3}{4}\) أرباع وأجزاء \(\frac{5}{6}\) أسداس، فلا نستطيع ضم عدديهما مباشرة، كما لا نجمع كيلومترات وأميالًا. الحل أن نعيد كتابة الكسرين بأجزاء من الحجم نفسه.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  الـ <strong>Common Denominator</strong> لكسرين هو مقام مشترك نحصل عليه بإعادة كتابة كل منهما في صورة Equivalent Fraction. وأصغر مقام مشترك هو LCM للمقامين. تذكير: LCM لعددين هو أصغر مضاعف موجب مشترك لهما.
+                </p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>
+                  ليكن \(m = \mathrm{LCM}(b, d)\) و\(s = m \div b\) و\(t = m \div d\) (وكلاهما Whole Number لأن \(m\) مضاعف للمقامين). عندئذٍ:
+                </p>
+                <div class="math-block">\[ \frac{a}{b} \pm \frac{c}{d} = \frac{a \cdot s \pm c \cdot t}{m} \]</div>
+                <p>في الطرح نشترط أن يكون الناتج غير سالب، أي \(a \cdot s \ge c \cdot t\)، فالكسور هنا غير سالبة (الأعداد النسبية بتعريفها العام في المرحلة 6).</p>
+              </div>
+
+              <p>
+                <strong>لماذا يصح؟</strong> بعد الضرب في \(s\) و\(t\) يصير \(\frac{a}{b} = \frac{a \cdot s}{m}\) و\(\frac{c}{d} = \frac{c \cdot t}{m}\)، أي \(a \cdot s\) و\(c \cdot t\) جزءًا من الحجم نفسه \(\frac{1}{m}\)، فنجمع أو نطرح عدد الأجزاء ويبقى الحجم. ويصح أي مقام مشترك، لكن LCM يُبقي الأعداد صغيرة.
+              </p>
+
+              <p>
+                <strong>توقّع ثم تحقّق:</strong> ماذا تتوقع لناتج \(\frac{3}{4} + \frac{5}{6}\): هل هو أصغر من 1 أم أكبر منه؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب \(\frac{3}{4} + \frac{5}{6}\).</p>
+                  <ol>
+                    <li>\(4 = 2^{2}\) و\(6 = 2 \cdot 3\)، فيكون \(\mathrm{LCM}(4, 6) = 2^{2} \cdot 3 = 12\).</li>
+                    <li>\(s = 12 \div 4 = 3\) و\(t = 12 \div 6 = 2\)، فنكتب \(\frac{3}{4} = \frac{9}{12}\) و\(\frac{5}{6} = \frac{10}{12}\).</li>
+                    <li>نجمع البسطين: \(\frac{9}{12} + \frac{10}{12} = \frac{19}{12}\).</li>
+                    <li>\(19 = 1 \cdot 12 + 7\)، فالناتج \(1\frac{7}{12}\)، وهو في Simplest Form لأن \(\mathrm{GCD}(7, 12) = 1\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(\frac{19}{12} = 1\frac{7}{12}\). التحقق بطريقة مختلفة: \(\frac{3}{4} = 0.75\) و\(\frac{5}{6} = 0.8333\ldots\) ومجموعهما \(1.5833\ldots\)، و\(\frac{7}{12} = 0.58333\ldots\) بالقسمة الطويلة، فالنتيجتان متفقتان. قارن بتوقعك: الناتج أكبر من 1 لأن كلًّا من الكسرين أكبر من \(\frac{1}{2}\). وللعمليات على Mixed Number نحوّله أولًا إلى Improper Fraction بالقاعدة السابقة.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                الضرب أبسط من الجمع: لا نحتاج إلى مقام مشترك. نقسم مربعًا مساحته 1 إلى \(b\) عمودًا و\(d\) صفًا، فيصير \(b \cdot d\) خلية متساوية، مساحة كل منها \(\frac{1}{b \cdot d}\). والمستطيل الذي عرضه \(\frac{a}{b}\) وارتفاعه \(\frac{c}{d}\) يحوي \(a \cdot c\) خلية.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <div class="math-block">\[ \frac{a}{b} \times \frac{c}{d} = \frac{a \cdot c}{b \cdot d} \]</div>
+              </div>
+
+              <p>
+                أما القسمة فنفهمها بسؤال: «كم مرة يتسع المقسوم عليه في المقسوم؟» فمثلًا \(\frac{2}{5} \div \frac{3}{10}\) تسأل: كم مرة يتسع \(\frac{3}{10}\) في \(\frac{2}{5}\)؟
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  الـ <strong>Reciprocal</strong> للكسر \(\frac{a}{b}\) حيث \(a \ne 0\) هو \(\frac{b}{a}\)، وحاصل ضربهما 1 لأن \(\frac{a}{b} \times \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1\).
+                </p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>إذا كان \(c \ne 0\) فإن قسمة كسر على كسر هي الضرب في Reciprocal المقسوم عليه:</p>
+                <div class="math-block">\[ \frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c} \]</div>
+              </div>
+
+              <div class="callout callout--note">
+                <span class="callout__label">برهان</span>
+                <p><strong>الفكرة:</strong> نقيس الكسرين بوحدة صغيرة مشتركة، فيتحول السؤال «كم مرة يتسع؟» إلى قسمة عددين كليين.</p>
+                <ol>
+                  <li>بمقام مشترك \(b \cdot d\) يصير \(\frac{a}{b} = \frac{a \cdot d}{b \cdot d}\) و\(\frac{c}{d} = \frac{c \cdot b}{b \cdot d}\)، أي \(a \cdot d\) و\(c \cdot b\) وحدة من الحجم نفسه \(\frac{1}{b \cdot d}\).</li>
+                  <li>عدد المرات التي يتسع فيها الثاني في الأول هو نسبة عدد الوحدات، فتُحذف الوحدة: \(\frac{a \cdot d}{c \cdot b}\).</li>
+                  <li>ومن قاعدة الضرب: \(\frac{a \cdot d}{b \cdot c} = \frac{a}{b} \times \frac{d}{c}\).</li>
+                </ol>
+                <p><strong>لماذا يكفي؟</strong> لأن اختيار وحدة القياس لا يغيّر عدد المرات، والبرهان لم يفترض شيئًا عن الكسرين سوى \(c \ne 0\).</p>
+              </div>
+
+              <p>
+                <strong>توقّع ثم تحقّق:</strong> ماذا تتوقع لناتج \(\frac{2}{5} \div \frac{3}{10}\): هل هو أكبر من 1 أم أصغر منه؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب \(\frac{2}{3} \times \frac{9}{10}\) ثم \(\frac{2}{5} \div \frac{3}{10}\).</p>
+                  <ol>
+                    <li>الضرب: نختصر قبل الضرب، فالعددان 9 و3 يقبلان القسمة على 3، والعددان 2 و10 يقبلان القسمة على 2: \(\frac{2 \cdot 9}{3 \cdot 10} = \frac{1 \cdot 3}{1 \cdot 5} = \frac{3}{5}\).</li>
+                    <li>القسمة: Reciprocal العدد \(\frac{3}{10}\) هو \(\frac{10}{3}\)، فنحسب \(\frac{2}{5} \times \frac{10}{3} = \frac{20}{15}\).</li>
+                    <li>نقسم البسط والمقام على \(\mathrm{GCD}(20, 15) = 5\): \(\frac{20}{15} = \frac{4}{3} = 1\frac{1}{3}\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(\frac{3}{5}\) و\(\frac{4}{3}\). التحقق: الضرب \(\frac{18}{30} = \frac{3}{5}\) دون اختصار مسبق. والقسمة نرجع فيها بالعملية العكسية: \(\frac{4}{3} \times \frac{3}{10} = \frac{12}{30} = \frac{2}{5}\)، وبسؤال «كم مرة يتسع؟»: \(\frac{2}{5} = \frac{4}{10}\)، و4 أعشار على 3 أعشار تساوي \(\frac{4}{3}\). قارن بتوقعك: أكبر من 1 لأن \(\frac{4}{10} \gt \frac{3}{10}\).
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                وفي الأعداد العشرية تنطبق المبادئ نفسها. في الجمع والطرح نحاذي الفاصلتين حتى تلتقي المواضع المتساوية (أجزاء من الحجم نفسه). في الضرب نحسب الأعداد دون فاصلة، ثم نضع في الناتج من الخانات العشرية مجموع ما في العاملين، لأن \(1.2 \times 0.35 = \frac{12}{10} \times \frac{35}{100} = \frac{12 \cdot 35}{1000}\). وفي القسمة نضرب المقسوم والمقسوم عليه في قوة 10 نفسها فيبقى الكسر مكافئًا، ويصير المقسوم عليه Whole Number.
+              </p>
+
+              <p>
+                <strong>توقّع ثم تحقّق:</strong> ماذا تتوقع: أيهما أكبر \(1.2 \times 0.35\) أم \(0.35\)؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب \(2.35 + 0.8\) و\(1.2 \times 0.35\) و\(4.5 \div 0.15\).</p>
+                  <ol>
+                    <li>الجمع: نكتب \(0.8\) على الصورة \(0.80\) لتتحاذى المواضع، فيكون \(2.35 + 0.80 = 3.15\).</li>
+                    <li>الضرب: \(12 \times 35 = 420\)، وفي العاملين 3 خانات عشرية (1 و2)، فالناتج \(0.420 = 0.42\).</li>
+                    <li>القسمة: نضرب الطرفين في 100: \(\frac{4.5}{0.15} = \frac{450}{15} = 30\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(3.15\) و\(0.42\) و\(30\). التحقق: \(\frac{235}{100} + \frac{80}{100} = \frac{315}{100}\)؛ و\(1.2 \times 0.35 = 0.35 + 0.2 \times 0.35 = 0.35 + 0.07 = 0.42\)؛ و\(0.15 \times 30 = 4.5\). قارن بتوقعك: الناتج \(0.42\) أكبر من \(0.35\) لأن \(1.2\) أكبر من 1.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> إذا استغرقت مهمتان \(\frac{3}{4}\) ساعة و\(\frac{5}{6}\) ساعة فمجموعهما \(\frac{19}{12}\) ساعة، أي ساعة و35 دقيقة لأن \(\frac{7}{12} \times 60 = 35\). والمكتبات التي تخزّن الكسر بسطًا ومقامًا وتطبّق هذه القواعد حرفيًا تُبقي النتائج دقيقة، بخلاف الاكتفاء بأرقام عشرية قليلة: \(0.333 \times 3 = 0.999\) لا يساوي 1.
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: جمع البسطين والمقامين كلًّا على حدة، فنكتب \(\frac{1}{2} + \frac{1}{3} = \frac{2}{5}\). النتيجة الخاطئة أصغر من \(\frac{1}{2}\) (لأن \(\frac{2}{5} = \frac{4}{10}\) و\(\frac{1}{2} = \frac{5}{10}\))، ومجموع عددين لا يكون أصغر من أحدهما. التصحيح: بمقام مشترك \(\frac{3}{6} + \frac{2}{6} = \frac{5}{6}\)، ويتفق مع \(0.5 + 0.333\ldots = 0.8333\ldots\). وخطأ مشابه في القسمة هو قلب المقسوم بدل المقسوم عليه: \(\frac{5}{2} \times \frac{3}{10} = \frac{3}{4}\) أصغر من 1، بينما \(\frac{2}{5} \gt \frac{3}{10}\) فالناتج الصحيح أكبر من 1. فقدّر الناتج دائمًا قبل الحساب وبعده.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="comparison">
+        <div class="container">
+          <div class="content-section__eyebrow">مقارنة</div>
+          <h2 class="content-section__title">Fraction أم Decimal: متى نختار أيهما؟</h2>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>الميزة</th>
+                  <th>Fraction</th>
+                  <th>Decimal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الدقة</td>
+                  <td>يمثّل كل قيمة بدقة، حتى \(\frac{1}{3}\)</td>
+                  <td>دقيق إن كان منتهيًا؛ أما الدوري فيُقطع فيصير تقريبًا</td>
+                </tr>
+                <tr>
+                  <td>المقارنة بين قيمتين</td>
+                  <td>نوحّد المقامين أولًا (Common Denominator)</td>
+                  <td>مباشرة بعد محاذاة المواضع</td>
+                </tr>
+                <tr>
+                  <td>الضرب والقسمة</td>
+                  <td>بسط في بسط ومقام في مقام، والقسمة بالـ Reciprocal</td>
+                  <td>تُحسب كأعداد كلية مع ضبط الفاصلة، وقد لا تنتهي القسمة</td>
+                </tr>
+                <tr>
+                  <td>الأنسب حين</td>
+                  <td>تلزم الدقة التامة أو التبسيط الرمزي</td>
+                  <td>نقيس أو نعرض النتائج أو نكتب المبالغ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>اشرح بكلماتك معنى الكسر \(\frac{5}{8}\) بوجهين: جزء من كل، ونقطة على Number Line. ثم فسّر لماذا لا يجوز أن يكون المقام 0.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>نقسم الوحدة إلى 8 أجزاء متساوية ونأخذ 5 منها؛ وعلى Number Line نقسم المسافة بين 0 و1 إلى 8 أقسام متساوية، ونقطة \(\frac{5}{8}\) هي نقطة التقسيم الخامسة بدءًا من 0. المقام هو عدد الأجزاء المتساوية في الوحدة، ولو كان صفرًا لما وُجدت أجزاء نعدّها. (راجع: Fractions &amp; Mixed Numbers)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q2">
+              <h3 class="topic-block__title">سؤال 2</h3>
+              <p>اكتب \(\frac{54}{36}\) في Simplest Form ثم حوّله إلى Mixed Number، وتحقق من الناتج بطريقة مختلفة.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>\(54 = 2 \cdot 3^{3}\) و\(36 = 2^{2} \cdot 3^{2}\) فيكون \(\mathrm{GCD} = 2 \cdot 3^{2} = 18\)، ومنه \(\frac{54}{36} = \frac{3}{2}\)، وبما أن \(3 = 1 \cdot 2 + 1\) فالناتج \(1\frac{1}{2}\). التحقق: \(54 = 1 \cdot 36 + 18\) فنحصل على \(1\frac{18}{36}\)، وتبسيط \(\frac{18}{36}\) يعطي \(\frac{1}{2}\) أيضًا. (راجع: Fractions &amp; Mixed Numbers)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q3">
+              <h3 class="topic-block__title">سؤال 3</h3>
+              <p>دون إجراء القسمة الطويلة، حدّد أيّ الكسور التالية عشريه منتهٍ ولماذا: \(\frac{9}{40}\) و\(\frac{7}{15}\) و\(\frac{18}{45}\). ثم اكتب العشري لما ينتهي منها.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>نبسّط أولًا ثم ننظر في عوامل المقام. \(\frac{9}{40}\): \(40 = 2^{3} \cdot 5\) فمنتهٍ، وقيمته \(0.225\) (تحقق: \(0.225 \times 40 = 9\)). \(\frac{18}{45} = \frac{2}{5}\) بعد القسمة على 9، والمقام 5 فمنتهٍ وقيمته \(0.4\)، مع أن 45 نفسه يحوي العامل 3. \(\frac{7}{15}\): \(15 = 3 \cdot 5\) فيه العامل 3 فعشريه دوري، وهو \(0.4\overline{6}\). (راجع: Decimals &amp; Place Value)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q4">
+              <h3 class="topic-block__title">سؤال 4</h3>
+              <p>حسب زميل \(\frac{3}{5} \div \frac{9}{10}\) فكتب \(\frac{5}{3} \times \frac{9}{10} = \frac{3}{2}\). اكتشف الخطأ وصحّحه، وبيّن كيف كان يمكن كشفه بالتقدير قبل الحساب.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>قلب المقسوم \(\frac{3}{5}\) بدل المقسوم عليه \(\frac{9}{10}\). الصحيح: \(\frac{3}{5} \times \frac{10}{9} = \frac{30}{45} = \frac{2}{3}\). بالتقدير: \(\frac{3}{5} = \frac{6}{10}\) أصغر من \(\frac{9}{10}\)، فلا يتسع المقسوم عليه فيه مرة كاملة ويجب أن يكون الناتج أصغر من 1، بينما \(\frac{3}{2}\) أكبر من 1. والتحقق بالعملية العكسية: \(\frac{2}{3} \times \frac{9}{10} = \frac{18}{30} = \frac{3}{5}\). (راجع: Operations on Fractions &amp; Decimals)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q5">
+              <h3 class="topic-block__title">سؤال 5</h3>
+              <p>اشرحها لغيرك: زميل يجمع \(\frac{1}{3} + \frac{1}{3} + \frac{1}{3}\) في برنامجه بتخزين 0.333 ثلاث مرات، فيحصل على 0.999 لا 1. اشرح له في جملتين إلى ثلاث لماذا حدث ذلك، وماذا تنصحه أن يخزّن، ومتى يكفيه العشري.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>عشري \(\frac{1}{3}\) دوري (\(0.\overline{3}\))، فأي كتابة منتهية له مثل \(0.333\) هي تقريب، وتتراكم أخطاؤها حين نجمعه. الأفضل أن يخزّن البسط والمقام، لأن \(\frac{1}{3} + \frac{1}{3} + \frac{1}{3} = \frac{3}{3} = 1\) تمامًا. ويكفي العشري حين تكون القيم منتهية مثل \(0.25\) أو حين يكفي التقريب. (راجع: Decimals &amp; Place Value)</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">زمن خط معالجة: كسور وأعداد عشرية معًا</h2>
+
+          <div class="article-content">
+            <p>
+              خط معالجة يشغّل في كل مرور مهمتين متتاليتين ثم خطوة تنظيف. سُجّلت أزمنتها بصيغ مختلفة، ويُراد حساب زمن المرور الواحد بدقة، ثم معرفة كم مرورًا يتّسع في المهلة المسموحة.
+            </p>
+
+            <div class="table-wrap table-wrap--fit">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>البند</th>
+                    <th>الزمن بالدقائق</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>المهمة الأولى</td>
+                    <td>\(\frac{5}{6}\)</td>
+                  </tr>
+                  <tr>
+                    <td>المهمة الثانية</td>
+                    <td>\(\frac{3}{8}\)</td>
+                  </tr>
+                  <tr>
+                    <td>التنظيف</td>
+                    <td>0.25</td>
+                  </tr>
+                  <tr>
+                    <td>المهلة المسموحة</td>
+                    <td>3.5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol>
+              <li>احسب زمن المرور الواحد (المهمتان والتنظيف) كسرًا في Simplest Form، ثم اكتبه Mixed Number.</li>
+              <li>تحقق من الناتج بطريقة ثانية: حدّد دون قسمة أيّ الأزمنة الثلاثة عشريه منتهٍ، ثم اجمع القيم العشرية وقارن.</li>
+              <li>كم مرورًا كاملًا يتّسع في المهلة؟ وما الجزء الذي يبقى من مرور آخر؟</li>
+              <li>عقلية المهندس: لماذا اخترنا الكسور في الخطوة الأولى؟ وماذا يتغير لو صار زمن التنظيف \(\frac{1}{7}\) دقيقة؟ اشرح ذلك لزميل.</li>
+            </ol>
+
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>ابدأ بكتابة 0.25 و3.5 كسرين مبسّطين، ثم ابحث عن LCM للمقامات 6 و8 و4.</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <p><strong>الخطوة 1:</strong> \(0.25 = \frac{25}{100} = \frac{1}{4}\). المقامات 6 و8 و4: \(6 = 2 \cdot 3\) و\(8 = 2^{3}\) و\(4 = 2^{2}\)، فـ \(\mathrm{LCM} = 2^{3} \cdot 3 = 24\).</p>
+                <div class="math-block">\[ \frac{5}{6} + \frac{3}{8} + \frac{1}{4} = \frac{20 + 9 + 6}{24} = \frac{35}{24} = 1\frac{11}{24} \]</div>
+                <p>وهو في Simplest Form لأن \(35 = 5 \cdot 7\) و\(24 = 2^{3} \cdot 3\) لا عامل مشترك بينهما، و\(35 = 1 \cdot 24 + 11\).</p>
+
+                <p><strong>الخطوة 2:</strong> \(6 = 2 \cdot 3\) فيه العامل 3، فعشري \(\frac{5}{6}\) دوري: \(0.8\overline{3}\). و\(8 = 2^{3}\) فعشري \(\frac{3}{8}\) منتهٍ: \(0.375\). و\(0.25\) منتهٍ.</p>
+                <div class="math-block">\[ 0.8333\ldots + 0.375 + 0.25 = 1.4583\ldots \]</div>
+                <p>ومن القسمة الطويلة \(\frac{11}{24} = 0.4583\ldots\) فيكون \(1\frac{11}{24} = 1.4583\ldots\)، والطريقتان متفقتان.</p>
+
+                <p><strong>الخطوة 3:</strong> \(3.5 = \frac{35}{10} = \frac{7}{2}\). نقسم المهلة على زمن المرور:</p>
+                <div class="math-block">\[ \frac{7}{2} \div \frac{35}{24} = \frac{7}{2} \times \frac{24}{35} = \frac{12}{5} = 2\frac{2}{5} \]</div>
+                <p>إذن يتّسع مروران كاملان ويبقى \(\frac{2}{5}\) من مرور لا يكفي لإتمامه. التحقق: \(2 \times \frac{35}{24} = \frac{35}{12} \approx 2.92\) أقل من 3.5، و\(3 \times \frac{35}{24} = \frac{105}{24} = 4.375\) أكبر منها؛ و\(\frac{12}{5} \times \frac{35}{24} = \frac{420}{120} = 3.5\).</p>
+
+                <p><strong>عقلية المهندس:</strong> اخترنا الكسور لأن عشري \(\frac{5}{6}\) دوري، فأي جمع عشري له تقريب، أما بالكسور فالمقام المشترك 24 يُبقي الناتج دقيقًا. ولو صار التنظيف \(\frac{1}{7}\) لصار \(\mathrm{LCM}(6, 8, 7) = 168\) وبقي الجمع بالكسور دقيقًا، بينما عشري \(\frac{1}{7}\) دوري بدورة من 6 أرقام فيصير كل مسار عشري تقريبيًا. نحسب إذن بالكسور طلبًا للدقة، ونستعمل العشري تقديرًا سريعًا للتحقق.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>الـ Fraction \(\frac{a}{b}\) يعني \(a\) جزءًا حجم كلٍّ منها \(\frac{1}{b}\)، وهو جزء من كل، ونقطة على Number Line، وناتج قسمة \(a \div b\)؛ ويُحوَّل Improper Fraction إلى Mixed Number بالـ Quotient والـ Remainder.</li>
+              <li>الضرب أو القسمة بالعدد نفسه في البسط والمقام يعطي Equivalent Fractions، أما الجمع فيغيّر القيمة؛ ونقسم على GCD لنصل إلى Simplest Form.</li>
+              <li>الـ Decimal يمدّ Place Value يمين الآحاد؛ والقسمة الطويلة تنتهي (Terminating) إذا صار الباقي 0، وإلا تتكرر الباقيات فتظهر دورة (Repeating) لأن الباقي أصغر من المقام. والكسر المبسّط الذي مقامه من العوامل 2 و5 فقط عشريه منتهٍ.</li>
+              <li>نجمع ونطرح بـ Common Denominator هو LCM للمقامين، ونضرب البسط في البسط والمقام في المقام، ونقسم بضرب Reciprocal المقسوم عليه (كم مرة يتسع؟).</li>
+              <li>في العشري نحاذي الفاصلتين عند الجمع والطرح، ونضرب كأعداد كلية ثم نعدّ الخانات العشرية، ونضرب المقسوم والمقسوم عليه في قوة 10 نفسها عند القسمة.</li>
+              <li>العشري الدوري المقطوع تقريب لا قيمة دقيقة؛ فنُبقي القيمة كسرًا حين تلزم الدقة.</li>
+              <li>عقلية المهندس: قدّر الناتج قبل الحساب وتحقق منه بطريقة ثانية، وأبقِ القيمة كسرًا ما دامت الدقة مطلوبة.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="03-factors-multiples-gcd-lcm.html">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">Factors, Multiples, GCD &amp; LCM - العوامل والمضاعفات</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="05-ratio-proportion-percent.html">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">Ratio, Proportion, Percent - النسبة والتناسب والمئوية</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>

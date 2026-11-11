@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[عنوان الصفحة]</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- لا تنسخ CSS ولا JS داخل الصفحة: أبقِ هذا الرابط ووسم script في آخر الصفحة كما هما -->
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <!-- ==========================================================
+       قالب الرياضيات والنظرية (احذف كل التعليقات والعناصر النائبة [...] من الملف النهائي)
+       الصفحة = مرحلة واحدة من الخطة (أو تطبيقها العملي)، وكل بند في قائمة موضوعات الصفحة
+       = topic-block واحدة، بنفس الترتيب. الصفحة تُقرأ وتُحَل على الورق: لا code-block
+       ولا output-block ولا مخططات ASCII. اختر من المكوّنات ما يناسب المحتوى واحذف الباقي.
+
+       1) الشرح ثم مثاله المحلول مباشرة داخل topic-block نفسها؛ لا تجمع كل النظري
+          ثم كل الأمثلة. موضوع مفهومي بلا مثال: شرح فقط.
+       2) مسار الموضوع: المشكلة (لماذا نحتاجه؟) ← التعريف الدقيق ← أصغر مثال محلول
+          ← لماذا يعمل ← ربطه بمشكلة هندسية حقيقية ← الخطأ الشائع في callout--warning.
+       3) تعريف أو قاعدة أو صيغة أو نظرية ← callout--definition، والتسمية في
+          callout__label (تعريف | قاعدة | صيغة | نظرية).
+       4) البرهان ← callout--note بتسمية «برهان»: الفكرة أولًا، ثم الخطوات في ol،
+          ثم فقرة «لماذا يكفي؟». لا تضف class جديدًا للبرهان.
+       5) المعادلات بصيغة KaTeX يحمّلها السكربت تلقائيًا: داخل السطر \( … \)، وعلى سطر
+          مستقل داخل <div class="math-block">\[ … \]</div> (ويجوز داخل callout وli).
+          لا تستعمل $ ولا $$. داخل المعادلة رموز لاتينية فقط (x وn وf(x))، والكلام العربي
+          خارجها. اكتب \lt و\gt بدل < و>، و&amp; بدل & داخل aligned.
+       6) المثال المحلول: <div class="example"> بمسألة بأرقام صغيرة ثم خطوات مرقّمة مبرَّرة
+          ثم الجواب، وفي الجواب طريقة التحقق (تعويض أو مثال مضاد أو حالة حدّية).
+       7) الجدول الصغير (جدول صواب أو جدول قيم) بـ table-wrap--fit.
+       8) الرسم (اختياري، عند الضرورة فقط: منحنى دالة أو رسم بياني أو شجرة): figure فيه svg
+          بـ viewBox وبـ classes الـ fg-* فقط (بلا style ولا ألوان ولا نص عربي داخل الـ svg)،
+          والتعليق العربي في figcaption. اجعل width مساويًا لعرض الـ viewBox (حتى 560)،
+          وبحد أقصى 40 سطرًا للرسم.
+       9) كل بند اختياري أضفه فقط إن أضاف قيمة، واحذف ما لا تحتاجه بالكامل.
+      10) لا أزرار ولا أيقونات ولا وسوم script/link إضافية: السكربت يضيف قائمة المحتويات
+          وعنوان الشريط العلوي والمعادلات تلقائيًا. لا تضف classes غير الموجودة هنا،
+          ولا وسم style، ولا footer. أبقِ <body data-toc> كما هو.
+    =========================================================== -->
+
+    <!-- Top bar: رابط الرجوع إلى بطاقة الصفحة في الخطة (index.html) + عنوان الصفحة (يملؤه السكربت من h1) -->
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#[معرّف-البطاقة]"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <!-- ==========================================================
+         Hero
+         eyebrow: موقع الصفحة، مثل "G06 · Data Structures · 19" أو "M2 · Discrete Mathematics · 9".
+         lead: مقدمة الصفحة بالكامل (ما يضيفه ولماذا يهم الآن)،
+         ولا يوجد قسم "مقدمة" منفصل بعده.
+      =========================================================== -->
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">[G00 · اسم القسم · 0]</div>
+          <h1 class="hero__title">[عنوان الصفحة]</h1>
+          <p class="hero__lead">
+            [مقدمة موجزة: ما الذي تضيفه هذه الصفحة تحديدًا ولماذا يهم الآن.]
+          </p>
+        </div>
+      </header>
+
+      <!-- ==========================================================
+         شرح وتطبيق (data-toc="deep" يرقّم موضوعات الصفحة ويضعها في قائمة المحتويات)
+      =========================================================== -->
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <!-- ============ Topic Block: [اسم الموضوع 1] (يعرض كل المكوّنات الممكنة) ============ -->
+            <div class="topic-block" id="[topic-1-slug]">
+              <h3 class="topic-block__title">[اسم الموضوع 1]</h3>
+
+              <p>[المشكلة أو السؤال الذي يحلّه الموضوع، ثم فكرته بلغة بسيطة.]</p>
+
+              <!-- تعريف / قاعدة / صيغة / نظرية (اختياري) -->
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>[التعريف الدقيق، ويجوز فيه معادلة داخل السطر مثل \(a^{m} \cdot a^{n} = a^{m+n}\).]</p>
+              </div>
+
+              <!-- نظرية مع معادلة داخلها (اختياري) -->
+              <div class="callout callout--definition">
+                <span class="callout__label">نظرية</span>
+                <p>[نص النظرية: إذا تحقق الشرط فإن النتيجة.]</p>
+                <div class="math-block">\[ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} \]</div>
+              </div>
+
+              <!-- برهان (اختياري): الفكرة ثم الخطوات ثم لماذا يكفي -->
+              <div class="callout callout--note">
+                <span class="callout__label">برهان</span>
+                <p><strong>الفكرة:</strong> [الفكرة في جملة واحدة قبل أي رمز.]</p>
+                <ol>
+                  <li>[الخطوة 1 مع تبريرها.]</li>
+                  <li>[الخطوة 2: \(S = 1 + 2 + \dots + n\).]</li>
+                </ol>
+                <div class="math-block">
+                  \[ \begin{aligned} 2S &amp;= n(n+1) \\ S &amp;= \frac{n(n+1)}{2} \end{aligned} \]
+                </div>
+                <p><strong>لماذا يكفي؟</strong> [لماذا تغطي الخطوات كل الحالات.]</p>
+              </div>
+
+              <!-- معادلة على سطر مستقل (اختياري) -->
+              <div class="math-block">\[ f(x) = \frac{x^2 + 1}{2} \]</div>
+
+              <!-- Note (اختياري) -->
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>[معلومة مهمة يجب أن يعرفها القارئ.]</p>
+              </div>
+
+              <!-- مثال محلول (اختياري): المسألة ثم الخطوات ثم الجواب -->
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>[نص المسألة بأرقام صغيرة.]</p>
+                  <ol>
+                    <li>[الخطوة 1 مع تبريرها.]</li>
+                    <li>[الخطوة 2: \(2 \times 3 = 6\).]</li>
+                  </ol>
+                  <p class="example__answer">الجواب: [النتيجة، وكيف نتحقق منها.]</p>
+                </div>
+              </div>
+
+              <!-- جدول صغير (اختياري): جدول صواب أو جدول قيم -->
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>\(p\)</th>
+                      <th>\(q\)</th>
+                      <th>\(p \land q\)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>T</td>
+                      <td>T</td>
+                      <td>T</td>
+                    </tr>
+                    <tr>
+                      <td>T</td>
+                      <td>F</td>
+                      <td>F</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- رسم (اختياري): classes الـ fg-* فقط، ونصوص لاتينية وأرقام فقط داخل svg.
+                   منحنى: path.fg-curve؛ رسم بياني أو شجرة: circle.fg-dot-accent للعقد وpath.fg-line للحواف -->
+              <figure class="figure">
+                <svg viewBox="0 0 400 250" width="400" role="img" aria-label="[وصف الرسم]">
+                  <path class="fg-grid" d="M133 33V217M200 33V217M267 33V217M333 33V217M50 83H367M50 133H367M50 183H367" />
+                  <path class="fg-axis" d="M50 217H380M67 225V25" />
+                  <path class="fg-curve" d="M67 200C150 197 250 150 342 50" />
+                  <circle class="fg-dot-accent" cx="200" cy="173" r="5" />
+                  <text class="fg-text" x="372" y="240">x</text>
+                  <text class="fg-text" x="77" y="35">y</text>
+                </svg>
+                <figcaption>[تعليق عربي يشرح ما يظهر في الرسم.]</figcaption>
+              </figure>
+
+              <!-- Flow Diagram (اختياري): لخطوات منهجية مثل حل المسائل؛ الترقيم من CSS وأبقِ flow-arrow بين الخطوات -->
+              <div class="flow-diagram">
+                <div class="flow-step">
+                  <div class="flow-step__title">[خطوة 1]</div>
+                  <div class="flow-step__description">[وصف]</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                  <div class="flow-step__title">[خطوة 2]</div>
+                  <div class="flow-step__description">[وصف]</div>
+                </div>
+              </div>
+
+              <!-- Warning: الخطأ الشائع الخاص بهذا الموضوع، أو المثال المضاد (اختياري) -->
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>[الخطأ الشائع أو سوء الفهم المرتبط بهذا الموضوع تحديدًا.]</p>
+              </div>
+            </div>
+
+            <!-- ============ Topic Block: [اسم الموضوع 2] (مفهومي بلا مثال) ============ -->
+            <div class="topic-block" id="[topic-2-slug]">
+              <h3 class="topic-block__title">[اسم الموضوع 2]</h3>
+              <p>[شرح نظري.]</p>
+            </div>
+
+            <!-- كرر topic-block لكل موضوع باقٍ -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         Comparison (اختياري): فقط عند وجود مفاضلة حقيقية (مثل التباديل والتوافيق)؛ وإلا احذف القسم.
+         للقرارات استعمل الأعمدة: القرار | البديل | السبب | الثمن (≤ 4 أعمدة).
+      =========================================================== -->
+      <section class="content-section" id="comparison">
+        <div class="container">
+          <div class="content-section__eyebrow">مقارنة</div>
+          <h2 class="content-section__title">[عنوان المقارنة]</h2>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>الميزة</th>
+                  <th>[الخيار أ]</th>
+                  <th>[الخيار ب]</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[نقطة المقارنة]</td>
+                  <td>[وصف]</td>
+                  <td>[وصف]</td>
+                </tr>
+                <tr>
+                  <td>[نقطة المقارنة]</td>
+                  <td>[وصف]</td>
+                  <td>[وصف]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         اختبر نفسك: سؤال واحد على الأقل لكل موضوع أساسي (حتى 5 أسئلة)، بمستويات
+         متدرجة (فهم ← تطبيق ← تحليل ← قرار). الإجابة تُطوى داخل reveal.
+      =========================================================== -->
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>[نص السؤال: مفهوم بذاته، بلا إحالات على ما لم يُعرض في الصفحة. ويجوز فيه معادلة \(x + 2 = 5\).]</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>[إجابة من جملتين إلى ثلاث، تنتهي بـ «(راجع: اسم الموضوع)».]</p>
+                </div>
+              </details>
+            </div>
+
+            <!-- كرر topic-block لكل سؤال: سؤال 2، سؤال 3 ... -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         تمرين شامل: مسألة تطبيقية واحدة من 3 أو 4 خطوات مرقّمة (تنفّذ ← تصلح أو تتتبّع ←
+         تفسّر أو تقرّر)، وآخرها سؤال «عقلية المهندس». الحل مطويّ داخل reveal.
+         لا تعرض النتائج قبل الحل.
+      =========================================================== -->
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">[عنوان التمرين]</h2>
+
+          <div class="article-content">
+            <p>[السيناريو الواقعي في فقرة قصيرة.]</p>
+
+            <!-- المعطيات (اختياري): جدول صغير table-wrap--fit أو math-block -->
+
+            <ol>
+              <li>[الخطوة 1: احسب.]</li>
+              <li>[الخطوة 2: تحقق أو أصلح.]</li>
+              <li>[الخطوة 3: فسّر أو قرّر.]</li>
+              <li>[الخطوة الأخيرة — عقلية المهندس: ماذا لو…؟ ولماذا اخترنا هذا الحل؟]</li>
+            </ol>
+
+            <!-- تلميح (اختياري) -->
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>[تلميح واحد.]</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <!-- حل كل خطوة بالترتيب: math-block أو جدول ثم شرح قصير -->
+                <p>[حل الخطوة 1.]</p>
+                <div class="math-block">\[ 3 \times 4 = 12 \]</div>
+                <p><strong>عقلية المهندس:</strong> [حل السؤال الأخير: ماذا حدث؟ ولماذا؟ وماذا نفعل؟ وكيف نتحقق؟]</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         Summary: علامة ✓ تأتي من CSS فلا تكتبها. آخر نقطة: «عقلية المهندس: …» بجملة واحدة.
+      =========================================================== -->
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>[نقطة أساسية 1]</li>
+              <li>[نقطة أساسية 2]</li>
+              <li>[عقلية المهندس: …]</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+         التنقل بين صفحات القسم: أول صفحة تجعل «السابق» = ../index.html#معرّف-القسم (بطاقة القسم في الخطة)،
+         وآخر صفحة تجعل «التالي» = ../index.html#معرّف-القسم. المسارات والعناوين يحدّدها الـ prompt.
+      =========================================================== -->
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="[مسار-السابق.html]">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">[عنوان الصفحة السابقة]</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="[مسار-التالي.html]">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">[عنوان الصفحة التالية]</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>

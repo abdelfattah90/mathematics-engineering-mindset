@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integers, Rationals, Absolute Value - الأعداد الصحيحة والنسبية والقيمة المطلقة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#math-6"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">M1 · Basic Mathematics · 6</div>
+          <h1 class="hero__title">Integers, Rationals, Absolute Value - الأعداد الصحيحة والنسبية والقيمة المطلقة</h1>
+          <p class="hero__lead">
+            حتى الآن كانت أعدادنا كلها عند 0 أو على يمينه. نمدّ في هذه الصفحة خط الأعداد إلى يسار 0، ونرى كيف تعمل العمليات حين تظهر الإشارة، ثم نوسّعه ليشمل كل الكسور. بعد ذلك نجيب عن سؤالين يتكرران في البرمجة: كم يبعد عدد عن 0 بغض النظر عن الاتجاه؟ وأي عدد كامل نختار حين يقع الناتج بين عددين كاملين؟ ما نبنيه هنا هو الأساس الذي تقف عليه الصفحات التالية.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <div class="topic-block" id="integers">
+              <h3 class="topic-block__title">Integers &amp; the Number Line - الأعداد الصحيحة وخط الأعداد</h3>
+              <p>
+                الطرح هو Inverse Operation للجمع، فالسؤال \(3 - 5\) يعني: أي عدد نضيفه إلى 5 فنحصل على 3؟ لا جواب بين Whole Number، لأنها كلها 0 أو أكبر (تذكير: Whole Number هي الأعداد 0 و1 و2 وهكذا بلا نهاية). والحياة مليئة بما هو أقل من 0: درجة حرارة تحت التجمد، ورصيد مدين، وإزاحة نحو اليسار. الحل أن نمدّ الخط ونضيف أعدادًا جديدة.
+              </p>
+              <p>
+                تذكير: Number Line خط تُرتَّب عليه الأعداد وتزيد قيمتها كلما اتجهنا يمينًا. نمدّه الآن إلى يسار 0 بالوحدة نفسها.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  <strong>Opposite</strong> لعدد \(a\) هو العدد \(-a\) الذي يبعد عن 0 المسافة نفسها لكن في الجهة المقابلة، ومجموعهما 0: \(a + (-a) = 0\). وOpposite العدد 0 هو 0.
+                </p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  <strong>Negative Number</strong> هو عدد أقل من 0، أي يقع على يسار 0 على خط الأعداد. و<strong>Integer</strong> هو Whole Number أو Opposite لأحدها: \(\dots, -3, -2, -1, 0, 1, 2, 3, \dots\)
+                </p>
+              </div>
+
+              <p>
+                الحدس: الخط بعد التوسيع مرآة حول 0، ولكل عدد توأم في الجهة المقابلة. ومجموع التوأمين 0: نمشي \(a\) وحدة ثم نعود \(a\) وحدة فنرجع إلى مكاننا. وانتبه: الرمز \(-a\) يعني Opposite للعدد \(a\) لا «عددًا سالبًا» دائمًا؛ فإذا كان \(a = -4\) فإن \(-a = 4\).
+              </p>
+
+              <figure class="figure">
+                <svg viewBox="0 0 560 100" width="560" direction="ltr" role="img" aria-label="خط أعداد من سالب خمسة إلى خمسة، تظهر عليه النقطتان 3 وسالب 3 على بعد متساوٍ من الصفر">
+                  <path class="fg-axis" d="M30 55H530M55 49V61M100 49V61M145 49V61M190 49V61M235 49V61M280 49V61M325 49V61M370 49V61M415 49V61M460 49V61M505 49V61" />
+                  <path class="fg-line" d="M145 43C145 12 280 12 280 43" />
+                  <path class="fg-line" d="M280 43C280 12 415 12 415 43" />
+                  <circle class="fg-dot-accent" cx="145" cy="55" r="5" />
+                  <circle class="fg-dot-accent" cx="415" cy="55" r="5" />
+                  <text class="fg-text" x="55" y="84" text-anchor="middle">−5</text>
+                  <text class="fg-text" x="100" y="84" text-anchor="middle">−4</text>
+                  <text class="fg-text" x="145" y="84" text-anchor="middle">−3</text>
+                  <text class="fg-text" x="190" y="84" text-anchor="middle">−2</text>
+                  <text class="fg-text" x="235" y="84" text-anchor="middle">−1</text>
+                  <text class="fg-text" x="280" y="84" text-anchor="middle">0</text>
+                  <text class="fg-text" x="325" y="84" text-anchor="middle">1</text>
+                  <text class="fg-text" x="370" y="84" text-anchor="middle">2</text>
+                  <text class="fg-text" x="415" y="84" text-anchor="middle">3</text>
+                  <text class="fg-text" x="460" y="84" text-anchor="middle">4</text>
+                  <text class="fg-text" x="505" y="84" text-anchor="middle">5</text>
+                </svg>
+                <figcaption>خط الأعداد بعد التوسيع: العددان \(3\) و\(-3\) متقابلان، وكل منهما يبعد 3 وحدات عن 0.</figcaption>
+              </figure>
+
+              <p>
+                نرتّب الأعداد من اليسار إلى اليمين، فيكون الأصغر هو الأبعد يسارًا: \(-5 \lt -2 \lt 0 \lt 3\).
+              </p>
+
+              <p>
+                الجمع حركة على الخط: نبدأ من العدد الأول ونتحرك بمقدار العدد الثاني، يمينًا إن كان موجبًا ويسارًا إن كان Negative Number. فمثلًا \(3 + (-5)\): نبدأ من 3 ونتحرك 5 وحدات يسارًا فنصل إلى \(-2\). أما الطرح فنفسّره بإضافة Opposite.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>طرح عدد هو جمع Opposite له:</p>
+                <div class="math-block">\[ a - b = a + (-b) \]</div>
+              </div>
+
+              <p>
+                لماذا تصح؟ لأن \(a + (-b)\) يحقق شرط الطرح: إذا أضفنا إليه \(b\) عدنا إلى \(a\).
+              </p>
+              <div class="math-block">\[ (a + (-b)) + b = a + ((-b) + b) = a + 0 = a \]</div>
+              <p>
+                والخطوة الأولى هي Associative Property.
+              </p>
+
+              <p>
+                ننتقل إلى الضرب. معنى \(3 \times (-2)\) يأتي من التكرار: ثلاث نسخ من \(-2\) هي \((-2) + (-2) + (-2) = -6\). أما \((-1) \times (-2)\) فلا يُفسَّر بالتكرار، فنسأل: ما الناتج الذي يُبقي القواعد التي نعرفها صحيحة؟ نبدأ بنمط.
+              </p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>\(n\)</th>
+                      <th>\(n \times (-2)\)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\(3\)</td>
+                      <td>\(-6\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(2\)</td>
+                      <td>\(-4\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(1\)</td>
+                      <td>\(-2\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(0\)</td>
+                      <td>\(0\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(-1\)</td>
+                      <td>؟</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                تأمّل الصفوف الأربعة الأولى ثم توقّع: ماذا تتوقع أن يظهر مكان علامة الاستفهام لو استمر النمط؟ وماذا عن \((-2) \times (-2)\)؟
+              </p>
+              <p>
+                في كل صف ينقص العامل الأول بمقدار 1 ويزيد الناتج بمقدار 2، فيلزم أن يكون \((-1) \times (-2) = 2\) ثم \((-2) \times (-2) = 4\). إن توقعت \(-2\) فقد قادك حدس «السالب يجعل الناتج سالبًا»، والنمط يخالفه.
+              </p>
+              <p>
+                النمط حدس لا برهان، فنتحقق بقاعدة نثق بها. تذكير: Distributive Property تقول \((a + b) \times c = a \times c + b \times c\).
+              </p>
+
+              <div class="callout callout--note">
+                <span class="callout__label">برهان</span>
+                <p>
+                  <strong>الفكرة:</strong> نجمع الناتج المجهول مع \(1 \times (-2)\)؛ فإن كان المجموع 0 كان الناتج هو Opposite لـ \(1 \times (-2)\).
+                </p>
+                <ol>
+                  <li>نكتب \((-1) \times (-2) + 1 \times (-2)\) ونطبق Distributive Property فنحصل على \(((-1) + 1) \times (-2)\).</li>
+                  <li>\((-1) + 1 = 0\)، وأي عدد مضروبًا في 0 يساوي 0؛ فالمجموع 0.</li>
+                  <li>إذن \((-1) \times (-2)\) إذا أُضيف إلى \(1 \times (-2) = -2\) أعطى 0، فهو Opposite لـ \(-2\)، أي 2.</li>
+                </ol>
+                <div class="math-block">
+                  \[ \begin{aligned} (-1) \times (-2) + 1 \times (-2) &amp;= ((-1) + 1) \times (-2) \\ &amp;= 0 \times (-2) = 0 \end{aligned} \]
+                </div>
+                <p>
+                  <strong>لماذا يكفي؟</strong> لأن العدد الذي يعطي 0 عند جمعه مع \(-2\) واحد فقط، وهو 2، فلا يبقى للناتج خيار آخر إن أردنا أن تظل Distributive Property صحيحة. والحجة نفسها تعمل لأي عددين موجبين \(a\) و\(b\): \((-a) \times (-b) = a \times b\).
+                </p>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>
+                  في الضرب والقسمة: إذا اتفقت إشارتا العددين فالناتج موجب، وإن اختلفتا فالناتج سالب (والمقسوم عليه لا يساوي 0).
+                </p>
+              </div>
+
+              <p>
+                القسمة تتبع القاعدة نفسها لأنها Inverse Operation للضرب: \(-6 \div (-2) = 3\) لأن \(3 \times (-2) = -6\). أما \(7 \div 2\) فلا ناتج لها بين Integer، وهذا ما يقودنا إلى الموضوع التالي.
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>
+                    احسب \(-4 + 3 \times (-2) - (-5)\). (تذكير: Order of Operations تُجري الضرب قبل الجمع والطرح.)
+                  </p>
+                  <ol>
+                    <li>الضرب أولًا: \(3 \times (-2) = -6\)، فتصير العبارة \(-4 + (-6) - (-5)\).</li>
+                    <li>نحوّل الطرح إلى جمع Opposite: \(-4 + (-6) + 5\).</li>
+                    <li>نجمع من اليسار: \(-4 + (-6) = -10\)، ثم \(-10 + 5 = -5\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(-5\). التحقق بترتيب آخر للجمع: \(-4 + 5 + (-6) = 1 + (-6) = -5\)، والنتيجة نفسها.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> إذا حسبت إزاحة عنصر على الشاشة بوصفها «الموضع الجديد − الموضع القديم» فإشارة الناتج تحمل الاتجاه: \(-3\) تعني ثلاث وحدات نحو اليسار و\(+3\) نحو اليمين. ومن يخلط ترتيب Negative Number عند البحث عن أصغر قيمة أو أكبرها في حرارة أو ربح وخسارة يختار القيمة الخطأ.
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: «\(-5 \gt -2\) لأن 5 أكبر من 2». نتيجته أن يُعدّ الرصيد المدين بخمسة أفضل من المدين باثنين. المثال المضاد: على Number Line يقع \(-5\) يسار \(-2\)، فهو الأصغر. التصحيح: بين عددين سالبين الأكبر هو الأقرب إلى 0.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="rationals">
+              <h3 class="topic-block__title">Rational Numbers - الأعداد النسبية</h3>
+              <p>
+                Integer لا يكفي للقسمة: لا يوجد Integer \(x\) يحقق \(2x = 7\)، فلا ناتج لـ \(7 \div 2\) بينها. تذكير: Fraction عدد يُكتب بسطًا فوق مقام، ويعني قسمة البسط على المقام. المطلوب أن نسمح للبسط والمقام بأن يكونا أي Integer، وهنا تدخل الإشارة.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  <strong>Rational Number</strong> هو كل عدد يمكن كتابته على الصورة \(\frac{a}{b}\) حيث \(a\) و\(b\) عددان من Integer و\(b \ne 0\).
+                </p>
+              </div>
+
+              <p>
+                كل Integer هو Rational Number لأن \(n = \frac{n}{1}\). وتذكير: Decimal هو الكتابة بالفاصلة العشرية. وكل Terminating Decimal كسر، مثل \(-2.5 = -\frac{5}{2}\)، وكذلك كل Repeating Decimal، مثل \(0.333\ldots = \frac{1}{3}\) (حاصل \(1 \div 3\)).
+              </p>
+              <p>
+                وموضع الإشارة لا يغيّر القيمة: \(\frac{-3}{4} = \frac{3}{-4} = -\frac{3}{4}\)، لأن قسمة عددين مختلفي الإشارة سالبة. ونكتب المقام موجبًا عادةً.
+              </p>
+
+              <p>
+                الحدس: كل Rational Number نقطة على خط الأعداد نصل إليها بتقسيم الوحدة إلى أجزاء متساوية ثم العدّ منها يمينًا أو يسارًا. لذلك تبقى عملياته عمليات Fraction التي نعرفها: Common Denominator للجمع والطرح، وضرب البسطين والمقامين، والقسمة بضرب Reciprocal، مع قواعد الإشارة السابقة. والمقارنة بتوحيد المقام الموجب ثم مقارنة البسطين كما نقارن Integer على الخط.
+              </p>
+              <p>
+                وللأعداد النسبية كثافة: بين أي عددين نسبيين \(p\) و\(q\) عدد نسبي ثالث هو متوسطهما \(\frac{p + q}{2}\)، فلا يوجد «عدد نسبي تالٍ» لأي عدد، بخلاف Integer الذي له تالٍ.
+              </p>
+
+              <p>
+                توقّع: أيهما أكبر، \(-\frac{3}{4}\) أم \(-\frac{2}{3}\)؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>قارن \(-\frac{3}{4}\) و\(-\frac{2}{3}\) ثم اجمعهما.</p>
+                  <ol>
+                    <li>نوحّد المقام: أصغر مقام مشترك لـ 4 و3 هو 12، فيكون \(-\frac{3}{4} = -\frac{9}{12}\) و\(-\frac{2}{3} = -\frac{8}{12}\).</li>
+                    <li>نقارن البسطين: \(-9 \lt -8\) على خط الأعداد، فإن \(-\frac{9}{12} \lt -\frac{8}{12}\).</li>
+                    <li>نجمع: \(-\frac{9}{12} + \left(-\frac{8}{12}\right) = -\frac{17}{12}\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(-\frac{3}{4} \lt -\frac{2}{3}\) والمجموع \(-\frac{17}{12}\) (لا يُبسَّط لأن 17 عدد أولي لا يقسم 12). التحقق بالعشري: \(-0.75 \lt -0.666\ldots\) صحيح، و\(-0.75 + (-0.666\ldots) = -1.41666\ldots\) وهو \(-\frac{17}{12}\) لأن \(17 \div 12 = 1.41666\ldots\). وبالنسبة إلى توقعك: إن اخترت \(-\frac{3}{4}\) لأن \(\frac{3}{4}\) أكبر فقد عكست الترتيب؛ \(-\frac{2}{3}\) أقرب إلى 0 فهو الأكبر.
+                  </p>
+                </div>
+              </div>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>
+                  ليست كل نقاط خط الأعداد نسبية: هناك نقاط لا يُكتب أي منها كسرًا بسطه ومقامه Integer. القوى والجذور تفتح لنا أعدادًا من هذا النوع الجديد، وهو موضوع الصفحة التالية.
+                </p>
+              </div>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> الكسر يحفظ القيمة بدقة تامة لأنه زوج من Integer، ولذلك تُخزَّن نسب مثل العرض إلى الارتفاع أحيانًا كبسط ومقام. أما \(\frac{1}{3}\) بوصفه Decimal فيجب قطعه عند عدد من الخانات فتضيع منه دقة: \(0.333 \times 3 = 0.999\) لا 1.
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: عدّ \(\frac{5}{0}\) عددًا نسبيًا قيمته «لا نهاية» أو 0. نتيجته: لو كان \(\frac{5}{0} = x\) لكان \(x \times 0 = 5\) لأن القسمة Inverse Operation للضرب، لكن أي عدد مضروبًا في 0 يعطي 0 لا 5، فلا يوجد \(x\). التصحيح: الشرط \(b \ne 0\) في التعريف ضروري؛ والكتابة \(\frac{5}{0}\) بلا معنى، وكذلك \(\frac{0}{0}\) لأن كل عدد يصلح جوابًا لها.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="absolute-floor-ceiling">
+              <h3 class="topic-block__title">Absolute Value, Floor &amp; Ceiling - القيمة المطلقة وFloor وCeiling</h3>
+              <p>
+                لدينا سؤالان مختلفان. الأول: كم يبعد عدد عن 0 دون أن يهمنا الاتجاه؟ والثاني: حين يقع ناتج بين عددين Integer متجاورين، أي Integer نختار؟ نبدأ بالأول.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  <strong>Absolute Value</strong> لعدد \(x\) هي بعده عن 0 على خط الأعداد، وتُكتب \(\lvert x \rvert\).
+                </p>
+              </div>
+
+              <p>
+                الحدس: البعد لا يكون سالبًا، فالقيمة المطلقة تُسقط الاتجاه وتُبقي الحجم. وبالصيغة: \(\lvert x \rvert = x\) إذا كان \(x \ge 0\)، و\(\lvert x \rvert = -x\) إذا كان \(x \lt 0\). والسطر الثاني لا يعني أن الناتج سالب: إن كان \(x = -3\) فإن \(-x = 3\)، وهكذا \(\lvert -3 \rvert = 3\).
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>المسافة بين عددين \(a\) و\(b\) على الخط هي القيمة المطلقة لفرقهما، ولا يهم الترتيب:</p>
+                <div class="math-block">\[ \lvert a - b \rvert = \lvert b - a \rvert \]</div>
+              </div>
+
+              <p>
+                لماذا لا يهم الترتيب؟ لأن \(b - a\) هو Opposite لـ \(a - b\)، وللعددين المتقابلين البعد نفسه عن 0. ونحسب ما بداخل \(\lvert \cdot \rvert\) أولًا كما نفعل في الأقواس، ثم نأخذ القيمة المطلقة.
+              </p>
+
+              <p>
+                توقّع: ما المسافة بين \(-3\) و\(5\) على الخط؟ هل هي 2 أم 8؟
+              </p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب المسافة بين \(-3\) و\(5\).</p>
+                  <ol>
+                    <li>المسافة \(= \lvert 5 - (-3) \rvert\).</li>
+                    <li>نحسب ما بداخلها أولًا: \(5 - (-3) = 5 + 3 = 8\).</li>
+                    <li>نأخذ القيمة المطلقة: \(\lvert 8 \rvert = 8\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: 8. التحقق بطريقة أخرى: من \(-3\) إلى 0 ثلاث وحدات ومن 0 إلى 5 خمس وحدات، ومجموعهما 8؛ وبعكس الترتيب \(\lvert -3 - 5 \rvert = \lvert -8 \rvert = 8\). وبالنسبة إلى توقعك: الرقم 2 هو فرق الحجمين فقط، ويصح لو كان العددان على جهة واحدة من 0.
+                  </p>
+                </div>
+              </div>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>
+                  حلّ المعادلات والمتباينات التي فيها قيمة مطلقة موضوع مرحلة لاحقة؛ نكتفي هنا بالتعريف وبقياس المسافة.
+                </p>
+              </div>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> الفارق بين توقيتين \(t_1\) و\(t_2\) هو \(\lvert t_2 - t_1 \rvert\)، فيعطي القيمة نفسها أيهما أسبق، ولا يظهر رقم سالب مفاجئ في التقرير.
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: \(\lvert a - b \rvert = \lvert a \rvert - \lvert b \rvert\). نتيجته مع \(a = 5\) و\(b = -3\): \(5 - 3 = 2\) بدل 8، وهذا مثال مضاد واحد يُسقط القاعدة. التصحيح: نحسب الفرق أولًا ثم نأخذ القيمة المطلقة. وبما أن القيمة المطلقة لا تكون سالبة فكل ناتج سالب يكشف الخطأ، مثل \(\lvert 3 \rvert - \lvert 5 \rvert = -2\).
+                </p>
+              </div>
+
+              <p>
+                ننتقل إلى السؤال الثاني. العدد \(-2.5\) يقع بين Integer متجاورين هما \(-3\) و\(-2\)، ونحتاج قاعدة تختار أحدهما. والقواعد الشائعة ثلاث.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>
+                  <strong>Floor</strong> لعدد \(x\) هو أكبر Integer لا يزيد على \(x\)، ويُكتب \(\lfloor x \rfloor\).
+                </p>
+                <p>
+                  <strong>Ceiling</strong> لعدد \(x\) هو أصغر Integer لا يقل عن \(x\)، ويُكتب \(\lceil x \rceil\).
+                </p>
+                <p>
+                  <strong>Truncation</strong> (الجزء الصحيح) هي حذف الجزء الكسري من العدد وإبقاء Integer الأقرب إلى 0.
+                </p>
+              </div>
+
+              <p>
+                الحدس: كل منها يحرّك العدد إلى Integer مجاور في اتجاه مختلف. Floor نحو اليسار دائمًا، وCeiling نحو اليمين دائمًا، وTruncation نحو 0. لذلك تطابق Truncation مع Floor في الموجب ومع Ceiling في السالب، ويظهر الفرق بين Floor وTruncation في السالب فقط.
+              </p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">صيغة</span>
+                <p>إذا كان \(n\) من Integer فإن:</p>
+                <div class="math-block">\[ \lfloor x \rfloor = n \iff n \le x \lt n + 1 \]</div>
+                <div class="math-block">\[ \lceil x \rceil = n \iff n - 1 \lt x \le n \]</div>
+              </div>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>\(x\)</th>
+                      <th>Floor</th>
+                      <th>Ceiling</th>
+                      <th>Truncation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\(2.5\)</td>
+                      <td>\(2\)</td>
+                      <td>\(3\)</td>
+                      <td>\(2\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(-2.5\)</td>
+                      <td>\(-3\)</td>
+                      <td>\(-2\)</td>
+                      <td>\(-2\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(3\)</td>
+                      <td>\(3\)</td>
+                      <td>\(3\)</td>
+                      <td>\(3\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(-0.5\)</td>
+                      <td>\(-1\)</td>
+                      <td>\(0\)</td>
+                      <td>\(0\)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                توقّع: ماذا تتوقع أن يكون \(\lfloor -2.5 \rfloor\)؟ هل هو \(-2\) لأن الجزء الكسري يُحذف؟
+              </p>
+
+              <figure class="figure">
+                <svg viewBox="0 0 540 110" width="540" direction="ltr" role="img" aria-label="خط أعداد من سالب أربعة إلى ثلاثة، عليه النقطة سالب 2.5 بين سالب 3 وسالب 2">
+                  <path class="fg-axis" d="M30 55H510M60 49V61M120 49V61M180 49V61M240 49V61M300 49V61M360 49V61M420 49V61M480 49V61" />
+                  <path class="fg-line" d="M150 43C150 15 120 15 120 43" />
+                  <path class="fg-line" d="M150 43C150 15 180 15 180 43" />
+                  <circle class="fg-dot-accent" cx="150" cy="55" r="5" />
+                  <text class="fg-text" x="60" y="82" text-anchor="middle">−4</text>
+                  <text class="fg-text" x="120" y="82" text-anchor="middle">−3</text>
+                  <text class="fg-text" x="180" y="82" text-anchor="middle">−2</text>
+                  <text class="fg-text" x="240" y="82" text-anchor="middle">−1</text>
+                  <text class="fg-text" x="300" y="82" text-anchor="middle">0</text>
+                  <text class="fg-text" x="360" y="82" text-anchor="middle">1</text>
+                  <text class="fg-text" x="420" y="82" text-anchor="middle">2</text>
+                  <text class="fg-text" x="480" y="82" text-anchor="middle">3</text>
+                  <text class="fg-text" x="150" y="104" text-anchor="middle">−2.5</text>
+                </svg>
+                <figcaption>النقطة الملونة هي \(-2.5\). القوس الأيسر يصل إلى \(-3\) (Floor) والأيمن إلى \(-2\) (Ceiling)، وTruncation تختار \(-2\) لأنه الأقرب إلى 0.</figcaption>
+              </figure>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب Floor وCeiling وTruncation للعدد \(-2.5\).</p>
+                  <ol>
+                    <li>نحدّد Integer المتجاورين: \(-3 \le -2.5 \lt -2\).</li>
+                    <li>Floor: أكبر Integer لا يزيد على \(-2.5\). العدد \(-2\) أكبر من \(-2.5\) فلا يصلح، فيبقى \(-3\).</li>
+                    <li>Ceiling: أصغر Integer لا يقل عن \(-2.5\)، وهو \(-2\).</li>
+                    <li>Truncation: نحذف \(.5\) فيبقى \(-2\).</li>
+                  </ol>
+                  <p class="example__answer">
+                    الجواب: \(\lfloor -2.5 \rfloor = -3\) و\(\lceil -2.5 \rceil = -2\) وTruncation تعطي \(-2\). التحقق بطريقة أخرى: العلاقة \(\lceil x \rceil = -\lfloor -x \rfloor\) تعطي \(-\lfloor 2.5 \rfloor = -2\) وهو يطابق Ceiling؛ والسبب أن الانعكاس حول 0 يقلب اليسار واليمين فيحوّل Floor إلى Ceiling. وبالنسبة إلى توقعك: \(-2\) هو Truncation لا Floor.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                <strong>لماذا يهمّ مهندس البرمجيات؟</strong> عدد الصفحات عند عرض 103 عناصر بعشرة في الصفحة هو \(\lceil 103 \div 10 \rceil = \lceil 10.3 \rceil = 11\)؛ والتحقق أن 10 صفحات تحمل 100 عنصر ويبقى 3، فتلزم صفحة إضافية، ولو استعملنا Floor لحصلنا على 10 وضاعت 3 عناصر. وفي القسمة الصحيحة على عدد سالب: \(-7 \div 2 = -3.5\) تصير \(-4\) مع Floor و\(-3\) مع Truncation، وتختلف لغات البرمجة في الاتفاق الذي تتبعه، فلا تفترض سلوكًا واحدًا.
+              </p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>
+                  الخطأ: «Floor تعني حذف الجزء الكسري»، فيُكتب \(\lfloor -2.5 \rfloor = -2\). نتيجته أن \(-2\) لا يحقق الشرط \(n \le x\) لأن \(-2 \gt -2.5\)، وهذا مثال مضاد. التصحيح: الحذف هو Truncation، أما Floor فهو أكبر Integer لا يزيد على \(x\). يتفقان في الموجب (\(\lfloor 2.5 \rfloor = 2\))، ويختلفان في كل Negative Number له جزء كسري.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="comparison">
+        <div class="container">
+          <div class="content-section__eyebrow">مقارنة</div>
+          <h2 class="content-section__title">Floor vs Truncation - أيهما نختار في القسمة الصحيحة؟</h2>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>الميزة</th>
+                  <th>Floor</th>
+                  <th>Truncation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الاتجاه</td>
+                  <td>نحو اليسار دائمًا</td>
+                  <td>نحو 0 دائمًا</td>
+                </tr>
+                <tr>
+                  <td>نتيجة \(-7 \div 2\) و\(7 \div 2\)</td>
+                  <td>\(-4\) و\(3\)</td>
+                  <td>\(-3\) و\(3\)</td>
+                </tr>
+                <tr>
+                  <td>التماثل بين \(x\) و\(-x\)</td>
+                  <td>غير متماثل: \(\lfloor -3.5 \rfloor = -4\) بينما \(-\lfloor 3.5 \rfloor = -3\)</td>
+                  <td>متماثل: Truncation للعدد \(-3.5\) هي \(-3\) وللعدد \(3.5\) هي \(3\)</td>
+                </tr>
+                <tr>
+                  <td>دلاء (buckets) عرض كل منها 10 قرب 0</td>
+                  <td>كل الدلاء بعرض 10 قيم</td>
+                  <td>الدلو 0 يضم من \(-9\) إلى \(9\)، أي 19 قيمة</td>
+                </tr>
+                <tr>
+                  <td>متى نختاره</td>
+                  <td>حين نريد تقسيمًا منتظمًا يمتد في الاتجاهين: دلاء وبلاط وصفحات</td>
+                  <td>حين نريد ألا تغيّر الإشارة المقدار، أو حين تفرضه لغة أو بروتوكول نتعامل معه</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>ما المقصود بالرمز \(-a\)؟ وما قيمته حين \(a = -4\)؟ وهل هو عدد سالب دائمًا؟</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>
+                    \(-a\) هو Opposite للعدد \(a\)، أي العدد الذي يبعد عن 0 المسافة نفسها في الجهة المقابلة ومجموعه مع \(a\) يساوي 0. حين \(a = -4\) يكون \(-a = 4\)، والتحقق: \(-4 + 4 = 0\). فهو سالب فقط إذا كان \(a\) موجبًا. (راجع: Integers &amp; the Number Line)
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q2">
+              <h3 class="topic-block__title">سؤال 2</h3>
+              <p>احسب \(-\frac{1}{2} + \frac{1}{3}\) ثم تحقق من الجواب بالأعداد العشرية.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>
+                    المقام المشترك 6: \(-\frac{3}{6} + \frac{2}{6} = -\frac{1}{6}\). التحقق: \(-0.5 + 0.333\ldots = -0.1666\ldots\) و\(\frac{1}{6} = 0.1666\ldots\)، فالجواب \(-\frac{1}{6}\) صحيح. (راجع: Rational Numbers)
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q3">
+              <h3 class="topic-block__title">سؤال 3</h3>
+              <p>كتب زميل أن \(\lvert a + b \rvert = \lvert a \rvert + \lvert b \rvert\) لكل عددين. أعطِ مثالًا مضادًا، ثم حدّد متى تصح المساواة.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>
+                    خذ \(a = -3\) و\(b = 5\): \(\lvert -3 + 5 \rvert = 2\) بينما \(\lvert -3 \rvert + \lvert 5 \rvert = 8\). تصح المساواة حين يكون للعددين الإشارة نفسها أو يكون أحدهما 0، لأن الجمع عندها لا يُلغي شيئًا؛ أما اختلاف الإشارة فيجعل أحد العددين يُنقص الآخر. (راجع: Absolute Value, Floor &amp; Ceiling)
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q4">
+              <h3 class="topic-block__title">سؤال 4</h3>
+              <p>يحسب مطوّر عدد الصفحات بالصيغة \(\lfloor n \div 10 \rfloor + 1\) حيث \(n\) عدد العناصر وفي كل صفحة عشرة. اختبرها عند \(n = 103\) وعند \(n = 100\)، ثم اختر العملية الصحيحة وعلّل.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>
+                    عند \(n = 103\) تعطي \(10 + 1 = 11\) وهو صحيح، لكن عند \(n = 100\) تعطي \(10 + 1 = 11\) والصحيح 10، فتظهر صفحة فارغة. الصحيح \(\lceil n \div 10 \rceil\): تعطي 11 عند 103 و10 عند 100، لأن Ceiling لا تضيف صفحة إلا إذا بقيت عناصر. (راجع: Absolute Value, Floor &amp; Ceiling)
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q5">
+              <h3 class="topic-block__title">سؤال 5</h3>
+              <p>اشرحها لغيرك: زميل مهندس يقول إن \((-1) \times (-2)\) يساوي \(-2\) لأن «السالب يبقى سالبًا». اشرح له بجملتين أو ثلاث لماذا يساوي 2.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>
+                    في النمط \(3 \times (-2) = -6\) ثم \(2 \times (-2) = -4\) ثم \(1 \times (-2) = -2\) ثم \(0 \times (-2) = 0\) يزيد الناتج 2 كلما نقص العامل الأول 1، فالصف التالي هو 2. وبالتوزيع \((-1) \times (-2) + 1 \times (-2) = ((-1) + 1) \times (-2) = 0\)، فالناتج هو Opposite لـ \(-2\)، أي 2؛ وأي ناتج آخر يكسر Distributive Property. (راجع: Integers &amp; the Number Line)
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">Response Time Monitoring - مراقبة زمن الاستجابة</h2>
+
+          <div class="article-content">
+            <p>
+              تراقب خدمة زمن استجابة طلباتها بالملّي ثانية، والزمن المستهدف 200. نحسب لكل قياس \(t\) الانحراف \(d = t - 200\): يكون موجبًا إن كان الطلب أبطأ من المستهدف وسالبًا إن كان أسرع. والقياسات لأربعة طلبات هي:
+            </p>
+
+            <div class="table-wrap table-wrap--fit">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>الطلب</th>
+                    <th>\(t\)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A</td>
+                    <td>\(170\)</td>
+                  </tr>
+                  <tr>
+                    <td>B</td>
+                    <td>\(235\)</td>
+                  </tr>
+                  <tr>
+                    <td>C</td>
+                    <td>\(200\)</td>
+                  </tr>
+                  <tr>
+                    <td>D</td>
+                    <td>\(148\)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol>
+              <li>احسب \(d\) و\(\lvert d \rvert\) لكل طلب، ثم متوسط \(d\) (نرمز له بـ \(\bar{d}\)) ومتوسط \(\lvert d \rvert\) بوصف كل منهما كسرًا مقامه 4، وبسّطه واكتبه عشريًا.</li>
+              <li>تنبّه القاعدة الحالية حين يكون \(\lvert \bar{d} \rvert \gt 20\). هل تنبّه على هذه البيانات؟ ولماذا قد لا يكون ذلك مناسبًا؟ أصلح القاعدة وتحقق منها بطريقة أخرى.</li>
+              <li>تُجمَّع الانحرافات في نطاقات عرض كل منها 50 لرسم توزيعها، ورقم النطاق \(k\) هو الذي يحقق \(50k \le d \lt 50(k + 1)\). يحسب المطوّر الرقم بـ Truncation للناتج \(d \div 50\). احسب رقم كل طلب بـ Truncation وبـ Floor، ثم قرّر أيهما يصح ولماذا.</li>
+              <li>عقلية المهندس — اشرحها لغيرك: اكتب لزميل في ثلاث جمل لماذا لا يكفي متوسط \(d\) وحده، ولماذا اخترنا Floor لا Truncation للنطاقات، ولماذا قد يختفي الخطأ لو اختبرنا الكود ببيانات موجبة فقط.</li>
+            </ol>
+
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>في الخطوة 2 قارن مجموع القيم الموجبة بمجموع السالبة، وفي الخطوة 3 اختبر حدّي النطاق عند 0 وعند \(-50\).</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <p>الخطوة 1: الانحرافات وقيمها المطلقة.</p>
+                <div class="table-wrap table-wrap--fit">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>الطلب</th>
+                        <th>\(d\)</th>
+                        <th>\(\lvert d \rvert\)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A</td>
+                        <td>\(-30\)</td>
+                        <td>\(30\)</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>\(35\)</td>
+                        <td>\(35\)</td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td>\(0\)</td>
+                        <td>\(0\)</td>
+                      </tr>
+                      <tr>
+                        <td>D</td>
+                        <td>\(-52\)</td>
+                        <td>\(52\)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="math-block">\[ \bar{d} = \frac{-30 + 35 + 0 + (-52)}{4} = \frac{-47}{4} = -11.75 \]</div>
+                <div class="math-block">\[ \frac{30 + 35 + 0 + 52}{4} = \frac{117}{4} = 29.25 \]</div>
+                <p>
+                  الكسران في أبسط صورة لأن البسطين فرديان والمقام 4. التحقق: \(4 \times 11.75 = 47\) و\(4 \times 29.25 = 117\)؛ ومجموع \(d\) من طريق آخر: \((170 + 235 + 200 + 148) - 4 \times 200 = 753 - 800 = -47\).
+                </p>
+
+                <p>
+                  الخطوة 2: \(\lvert \bar{d} \rvert = 11.75\) وهو لا يزيد على 20، فلا تنبّه القاعدة، مع أن ثلاثة طلبات انحرفت بأكثر من 20 (30 و35 و52). السبب أن الإشارتين تُلغي إحداهما الأخرى في المجموع: \(-30 + (-52) = -82\) يقابله 35 فقط. الإصلاح: نستعمل متوسط \(\lvert d \rvert\) وهو 29.25، وهو أكبر من 20 فتنبّه. التحقق بطريقة أخرى: القيم 30 و35 و52 كلها تزيد على 20، فالتنبيه متسق مع البيانات.
+                </p>
+
+                <p>الخطوة 3: رقم النطاق بالطريقتين.</p>
+                <div class="table-wrap table-wrap--fit">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>الطلب</th>
+                        <th>\(d\)</th>
+                        <th>\(d \div 50\)</th>
+                        <th>Truncation</th>
+                        <th>Floor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A</td>
+                        <td>\(-30\)</td>
+                        <td>\(-0.6\)</td>
+                        <td>\(0\)</td>
+                        <td>\(-1\)</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>\(35\)</td>
+                        <td>\(0.7\)</td>
+                        <td>\(0\)</td>
+                        <td>\(0\)</td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td>\(0\)</td>
+                        <td>\(0\)</td>
+                        <td>\(0\)</td>
+                        <td>\(0\)</td>
+                      </tr>
+                      <tr>
+                        <td>D</td>
+                        <td>\(-52\)</td>
+                        <td>\(-1.04\)</td>
+                        <td>\(-1\)</td>
+                        <td>\(-2\)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  مع Truncation تقع A وB وC في النطاق 0، لكن النطاق 0 يجب أن يضم من 0 إلى أقل من 50 فقط، و\(-30\) خارجه. فصار النطاق 0 يضم من \(-49\) إلى 49، أي عرضًا مضاعفًا تقريبًا، وتختلط الطلبات الأسرع والأبطأ. أما Floor فيحقق الشرط: للطلب A نجد \(-50 \le -30 \lt 0\) فيكون \(k = -1\)، وللطلب D نجد \(-100 \le -52 \lt -50\) فيكون \(k = -2\).
+                </p>
+
+                <p>
+                  <strong>عقلية المهندس:</strong> المتوسط الموقَّع يخفي الحجم لأن الإشارات تُلغي بعضها، فنقيس الحجم بـ \(\lvert d \rvert\). والنطاقات يجب أن تتساوى في العرض في الاتجاهين، وهذا ما يضمنه Floor لأنه يتحرك نحو اليسار دائمًا؛ أما Truncation فتتجه إلى 0 فتضاعف عرض النطاق الذي عند 0. ولو كانت كل قيم \(d\) موجبة لتطابقت Truncation وFloor واختفى الخطأ، لذلك يجب أن تشمل اختبارات الكود قيمًا سالبة وقيمًا على حدود النطاقات، مثل 0 و\(-50\).
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>Integer هو Whole Number أو Opposite لأحدها؛ وNegative Number يقع يسار 0، والرمز \(-a\) هو Opposite لـ \(a\) وليس سالبًا دائمًا.</li>
+              <li>الجمع حركة على خط الأعداد، والطرح جمع Opposite: \(a - b = a + (-b)\).</li>
+              <li>في الضرب والقسمة: إشارتان متفقتان تعطيان ناتجًا موجبًا ومختلفتان تعطيان سالبًا، لأن غير ذلك يكسر Distributive Property.</li>
+              <li>Rational Number هو \(\frac{a}{b}\) مع \(b \ne 0\)؛ يشمل كل Integer وكل Decimal منتهٍ أو متكرر، وبين أي عددين نسبيين عدد نسبي ثالث.</li>
+              <li>بين عددين سالبين الأكبر هو الأقرب إلى 0، ونقارن الكسور بتوحيد المقام الموجب.</li>
+              <li>Absolute Value هي البعد عن 0، والمسافة بين عددين هي \(\lvert a - b \rvert\) لا \(\lvert a \rvert - \lvert b \rvert\).</li>
+              <li>Floor نحو اليسار وCeiling نحو اليمين وTruncation نحو 0، ويختلف Floor عن Truncation في السالب فقط.</li>
+              <li>ليست كل الأعداد نسبية؛ والقوى والجذور في الصفحة التالية تفتح لنا أعدادًا من نوع جديد.</li>
+              <li>عقلية المهندس: قبل أن تثق بعملية قسمة أو تقريب أو فرق، جرّبها على قيمة سالبة وعلى حدٍّ (مثل 0 أو مضاعف تام) وتحقق منها بطريقة ثانية.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="05-ratio-proportion-percent.html">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">Ratio, Proportion, Percent - النسبة والتناسب والمئوية</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="07-powers-roots-real-numbers.html">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">Powers, Roots, Real Numbers - القوى والجذور والأعداد الحقيقية</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>

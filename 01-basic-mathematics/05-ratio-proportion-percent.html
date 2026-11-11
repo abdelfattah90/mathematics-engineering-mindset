@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratio, Proportion, Percent - النسبة والتناسب والمئوية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#math-5"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">M1 · Basic Mathematics · 5</div>
+          <h1 class="hero__title">Ratio, Proportion, Percent - النسبة والتناسب والمئوية</h1>
+          <p class="hero__lead">
+            تعلّمنا أن نعدّ الكميات ونقيسها ونجري عليها العمليات، أما هنا فنقارن كميتين معًا. تبدأ الصفحة بالنسبة والمعدل بوصفهما قسمة تُظهر الحجم النسبي، ثم التناسب الطردي والعكسي لحل مسائل «إن كان كذا فكم يكون؟»، ثم النسبة المئوية ونسبة التغير اللتين تملآن تقارير الأداء والمراقبة. كلها مبنية على الكسور والقسمة التي تعرفها.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <div class="topic-block" id="ratios-rates">
+              <h3 class="topic-block__title">Ratios &amp; Rates - النسب والمعدلات</h3>
+              <p>10 أخطاء في 20 طلبًا وضع سيئ جدًا، و10 أخطاء في 1,000,000 طلب وضع ممتاز. العدد وحده لا يكفي: نحتاج أن نقيس كل كمية بحجم ما تُقاس إليه، وأداة ذلك هي القسمة.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Ratio</strong> هي مقارنة بين كميتين بالقسمة. تدل النسبة \(3 : 4\) على 3 وحدات من الكمية الأولى مقابل كل 4 وحدات من الثانية، وللترتيب أثر: \(3 : 4\) تختلف عن \(4 : 3\).</p>
+              </div>
+
+              <p>الحدس: النسبة تصف شكل العلاقة لا حجمها المطلق. إذا ضربنا الكميتين في العدد نفسه أو قسمناهما عليه بقيت النسبة كما هي.</p>
+
+              <p>تُكتب النسبة بثلاث صيغ متكافئة: \(3 : 4\)، وكسرًا \(\frac{3}{4}\) (تذكير: Fraction عدد يُكتب بسطًا فوق مقام ويمثّل جزءًا من وحدة)، وعشريًا \(0.75\) (تذكير: Decimal عدد يُكتب بالقيمة المكانية بعد الفاصلة، وهنا هو ناتج \(3 \div 4\)). وتُبسَّط النسبة كما يُبسَّط الكسر، بقسمة طرفيها على GCD لهما.</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>في سجل خدمة 12 طلبًا فاشلًا و16 طلبًا ناجحًا. اكتب نسبة الفاشل إلى الناجح بأبسط صورة وبالصيغ الثلاث.</p>
+                  <ol>
+                    <li>نكتب النسبة كما وردت: \(12 : 16\)، أي \(\frac{12}{16}\).</li>
+                    <li>نبحث عن GCD: عوامل 12 هي 1 و2 و3 و4 و6 و12، وعوامل 16 هي 1 و2 و4 و8 و16، فالمشترك الأكبر هو 4.</li>
+                    <li>نقسم الطرفين على 4: \(\frac{12 \div 4}{16 \div 4} = \frac{3}{4}\). هذا كسر مكافئ (تذكير: Equivalent Fractions كسران يمثلان العدد نفسه، مثل \(\frac{1}{2}\) و\(\frac{2}{4}\)) وهو في أبسط صورة (تذكير: Simplest Form كسر لا يشترك بسطه ومقامه في عامل غير 1)، فلا عامل مشتركًا بين 3 و4 غير 1.</li>
+                    <li>عشريًا: \(3 \div 4 = 0.75\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: \(3 : 4\) أو \(\frac{3}{4}\) أو \(0.75\). التحقق: نضرب الطرفين في 4 فنعود إلى \(12 : 16\)، وكذلك \(12 \div 16 = 0.75\).</p>
+                </div>
+              </div>
+
+              <p><strong>لماذا يصح التبسيط؟</strong> قسمة الطرفين على 4 تعني تجميع الطلبات في حزم من 4: الفاشل 3 حزم والناجح 4 حزم. تغيّر حجم الحزمة لا نسبتها.</p>
+
+              <p>لكن ماذا لو كانت الكميتان بوحدتين مختلفتين، كالطلبات والدقائق؟ هنا لا نقارن «نوعًا بنوعه» بل نقيس كمية بالنسبة إلى أخرى.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Rate</strong> هو Ratio بين كميتين بوحدتين مختلفتين، مثل 1,200 طلب في 5 دقائق.</p>
+                <p><strong>Unit Rate</strong> هو Rate يكون مقامه وحدة واحدة، مثل 240 طلبًا في الدقيقة الواحدة.</p>
+              </div>
+
+              <p>الحدس: Unit Rate يضع المعدلات المختلفة على أساس واحد، فنقارنها كما نقارن أسعار «الكيلوغرام الواحد» لا أسعار العبوات المختلفة. وينكسر التشبيه في أن الكيلوغرام وحدة ثابتة، أما وحدة الزمن فنختارها بحسب السؤال: دقيقة أو ثانية أو ساعة.</p>
+
+              <p>توقّع قبل الحساب: خدمة عالجت 1,200 طلب في 5 دقائق. هل تتوقع عدد الطلبات في الثانية الواحدة أكبر من 240 أم أصغر؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>عالجت خدمة 1,200 طلب في 5 دقائق. احسب معدلها بالطلب في الدقيقة ثم بالطلب في الثانية.</p>
+                  <ol>
+                    <li>نقسم عدد الطلبات على الزمن لنجعل المقام دقيقة واحدة:
+                      <div class="math-block">\[ \frac{1{,}200 \text{ requests}}{5 \text{ min}} = \frac{240 \text{ requests}}{1 \text{ min}} \]</div>
+                    </li>
+                    <li>الدقيقة 60 ثانية، فتتوزع الطلبات الـ 240 على 60 ثانية:
+                      <div class="math-block">\[ \frac{240 \text{ requests}}{60 \text{ s}} = 4 \text{ requests/s} \]</div>
+                    </li>
+                  </ol>
+                  <p class="example__answer">الجواب: 240 طلبًا في الدقيقة، أي 4 طلبات في الثانية. النتيجة أصغر من 240 كما في التوقع، لأن الثانية أقصر من الدقيقة فنصيبها أقل. التحقق بالاتجاه المعاكس: \(4 \times 60 = 240\) ثم \(240 \times 5 = 1{,}200\).</p>
+                </div>
+              </div>
+
+              <p><strong>لماذا يهمّ مهندس البرمجيات؟</strong> خادم A عالج 900 طلب في 4 دقائق، وخادم B عالج 1,100 طلب في 5 دقائق. B عالج عددًا أكبر لكنه ليس الأسرع: \(900 \div 4 = 225\) طلبًا في الدقيقة مقابل \(1{,}100 \div 5 = 220\). لا تصح مقارنة throughput بين نافذتين زمنيتين مختلفتين إلا بعد تحويلهما إلى Unit Rate.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: قراءة نسبة الفاشل إلى الناجح \(3 : 4\) على أنها «\(\frac{3}{4}\) الطلبات فاشلة». النتيجة الخاطئة: المجموع في المثال 28 طلبًا، و\(\frac{3}{4} \times 28 = 21\) فاشلًا، بينما الفاشل الفعلي 12. السبب أن \(3 : 4\) تقارن جزءًا بجزء، أما الكسر «من الكل» فيقارن الجزء بالمجموع.</p>
+                <p>التصحيح: المجموع \(3 + 4 = 7\) أجزاء، فنصيب الفاشل \(\frac{3}{7}\). التحقق: \(28 \div 7 = 4\) في كل جزء، و\(3 \times 4 = 12\) فاشلًا.</p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="proportion">
+              <h3 class="topic-block__title">Proportion - التناسب</h3>
+              <p>خادم يعالج 6 طلبات كل 4 ثوانٍ: كم طلبًا يعالج في 10 ثوانٍ؟ وإذا أنجز 6 عمال مهمة في 10 أيام: كم يومًا يحتاج 12 عاملًا؟ في الحالة الأولى يزيد الناتج بزيادة المدخل، وفي الثانية يقل. نحتاج لغة دقيقة تفرّق بين الحالتين.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Proportion</strong> هو تساوي نسبتين (أو معدلين)، مثل \(6 : 4 = 15 : 10\). ونرمز للمجهول بـ «؟»، فتُكتب المسألة \(6 : 4 = ? : 10\).</p>
+              </div>
+
+              <p>الحدس: تساوي النسبتين يعني أن الكسرين متكافئان، فنصل من أحدهما إلى الآخر بضرب طرفيه في العدد نفسه. وهذا يعطينا طريقتين لإيجاد المجهول: معامل التكبير، أو Unit Rate.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Direct Proportion</strong> علاقة بين مدخل وناتج يبقى فيها الناتج ÷ المدخل ثابتًا، فإذا تضاعف المدخل تضاعف الناتج. والثابت هو Unit Rate.</p>
+              </div>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>المدخل: الثواني</th>
+                      <th>الناتج: الطلبات</th>
+                      <th>الناتج ÷ المدخل</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>1.5</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>6</td>
+                      <td>1.5</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>15</td>
+                      <td>1.5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>توقّع قبل الحساب: 10 ثوانٍ أكثر من ضعف 4 ثوانٍ، فهل يزيد عدد الطلبات على ضعف 6؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>خادم يعالج 6 طلبات كل 4 ثوانٍ بمعدل ثابت. كم طلبًا يعالج في 10 ثوانٍ؟</p>
+                  <ol>
+                    <li>نكتب التناسب طلبات فوق ثوانٍ:
+                      <div class="math-block">\[ \frac{6}{4} = \frac{?}{10} \]</div>
+                    </li>
+                    <li>بمعامل التكبير: المقام انتقل من 4 إلى 10، فمعامله \(10 \div 4 = 2.5\). نضرب البسط في العامل نفسه ليبقى الكسر مكافئًا: \(6 \times 2.5 = 15\).</li>
+                    <li>بالمعدل الوحدوي: \(6 \div 4 = 1.5\) طلب في الثانية، وفي 10 ثوانٍ \(1.5 \times 10 = 15\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: 15 طلبًا. التحقق: الطريقتان اتفقتا، وبسّطنا \(15 : 10\) على GCD يساوي 5 فصارت \(3 : 2\)، وبسّطنا \(6 : 4\) على GCD يساوي 2 فصارت \(3 : 2\) أيضًا. وهذا يوافق التوقع: المعامل 2.5 أكبر من 2، فالناتج 15 أكبر من 12.</p>
+                </div>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Inverse Proportion</strong> علاقة بين مدخل وناتج يبقى فيها الناتج × المدخل ثابتًا، فإذا تضاعف المدخل صار الناتج نصفه.</p>
+              </div>
+
+              <p>توقّع قبل الحساب: 6 عمال ينجزون مهمة في 10 أيام. إذا صار العمال 12، فهل تتوقع عدد الأيام 20 أم 10 أم 5؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>6 عمال ينجزون مهمة في 10 أيام، وكلهم بالإنتاجية نفسها. كم يومًا يحتاج 12 عاملًا؟ وكم يحتاج 4 عمال؟</p>
+                  <ol>
+                    <li>الشغل الكلي ثابت: \(6 \times 10 = 60\) يوم-عامل (worker-days)، أي إن عاملًا واحدًا كان سينجز المهمة في 60 يومًا.</li>
+                    <li>12 عاملًا يتقاسمون الـ 60: \(60 \div 12 = 5\) أيام.</li>
+                    <li>4 عمال: \(60 \div 4 = 15\) يومًا.</li>
+                  </ol>
+                  <p class="example__answer">الجواب: 5 أيام و15 يومًا. التحقق: \(12 \times 5 = 60\) و\(4 \times 15 = 60\). ومن جهة أخرى العمال تضاعفوا فنصفت الأيام: \(10 \div 2 = 5\)، وهذا يطابق التوقع الأخير.</p>
+                </div>
+              </div>
+
+              <figure class="figure">
+                <svg viewBox="0 0 560 250" width="560" role="img" aria-label="Direct proportion is a straight line through zero; inverse proportion is a falling curve">
+                  <path class="fg-grid" d="M140 20V210M240 20V210M40 150H260M40 90H260M40 30H260" />
+                  <path class="fg-grid" d="M374 20V210M428 20V210M482 20V210M536 20V210M320 165H550M320 120H550M320 75H550M320 30H550" />
+                  <path class="fg-axis" d="M40 210H260M40 218V20" />
+                  <path class="fg-axis" d="M320 210H550M320 218V20" />
+                  <path class="fg-curve" d="M40 210L240 30" />
+                  <path class="fg-curve" d="M374 30L383 56L392 75L410 102L428 120L464 142.5L500 156L536 165" />
+                  <circle class="fg-dot-accent" cx="80" cy="174" r="5" />
+                  <circle class="fg-dot-accent" cx="120" cy="138" r="5" />
+                  <circle class="fg-dot-accent" cx="240" cy="30" r="5" />
+                  <circle class="fg-dot-accent" cx="374" cy="30" r="5" />
+                  <circle class="fg-dot-accent" cx="428" cy="120" r="5" />
+                  <circle class="fg-dot-accent" cx="536" cy="165" r="5" />
+                  <text class="fg-text" x="150" y="238">seconds</text>
+                  <text class="fg-text" x="100" y="14">requests</text>
+                  <text class="fg-text" x="430" y="238">workers</text>
+                  <text class="fg-text" x="380" y="14">days</text>
+                </svg>
+                <figcaption>الرسم الأيسر تناسب طردي بين الثواني والطلبات: النقاط (2، 3) و(4، 6) و(10، 15) على خط مستقيم يبدأ من الصفر، وناتج القسمة 1.5 دائمًا. الرسم الأيمن تناسب عكسي بين العمال والأيام: النقاط (3، 20) و(6، 10) و(12، 5) على منحنى يهبط كلما زاد العمال، وحاصل الضرب 60 دائمًا.</figcaption>
+              </figure>
+
+              <p>ولحل أي مسألة تناسب نتبع الخطوات التالية:</p>
+
+              <div class="flow-diagram">
+                <div class="flow-step">
+                  <div class="flow-step__title">حدّد الثابت</div>
+                  <div class="flow-step__description">ضاعف المدخل في ذهنك: إن تضاعف الناتج فالتناسب طردي (الناتج ÷ المدخل)، وإن نصف فهو عكسي (الناتج × المدخل).</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                  <div class="flow-step__title">احسب الثابت من الحالة المعروفة</div>
+                  <div class="flow-step__description">Unit Rate في الطردي، والكمية الكلية مثل worker-days في العكسي.</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                  <div class="flow-step__title">طبّقه على الحالة الجديدة</div>
+                  <div class="flow-step__description">اضرب الثابت في المدخل الجديد في الطردي، واقسمه عليه في العكسي.</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                  <div class="flow-step__title">تحقّق</div>
+                  <div class="flow-step__description">هل الاتجاه معقول؟ وهل يعطي الثابت القيمة نفسها في الحالتين؟</div>
+                </div>
+              </div>
+
+              <p><strong>لماذا يهمّ مهندس البرمجيات؟</strong> تقدير السعة يستعمل الاثنين: كم instance نحتاج لحمل متوقع (طردي)، وكم worker نحتاج لإنهاء job في زمن محدد (عكسي). لكنهما نموذجان يفترضان ثبات الشرط. لو وُجد جزء ثابت لا يتأثر بعدد العمال، كزمن إقلاع، فلن يبقى الناتج × المدخل ثابتًا، وسنرى هذا في التمرين الشامل.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: «6 عمال تحتاج 10 أيام، فنضاعف العمال إلى 12 ونضاعف الأيام إلى 20». النتيجة الخاطئة: عدد أكبر من العمال يحتاج وقتًا أطول، والشغل الكلي صار \(12 \times 20 = 240\) يوم-عامل بدل 60.</p>
+                <p>التصحيح: اسأل أولًا عن الكمية الثابتة. الشغل الكلي ثابت، فإذا ضربنا العمال في 2 قسمنا الأيام على 2: \(10 \div 2 = 5\) أيام، والتحقق \(12 \times 5 = 60\).</p>
+              </div>
+            </div>
+
+            <div class="topic-block" id="percent-change">
+              <h3 class="topic-block__title">Percentages &amp; Percent Change - النسبة المئوية ونسبة التغير</h3>
+              <p>نريد مقارنة معدلي خطأ: 6 أخطاء من 40 طلبًا في خدمة، و8 أخطاء من 80 طلبًا في أخرى. المقامان مختلفان فيصعب الحكم بالعين. الحل أن نوحّد المقام دائمًا على 100.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Percent</strong> هي نسبة مقامها 100، أي «جزء من 100»: \(25\% = \frac{25}{100} = 0.25 = \frac{1}{4}\). وقد تتجاوز 100%، فـ \(150\% = 1.5\) أي مرة ونصف الكل.</p>
+              </div>
+
+              <p>الحدس: نحوّل كل نسبة إلى كسر مكافئ مقامه 100، فتصير المقارنة بين بسطين فقط. ولحساب نسبة مئوية من كمية نضرب الكمية في الكسر: \(25\%\) من \(80 \text{ ms}\) تساوي \(\frac{25}{100} \times 80 = 20 \text{ ms}\). التحقق: \(25\% = \frac{1}{4}\) و\(80 \div 4 = 20\).</p>
+
+              <p>توقّع قبل الحساب: أي الخدمتين أسوأ، التي فيها 6 أخطاء من 40 أم التي فيها 8 أخطاء من 80؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>قارن بين 6 أخطاء من 40 طلبًا و8 أخطاء من 80 طلبًا بنسبة مئوية لكل منهما.</p>
+                  <ol>
+                    <li>الأولى: \(40 \times 2.5 = 100\)، فنضرب البسط في 2.5 أيضًا: \(\frac{6}{40} = \frac{15}{100} = 15\%\).</li>
+                    <li>الثانية: \(80 \times 1.25 = 100\)، فنضرب البسط في 1.25: \(\frac{8}{80} = \frac{10}{100} = 10\%\).</li>
+                    <li>نقارن \(15\%\) بـ \(10\%\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: الخدمة الأولى أسوأ رغم أن أخطاءها أقل عددًا. التحقق: \(6 \div 40 = 0.15\) لأن \(40 \times 0.15 = 6\)، و\(8 \div 80 = 0.1\) لأن \(80 \times 0.1 = 8\). من حكم بالعدد الأكبر اختار الثانية خطأً، لأن العدد لا يعني شيئًا قبل أن يُقاس إلى حجم الكل.</p>
+                </div>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">صيغة</span>
+                <p><strong>Percent Change</strong> هي مقدار التغير بين قيمة قديمة وقيمة جديدة مقيسًا بالنسبة إلى القيمة القديمة.</p>
+                <div class="math-block">\[ \text{Percent Change} = \frac{\text{New} - \text{Old}}{\text{Old}} \times 100\% \]</div>
+                <p>عند الزيادة نحسب \(\text{New} - \text{Old}\) ونسمّي الناتج زيادة، وعند النقص نحسب \(\text{Old} - \text{New}\) ونسمّيه نقصًا.</p>
+              </div>
+
+              <p>الحدس: السؤال الذي تجيب عنه هو «كم يمثّل هذا التغير مما كنا عليه؟»، ولذلك يكون المقام دائمًا نقطة البداية، أي القيمة القديمة.</p>
+
+              <p>توقّع قبل الحساب: ارتفع زمن استجابة من \(80 \text{ ms}\) إلى \(100 \text{ ms}\)، ثم انخفض من \(100 \text{ ms}\) إلى \(80 \text{ ms}\). هل تتوقع النسبة المئوية نفسها في الحالتين؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب نسبة التغير في كل من الحركتين: من \(80 \text{ ms}\) إلى \(100 \text{ ms}\)، ومن \(100 \text{ ms}\) إلى \(80 \text{ ms}\).</p>
+                  <ol>
+                    <li>الارتفاع: التغير \(100 - 80 = 20\) والقديم 80، فنسبته \(\frac{20}{80} = \frac{1}{4} = 25\%\) زيادة.</li>
+                    <li>الانخفاض: التغير \(100 - 80 = 20\) والقديم 100، فنسبته \(\frac{20}{100} = 20\%\) نقصًا.</li>
+                  </ol>
+                  <p class="example__answer">الجواب: زيادة 25% ثم نقص 20%. التحقق بالضرب: \(80 \times 1.25 = 100\) و\(100 \times 0.8 = 80\). خالف هذا التوقع «المتماثل» رغم أن الفرق في الحالتين \(20 \text{ ms}\)، لأن المقام تغيّر من 80 إلى 100. والمعاملان \(1.25 = \frac{5}{4}\) و\(0.8 = \frac{4}{5}\) مقلوب كل منهما الآخر (Reciprocal)، فحاصل ضربهما 1.</p>
+                </div>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p><strong>Percentage Point</strong> هي وحدة قياس الفرق بين نسبتين مئويتين بالطرح المباشر. أما Percent Change بينهما فيُحسب على النسبة القديمة.</p>
+              </div>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>ارتفع conversion rate (نسبة الزوار الذين أتمّوا الشراء) من 4% إلى 5%. عبّر عن الارتفاع بوحدتين مختلفتين.</p>
+                  <ol>
+                    <li>بالنقاط المئوية: \(5 - 4 = 1\) نقطة مئوية.</li>
+                    <li>نسبيًا: \(\frac{5 - 4}{4} = \frac{1}{4} = 25\%\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: نقطة مئوية واحدة، وهي زيادة نسبية 25%. التحقق: \(4\% \times 1.25 = 5\%\).</p>
+                </div>
+              </div>
+
+              <p><strong>لماذا يهمّ مهندس البرمجيات؟</strong> تُبنى عتبات الإنذار على النسب المئوية: عتبة «زيادة 20% في latency» تتجاوزها حركة من \(80 \text{ ms}\) إلى \(100 \text{ ms}\) (25%)، بينما حركة من \(100 \text{ ms}\) إلى \(120 \text{ ms}\) تساويها بالضبط (20%) رغم أن الفرق في الحالتين \(20 \text{ ms}\). وفي تقارير المقاييس يغيّر الخلط بين النقطة المئوية والنسبة المئوية قراءة النتيجة كلها.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: «زيادة 50% ثم نقص 50% تلغي إحداهما الأخرى، فنعود إلى 100». النتيجة الخاطئة: 100. الحساب الفعلي: \(100 + \frac{50}{100} \times 100 = 150\)، ثم \(150 - \frac{50}{100} \times 150 = 150 - 75 = 75\). السبب أن النسبة الثانية تُحسب من قاعدة جديدة هي 150 لا 100.</p>
+                <p>التصحيح: النسب المتتالية تُركَّب بالضرب لا بالجمع: \(1.5 \times 0.5 = 0.75\)، أي نقص صافٍ 25% من 100. التحقق: \(\frac{100 - 75}{100} = 25\%\).</p>
+              </div>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: وصف الانتقال من 4% إلى 5% بعبارة «ارتفع معدل التحويل 1%». النتيجة الخاطئة: من يقرؤها نسبة مئوية يحسب \(4\% \times 1.01 = 4.04\%\) لا 5%.</p>
+                <p>التصحيح: اذكر الوحدة صراحة: «ارتفع نقطة مئوية واحدة» أو «ارتفع 25% نسبيًا». التحقق: \(4\% \times 1.25 = 5\%\).</p>
+              </div>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>تظهر كلمة «مئوي» أيضًا في مصطلح percentile مثل p95 latency، لكنه مفهوم إحصائي مختلف يُدرس في المرحلة 44، فلا تخلطه بما شرحناه هنا.</p>
+                <p>وأخيرًا، حسبنا الزيادة والنقص بكلمتين منفصلتين لأن كل ما عرفناه حتى الآن غير سالب: الفرق دائمًا «الأكبر ناقص الأصغر». فماذا عمّا قبل الصفر على Number Line؟ هذا ما توسّعه الصفحة التالية.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>ما الفرق بين Ratio وRate؟ ثم احسب معدل خدمة عالجت 2,700 طلب في 9 دقائق: بالطلب في الدقيقة ثم بالطلب في الثانية.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>Ratio تقارن كميتين بالقسمة، وRate هي Ratio بين كميتين بوحدتين مختلفتين. \(2{,}700 \div 9 = 300\) طلب في الدقيقة، و\(300 \div 60 = 5\) طلبات في الثانية. التحقق: \(5 \times 60 \times 9 = 2{,}700\). (راجع: Ratios &amp; Rates - النسب والمعدلات)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q2">
+              <h3 class="topic-block__title">سؤال 2</h3>
+              <p>4 عمال بالإنتاجية نفسها ينجزون مهمة في 12 يومًا. كم يومًا يحتاج 6 عمال؟ وما الكمية التي بقيت ثابتة؟ تحقق من جوابك بطريقة ثانية.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>الثابت هو الشغل الكلي: \(4 \times 12 = 48\) يوم-عامل، فالتناسب عكسي، و\(48 \div 6 = 8\) أيام. التحقق: \(6 \times 8 = 48\)، ومن جهة أخرى العمال صاروا 1.5 ضعف فتُقسم الأيام على 1.5: \(12 \div 1.5 = 8\). (راجع: Proportion - التناسب)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q3">
+              <h3 class="topic-block__title">سؤال 3</h3>
+              <p>انخفض زمن استجابة من \(100 \text{ ms}\) إلى \(80 \text{ ms}\)، ثم عاد في إصدار لاحق إلى \(100 \text{ ms}\). قال زميل: «تحسّن 20% ثم تراجع 20%، فعدنا إلى حيث بدأنا». أي جزء من عبارته خاطئ؟</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>العودة إلى 100 صحيحة والتحسّن 20% صحيح: \(\frac{100 - 80}{100} = 20\%\). الخاطئ أن التراجع 20%، فهو يُقاس على القاعدة الجديدة 80: \(\frac{20}{80} = 25\%\). التحقق: \(80 \times 1.2 = 96 \neq 100\) بينما \(80 \times 1.25 = 100\). (راجع: Percentages &amp; Percent Change - النسبة المئوية ونسبة التغير)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q4">
+              <h3 class="topic-block__title">سؤال 4</h3>
+              <p>اشرحها لغيرك: اشرح لزميل مهندس لماذا لا يصح وصف ارتفاع conversion rate من 4% إلى 5% بعبارة «ارتفع 1%»، وما التعبيران الصحيحان.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>الفرق المباشر بين نسبتين يُقاس بالنقطة المئوية، وهنا \(5\% - 4\% = 1\) نقطة. أما «1%» فتُقرأ نسبة مئوية، فتعني \(4\% \times 1.01 = 4.04\%\) لا 5%. والتعبيران الصحيحان: «نقطة مئوية واحدة»، أو «زيادة نسبية 25%» لأن \(\frac{5 - 4}{4} = 25\%\). (راجع: Percentages &amp; Percent Change - النسبة المئوية ونسبة التغير)</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q5">
+              <h3 class="topic-block__title">سؤال 5</h3>
+              <p>صفحة تحمّل 100 عنصر في 2 ثانية، فقال مدير: «إذن 1,000 عنصر تحتاج 20 ثانية». متى يصح هذا الحساب ومتى يفشل؟ أعطِ مثالًا مضادًا بأرقام.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>يصح فقط إذا كان التناسب طرديًا، أي إذا بقي الزمن ÷ العناصر ثابتًا (زمن ثابت لكل عنصر). يفشل لو وُجد زمن ثابت لا يتأثر بالعدد: ثانية واحدة ثابتة و0.01 ثانية لكل عنصر تعطي \(1 + 0.01 \times 100 = 2\) ثانية لـ 100 عنصر، لكن \(1 + 0.01 \times 1{,}000 = 11\) ثانية فقط لـ 1,000، لا 20. ويؤكد ذلك أن الزمن ÷ العناصر تغيّر من 0.02 إلى 0.011. (راجع: Proportion - التناسب)</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">Release Check - فحص أثر إصدار جديد</h2>
+
+          <div class="article-content">
+            <p>نشر فريق إصدارًا جديدًا من خدمة API، وقارن بين نافذتين مدة كل منهما 5 دقائق: قبل الإصدار وبعده.</p>
+
+            <div class="table-wrap table-wrap--fit">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>المقياس</th>
+                    <th>قبل</th>
+                    <th>بعد</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الطلبات الكلية</td>
+                    <td>1,200</td>
+                    <td>1,500</td>
+                  </tr>
+                  <tr>
+                    <td>الطلبات الفاشلة</td>
+                    <td>24</td>
+                    <td>45</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol>
+              <li>احسب لكل نافذة معدل الطلبات في الثانية (Unit Rate) ونسبة الفشل (الفاشل ÷ الكلي) كنسبة مئوية.</li>
+              <li>كتب زميل في التقرير: «ارتفع الحمل 25% وارتفعت نسبة الفشل 1%». تحقق من العبارتين بطريقة ثانية وصحّح ما يلزم.</li>
+              <li>job لتحليل السجلات ينجزه 6 workers في 10 دقائق، ونريد إنجازه في 4 دقائق. كم worker نحتاج؟</li>
+              <li>اشرحها لغيرك: لماذا اخترت هذا النوع من التناسب في الخطوة 3؟ وماذا يتغير لو كانت دقيقة واحدة من الدقائق العشر ثابتة (إقلاع وتجميع نتائج) لا تقصر بزيادة workers؟</li>
+            </ol>
+
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>في الخطوة 3: ما الكمية الكلية التي لا تتغير مهما غيّرنا عدد workers؟</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <p><strong>الخطوة 1.</strong> قبل: \(1{,}200 \div 5 = 240\) طلبًا في الدقيقة، و\(240 \div 60 = 4\) في الثانية. بعد: \(1{,}500 \div 5 = 300\)، و\(300 \div 60 = 5\). وللفشل نقسم طرفي كل كسر ليصير المقام 100:</p>
+                <div class="math-block">\[ \frac{24}{1{,}200} = \frac{24 \div 12}{1{,}200 \div 12} = \frac{2}{100}, \qquad \frac{45}{1{,}500} = \frac{45 \div 15}{1{,}500 \div 15} = \frac{3}{100} \]</div>
+                <div class="table-wrap table-wrap--fit">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>المقياس</th>
+                        <th>قبل</th>
+                        <th>بعد</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>الطلبات في الثانية</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>نسبة الفشل</td>
+                        <td>2%</td>
+                        <td>3%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>التحقق: \(0.02 \times 1{,}200 = 24\) و\(0.03 \times 1{,}500 = 45\).</p>
+
+                <p><strong>الخطوة 2.</strong> الحمل: \(\frac{5 - 4}{4} = 25\%\) وهي صحيحة، وطريقة ثانية: \(1{,}500 \div 1{,}200 = 1.25\). أما الفشل فالفرق \(3\% - 2\% = 1\) نقطة مئوية لا «1%»، والتغير النسبي:</p>
+                <div class="math-block">\[ \frac{3 - 2}{2} = \frac{1}{2} = 50\% \]</div>
+                <p>التحقق: \(2\% \times 1.5 = 3\%\). العبارة الصحيحة: «ارتفع الحمل 25%، وارتفعت نسبة الفشل نقطة مئوية واحدة، أي 50% نسبيًا».</p>
+
+                <p><strong>الخطوة 3.</strong> الشغل الكلي ثابت، فالتناسب عكسي:</p>
+                <div class="math-block">\[ 6 \times 10 = 60 \text{ worker-min}, \qquad 60 \div 4 = 15 \text{ workers} \]</div>
+                <p>التحقق: \(15 \times 4 = 60\). وبطريقة ثانية: الزمن صار \(4 \div 10 = 0.4\) من الأصل، فيُضرب عدد workers في \(1 \div 0.4 = 2.5\): \(6 \times 2.5 = 15\).</p>
+
+                <p><strong>عقلية المهندس:</strong> اخترنا التناسب العكسي لأن الشغل الكلي ثابت ويتقاسمه workers. إذا كانت دقيقة واحدة ثابتة فالجزء القابل للتقسيم 9 دقائق، أي \(6 \times 9 = 54\) worker-min. والمطلوب 4 دقائق منها الدقيقة الثابتة، فيبقى 3 دقائق للتقسيم: \(54 \div 3 = 18\) workers. التحقق: \(18 \times 3 = 54\) و\(3 + 1 = 4\). النتيجة 18 لا 15، وكلما اقترب الزمن المطلوب من الدقيقة الثابتة قفز العدد المطلوب، ولن يكفي أي عدد لإنهاء الـ job في دقيقة واحدة. لذلك نتحقق قبل الحساب من أن كل الزمن قابل للتقسيم فعلًا.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>Ratio مقارنة بالقسمة تُكتب \(3 : 4\) أو \(\frac{3}{4}\) أو \(0.75\) وتُبسَّط كالكسر؛ وهي تقارن جزءًا بجزء، لا جزءًا بالكل.</li>
+              <li>Rate هو Ratio بوحدتين مختلفتين، وUnit Rate (مقامه 1) هو ما يصح أن نقارن به.</li>
+              <li>في Direct Proportion يبقى الناتج ÷ المدخل ثابتًا، وفي Inverse Proportion يبقى الناتج × المدخل ثابتًا؛ اسأل دائمًا أي الاثنين ثابت.</li>
+              <li>Percent جزء من 100، وPercent Change هي \(\frac{\text{New} - \text{Old}}{\text{Old}} \times 100\%\)، فهي تُقاس على القيمة القديمة ولذلك لا تتماثل: زيادة 25% يعكسها نقص 20%.</li>
+              <li>النسب المتتالية تُركَّب بالضرب لا بالجمع، والفرق بين نسبتين مئويتين يُقاس بـ Percentage Point لا بالنسبة المئوية.</li>
+              <li>عقلية المهندس: قبل أن تقبل نسبة أو معدلًا اسأل «نسبة إلى ماذا؟ وبأي وحدة؟ وهل ما افترضناه ثابتًا ثابت فعلًا؟».</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="04-fractions-decimals.html">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">Fractions, Decimals - الكسور والأعداد العشرية</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="06-integers-rationals-absolute-value.html">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">Integers, Rationals, Absolute Value - الأعداد الصحيحة والنسبية والقيمة المطلقة</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>
