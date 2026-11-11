@@ -1596,7 +1596,7 @@ main>.content-section:nth-of-type(odd) {
   min-height: 40px;
   background: var(--clr-white);
   border: 1px solid var(--track);
-  border-radius: 12px;
+  border-radius: 10px;
   color: var(--track-text);
   font-size: 1.12rem;
   font-weight: 700;
@@ -1633,9 +1633,31 @@ main>.content-section:nth-of-type(odd) {
   text-align: left;
 }
 
-/* زر «نسخ Prompt» في أقصى يسار عنوان المرحلة */
+/* زر «نسخ Prompt» في أقصى يسار عنوان المرحلة: أيقونة فقط */
 .stage-copy {
+  position: relative;
   flex: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.stage-copy::before {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Visually hidden, not display:none: .is-copied toggles these spans via display,
+   and the accessible name comes from the button's aria-label. */
+.stage-copy .btn__idle,
+.stage-copy .btn__done {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .stage-description {
@@ -1948,8 +1970,8 @@ main>.content-section:nth-of-type(odd) {
   }
 
   .stage-copy {
-    padding-inline: 0.65rem;
-    font-size: 0.82rem;
+    width: 36px;
+    height: 36px;
   }
 
   .stage-description {
@@ -2022,4 +2044,13 @@ main>.content-section:nth-of-type(odd) {
     animation: none !important;
     transition: none !important;
   }
+}
+
+.btn--link {
+  background-color: var(--clr-blue);
+  border-radius: 12px;
+}
+
+.btn--link span {
+  margin-top: 3px;
 }
