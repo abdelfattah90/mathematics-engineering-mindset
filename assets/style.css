@@ -692,7 +692,15 @@ main>.content-section:nth-of-type(odd) {
 .katex {
   direction: ltr;
   unicode-bidi: isolate;
-  font-size: 1.1em;
+}
+
+/* KaTeX's own stylesheet loads after this one and sets 1.21em, so a bare .katex rule never wins */
+main .katex {
+  font-size: 1.08em;
+}
+
+.math-block .katex {
+  font-size: 1.15em;
 }
 
 .math-block {

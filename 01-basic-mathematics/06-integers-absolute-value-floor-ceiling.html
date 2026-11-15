@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integers, Absolute Value, Floor &amp; Ceiling - الأعداد الصحيحة والقيمة المطلقة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#math-6"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">M1 · Basic Mathematics · 6</div>
+          <h1 class="hero__title">Integers, Absolute Value, Floor &amp; Ceiling - الأعداد الصحيحة والقيمة المطلقة</h1>
+          <p class="hero__lead">
+            في هذه الصفحة نمدّ خط الأعداد إلى ما تحت الصفر، ونتعلم كيف نقيس بُعد العدد عن الصفر، وكيف نحوّل ناتج القسمة إلى عدد كامل بالاتجاه الذي نريده. يهمنا هذا الآن لأن القسمة على عدد سالب تعطي نتائج مختلفة بين لغات البرمجة، وهذا الخطأ لا يوقف الخدمة بل يغيّر أرقامها بصمت.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <div class="topic-block" id="integers-number-line">
+              <h3 class="topic-block__title">Integers &amp; the Number Line - الأعداد الصحيحة وخط الأعداد</h3>
+              <p>رصيدك الآن \(3\) جنيهات، ودفعت فاتورة قيمتها \(8\) جنيهات والبنك يسمح بأن ينزل رصيدك تحت الصفر. كم يصبح رصيدك؟ الأعداد التي نعدّ بها لا تكفي هنا لأن الناتج أقل من الصفر.</p>
+              <p>الفكرة: نمدّ خط الأعداد إلى يسار الصفر، فيصير لكل عدد كامل مكان عليه، موجبًا كان أو سالبًا. هذه الأعداد الكاملة على جانبي الصفر تسمى <strong>Integer</strong>، أي عدد بلا جزء كسري.</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>رصيدك \(3\) جنيهات وتدفع \(8\). ما رصيدك الجديد؟ وأيهما أقل: رصيد \(-5\) أم رصيد \(-2\)؟</p>
+                  <ol>
+                    <li>نقف عند \(3\) على خط الأعداد، فالدفع نقص، والنقص خطوات إلى اليسار.</li>
+                    <li>نسير \(8\) خطوات إلى اليسار: \(3\) خطوات توصلنا إلى الصفر، وتبقى \(5\) خطوات تأخذنا إلى \(-5\). إذن \(3 - 8 = -5\).</li>
+                    <li>نقارن \(-5\) و\(-2\): العدد \(-5\) أبعد إلى اليسار، فهو الأقل.</li>
+                  </ol>
+                  <p class="example__answer">الجواب: الرصيد الجديد \(-5\)، أي دين مقداره \(5\) جنيهات، ورصيد \(-5\) أقل من رصيد \(-2\). التحقق بالعملية العكسية: نسير \(8\) خطوات من \(-5\) إلى اليمين فنعود إلى \(3\)، أي \(-5 + 8 = 3\).</p>
+                </div>
+              </div>
+
+              <figure class="figure">
+                <svg viewBox="0 0 480 120" width="480" role="img" aria-label="خط أعداد يبين الانتقال من نقطة إلى يسارها بثماني خطوات">
+                  <path class="fg-axis" d="M20 80H460M40 74V86M80 74V86M120 74V86M160 74V86M200 74V86M240 74V86M280 74V86M320 74V86M360 74V86M400 74V86M440 74V86" />
+                  <path class="fg-line" d="M400 72V44H80V72M74 64L80 72L86 64" />
+                  <circle class="fg-dot-accent" cx="400" cy="80" r="5" />
+                  <circle class="fg-dot-accent" cx="80" cy="80" r="5" />
+                  <text class="fg-text" x="240" y="36" text-anchor="middle">8</text>
+                  <text class="fg-text" x="40" y="106" text-anchor="middle">&#x200E;&#x2212;6</text> <text class="fg-text" x="80" y="106" text-anchor="middle">&#x200E;&#x2212;5</text> <text class="fg-text" x="120" y="106" text-anchor="middle">&#x200E;&#x2212;4</text> <text class="fg-text" x="160" y="106" text-anchor="middle">&#x200E;&#x2212;3</text>
+                  <text class="fg-text" x="200" y="106" text-anchor="middle">&#x200E;&#x2212;2</text> <text class="fg-text" x="240" y="106" text-anchor="middle">&#x200E;&#x2212;1</text> <text class="fg-text" x="280" y="106" text-anchor="middle">0</text> <text class="fg-text" x="320" y="106" text-anchor="middle">1</text>
+                  <text class="fg-text" x="360" y="106" text-anchor="middle">2</text> <text class="fg-text" x="400" y="106" text-anchor="middle">3</text> <text class="fg-text" x="440" y="106" text-anchor="middle">4</text>
+                </svg>
+                <figcaption>الشكل: نبدأ من \(3\) ونسير \(8\) خطوات إلى اليسار فنصل إلى \(-5\)؛ كل ما يقع يسار الصفر سالب.</figcaption>
+              </figure>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>الـ Integer هو أي عدد بلا جزء كسري: \(\ldots, -2, -1, 0, 1, 2, \ldots\). وعلى خط الأعداد يكون الأكبر هو الأقرب إلى اليمين، فكل سالب أصغر من الصفر، وكل موجب أكبر منه.</p>
+              </div>
+
+              <p>لماذا يصح هذا؟ لأن كل خطوة إلى اليمين تزيد العدد بمقدار \(1\)، فمن يسبق غيره إلى اليمين يكون قد زاد عليه.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ الشائع: الحكم على السالب بحجم رقمه، فيُظن أن \(-10\) أكبر من \(-2\) لأن \(10 \gt 2\). النتيجة الخاطئة ترتيب معكوس. التصحيح: العدد \(-10\) أبعد إلى اليسار فهو أصغر، أي \(-10 \lt -2\)؛ فكّر في دين \(10\) جنيهات فهو أسوأ من دين \(2\).</p>
+              </div>
+
+              <p><strong>أين أراها في الـ backend؟</strong> رصيد محفظة أو كمية مخزون قد يصير سالبًا حين يُنفَّذ خصمان معًا دون فحص، والفرق بين توقيتين يصير سالبًا إذا وصل الحدث الثاني قبل الأول. وجود عدد سالب حيث لا نتوقعه علامة تستحق الفحص.</p>
+            </div>
+
+            <div class="topic-block" id="absolute-value">
+              <h3 class="topic-block__title">Absolute Value - القيمة المطلقة</h3>
+              <p>نقيس فرق ساعة خادم عن ساعة مرجعية بالـ ms: قد يكون الفرق \(+5\,\text{ms}\) إذا تقدمت الساعة، أو \(-5\,\text{ms}\) إذا تأخرت. الاتجاه يختلف، لكن حجم الانحراف واحد، وهو ما يهمنا لنحكم هل الانحراف مقبول.</p>
+              <p>الفكرة: نسأل كم يبعد العدد عن الصفر دون أن نهتم بجهته. هذا البعد يسمى <strong>Absolute Value</strong>، ونكتبه بوضع العدد بين شرطتين عموديتين.</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب \(|-7|\) و\(|3 - 8|\).</p>
+                  <ol>
+                    <li>العدد \(-7\) يبعد عن الصفر \(7\) خطوات إلى اليسار، فيكون \(|-7| = 7\).</li>
+                    <li>في \(|3 - 8|\) نحسب داخل الشرطتين أولًا: \(3 - 8 = -5\) كما رأينا في الموضوع السابق.</li>
+                    <li>العدد \(-5\) يبعد عن الصفر \(5\) خطوات، فيكون \(|3 - 8| = |-5| = 5\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: \(|-7| = 7\) و\(|3 - 8| = 5\). التحقق: نعدّ الخطوات بين \(3\) و\(8\) على خط الأعداد فنجدها \(5\)، وكذلك \(|8 - 3| = 5\).</p>
+                </div>
+              </div>
+
+              <figure class="figure">
+                <svg viewBox="0 0 560 120" width="560" role="img" aria-label="خط أعداد يبين بعد عدد سالب عن الصفر والمسافة بين عددين موجبين">
+                  <path class="fg-axis" d="M20 80H540M40 74V86M70 74V86M100 74V86M130 74V86M160 74V86M190 74V86M220 74V86M250 74V86M280 74V86M310 74V86M340 74V86M370 74V86M400 74V86M430 74V86M460 74V86M490 74V86M520 74V86" />
+                  <path class="fg-line" d="M70 72V50H280V72M370 72V50H520V72" />
+                  <circle class="fg-dot-accent" cx="70" cy="80" r="5" />
+                  <circle class="fg-dot-accent" cx="280" cy="80" r="5" />
+                  <circle class="fg-dot-accent" cx="370" cy="80" r="5" />
+                  <circle class="fg-dot-accent" cx="520" cy="80" r="5" />
+                  <text class="fg-text" x="175" y="42" text-anchor="middle">7</text> <text class="fg-text" x="445" y="42" text-anchor="middle">5</text>
+                  <text class="fg-text" x="40" y="106" text-anchor="middle">&#x200E;&#x2212;8</text> <text class="fg-text" x="70" y="106" text-anchor="middle">&#x200E;&#x2212;7</text> <text class="fg-text" x="100" y="106" text-anchor="middle">&#x200E;&#x2212;6</text> <text class="fg-text" x="130" y="106" text-anchor="middle">&#x200E;&#x2212;5</text>
+                  <text class="fg-text" x="160" y="106" text-anchor="middle">&#x200E;&#x2212;4</text> <text class="fg-text" x="190" y="106" text-anchor="middle">&#x200E;&#x2212;3</text> <text class="fg-text" x="220" y="106" text-anchor="middle">&#x200E;&#x2212;2</text> <text class="fg-text" x="250" y="106" text-anchor="middle">&#x200E;&#x2212;1</text>
+                  <text class="fg-text" x="280" y="106" text-anchor="middle">0</text> <text class="fg-text" x="310" y="106" text-anchor="middle">1</text> <text class="fg-text" x="340" y="106" text-anchor="middle">2</text> <text class="fg-text" x="370" y="106" text-anchor="middle">3</text>
+                  <text class="fg-text" x="400" y="106" text-anchor="middle">4</text> <text class="fg-text" x="430" y="106" text-anchor="middle">5</text> <text class="fg-text" x="460" y="106" text-anchor="middle">6</text> <text class="fg-text" x="490" y="106" text-anchor="middle">7</text>
+                  <text class="fg-text" x="520" y="106" text-anchor="middle">8</text>
+                </svg>
+                <figcaption>الشكل: المسافة من \(-7\) إلى الصفر هي \(7\) خطوات، والمسافة بين \(3\) و\(8\) هي \(5\) خطوات؛ والمسافة لا تكون سالبة.</figcaption>
+              </figure>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>القيمة المطلقة لأي عدد لا تكون سالبة أبدًا: \(|7| = 7\) و\(|-7| = 7\) و\(|0| = 0\). وبُعد عدد \(a\) عن عدد \(b\) على خط الأعداد هو:</p>
+                <div class="math-block">\[ |a - b| \]</div>
+              </div>
+
+              <p>لماذا تعمل؟ لأن المسافة تعدّ الخطوات فقط، ولا فرق بين خطوات إلى اليمين وخطوات إلى اليسار. وعدد الخطوات لا يكون سالبًا.</p>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ الشائع: حساب القيمة المطلقة لكل عدد على حدة ثم الطرح، فنكتب \(|3| - |8| = 3 - 8 = -5\). النتيجة الخاطئة سالبة، وهذا مستحيل لأن المسافة لا تكون سالبة. التصحيح: نحسب داخل الشرطتين أولًا \(3 - 8 = -5\)، ثم نأخذ المسافة فنجد \(|-5| = 5\).</p>
+              </div>
+
+              <p><strong>أين أراها في الـ backend؟</strong> عند فحص انحراف الساعات أو الفرق بين قيمة متوقعة وقيمة فعلية نسأل: هل \(|a - b|\) أقل من حد مسموح؟ سؤال واحد يغطي الحالتين، سواء تقدمت إحدى القيمتين أو تأخرت.</p>
+            </div>
+
+            <div class="topic-block" id="floor-ceiling-truncation">
+              <h3 class="topic-block__title">Floor, Ceiling &amp; Truncation - التقريب لأسفل ولأعلى والبتر</h3>
+              <p>نريد عدد الصفحات لـ \(95\) عنصرًا إذا اتسعت الصفحة لـ \(10\) عناصر. القسمة تعطي \(9.5\) ولا توجد نصف صفحة. تذكير: Decimal هو عدد له جزء بعد الفاصلة العشرية، مثل \(9.5\).</p>
+              <p>تسع صفحات تتسع لـ \(90\) عنصرًا فقط، فنحتاج \(10\) صفحات؛ أي أننا قرّبنا الناتج لأعلى حتى لو كان الكسر صغيرًا. تذكير: Rounding هو استبدال العدد بعدد أبسط قريب منه، لكننا هنا نحدد الاتجاه بأنفسنا.</p>
+              <p>الفكرة: نحوّل العدد ذا الكسر إلى عدد كامل بالاتجاه الذي نختاره. <strong>Floor</strong> يقرّبه لأسفل، أي إلى اليسار على خط الأعداد، و<strong>Ceiling</strong> يقرّبه لأعلى، أي إلى اليمين. أما <strong>Truncation</strong> فتحذف الجزء الكسري فقط وتبقي الباقي كما هو.</p>
+
+              <p><strong>ماذا تتوقع؟</strong> إذا قرّبنا \(-2.5\) لأسفل، هل نحصل على \(-2\) أم \(-3\)؟ فكّر قليلًا ثم قارن جوابك بالحل.</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>قرّب \(2.5\) و\(-2.5\) بثلاث طرق: لأسفل، ولأعلى، وبحذف الجزء الكسري.</p>
+                  <ol>
+                    <li>العدد \(2.5\) يقع بين \(2\) و\(3\). لأسفل نصل إلى \(2\)، ولأعلى نصل إلى \(3\)، وحذف الجزء الكسري يعطي \(2\).</li>
+                    <li>العدد \(-2.5\) يقع بين \(-3\) و\(-2\). لأسفل، أي إلى اليسار، نصل إلى \(-3\)؛ ولأعلى، أي إلى اليمين، نصل إلى \(-2\).</li>
+                    <li>حذف الجزء الكسري من \(-2.5\) يترك \(-2\)، فنتجه نحو الصفر وليس نحو اليسار.</li>
+                  </ol>
+                  <p class="example__answer">الجواب: نتائج \(2.5\) هي \(2\) و\(3\) و\(2\)، ونتائج \(-2.5\) هي \(-3\) و\(-2\) و\(-2\) بالترتيب نفسه. التحقق: العدد يقع دائمًا بين نتيجتي لأسفل ولأعلى، أي \(-3 \lt -2.5 \lt -2\).</p>
+                </div>
+              </div>
+
+              <figure class="figure">
+                <svg viewBox="0 0 560 170" width="560" role="img" aria-label="خط أعداد يبين اتجاه كل طريقة تقريب لعددين يقعان بين عددين صحيحين">
+                  <path class="fg-axis" d="M20 110H540M40 104V116M100 104V116M160 104V116M220 104V116M280 104V116M340 104V116M400 104V116M460 104V116M520 104V116" />
+                  <path class="fg-line" d="M130 104V92H100V104M130 104V92H160V104M430 104V92H400V104M430 104V92H460V104" />
+                  <circle class="fg-dot-accent" cx="130" cy="110" r="5" />
+                  <circle class="fg-dot-accent" cx="430" cy="110" r="5" />
+                  <text class="fg-text" x="100" y="84" text-anchor="middle">floor</text> <text class="fg-text" x="160" y="84" text-anchor="middle">ceil</text> <text class="fg-text" x="160" y="68" text-anchor="middle">trunc</text>
+                  <text class="fg-text" x="400" y="84" text-anchor="middle">floor</text> <text class="fg-text" x="400" y="68" text-anchor="middle">trunc</text> <text class="fg-text" x="460" y="84" text-anchor="middle">ceil</text>
+                  <text class="fg-text" x="40" y="136" text-anchor="middle">&#x200E;&#x2212;4</text> <text class="fg-text" x="100" y="136" text-anchor="middle">&#x200E;&#x2212;3</text> <text class="fg-text" x="160" y="136" text-anchor="middle">&#x200E;&#x2212;2</text>
+                  <text class="fg-text" x="220" y="136" text-anchor="middle">&#x200E;&#x2212;1</text> <text class="fg-text" x="280" y="136" text-anchor="middle">0</text> <text class="fg-text" x="340" y="136" text-anchor="middle">1</text>
+                  <text class="fg-text" x="400" y="136" text-anchor="middle">2</text> <text class="fg-text" x="460" y="136" text-anchor="middle">3</text> <text class="fg-text" x="520" y="136" text-anchor="middle">4</text>
+                  <text class="fg-text" x="130" y="158" text-anchor="middle">&#x200E;&#x2212;2.5</text> <text class="fg-text" x="430" y="158" text-anchor="middle">2.5</text>
+                </svg>
+                <figcaption>الشكل: العدد \(-2.5\) يقع بين \(-3\) و\(-2\). يذهب floor يسارًا إلى \(-3\)، ويذهب ceil يمينًا إلى \(-2\)، ويتجه trunc نحو الصفر فيصل إلى \(-2\). أما العدد \(2.5\) فنتائجه \(2\) و\(3\) و\(2\) بالترتيب نفسه.</figcaption>
+              </figure>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">تعريف</span>
+                <p>الـ Floor لأي عدد \(x\) هو أكبر Integer لا يزيد عليه، ويُكتب \(\lfloor x \rfloor\). والـ Ceiling هو أصغر Integer لا يقل عنه، ويُكتب \(\lceil x \rceil\). أما Truncation فتحذف الجزء الكسري وتتجه نحو الصفر دائمًا، ونرمز لها بـ \(\operatorname{trunc}(x)\). وأسماؤها في لغات البرمجة: floor و ceil و trunc.</p>
+                <div class="math-block">\[ \lfloor -2.5 \rfloor = -3 \qquad \lceil -2.5 \rceil = -2 \qquad \operatorname{trunc}(-2.5) = -2 \]</div>
+              </div>
+
+              <p>لماذا تتفق floor و trunc في الموجب وتختلفان في السالب؟ لأن اتجاه «لأسفل» هو نحو الصفر عندما يكون العدد موجبًا، لكنه يبتعد عن الصفر عندما يكون سالبًا.</p>
+
+              <p>الآن نقسم عددًا سالبًا. تذكير: الـ Quotient هو ناتج القسمة الصحيحة، والـ Remainder هو ما يتبقى منها.</p>
+              <p>لنقسم \(-7\) على \(2\). نصف دين مقداره \(7\) هو دين مقداره \(3.5\)، أي أن \(-7 \div 2 = -3.5\)، والعدد \(-3.5\) يقع بين \(-4\) و\(-3\). مع floor يكون الـ Quotient هو \(-4\)، ومع trunc يكون \(-3\)، ثم نختار الـ Remainder ليعيدنا إلى \(-7\).</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>الطريقة</th>
+                      <th>Quotient</th>
+                      <th>Remainder</th>
+                      <th>التحقق</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>floor</td>
+                      <td>\(-4\)</td>
+                      <td>\(1\)</td>
+                      <td>\(2 \times (-4) + 1 = -7\)</td>
+                    </tr>
+                    <tr>
+                      <td>trunc</td>
+                      <td>\(-3\)</td>
+                      <td>\(-1\)</td>
+                      <td>\(2 \times (-3) + (-1) = -7\)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>في الطريقتين يبقى المقسوم كما هو:</p>
+                <div class="math-block">\[ -7 = 2 \times \text{Quotient} + \text{Remainder} \]</div>
+                <p>الذي يتغير هو اختيارنا للـ Quotient، ويتبعه الـ Remainder: مع floor يأخذ إشارة المقسوم عليه، ومع trunc يأخذ إشارة المقسوم. ولهذا يعطي عامل الباقي \(\%\) القيمة \(1\) في Python والقيمة \(-1\) في Java. نكتفي هنا بهذا القدر، والحساب المعياري الكامل في المرحلة \(24\).</p>
+              </div>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ الشائع: الظن أن floor و trunc تعطيان النتيجة نفسها لأنهما تتفقان في الأعداد الموجبة. النتيجة الخاطئة: نتوقع \(-4\) والباقي \(1\) فنحصل على \(-3\) والباقي \(-1\) حين تستعمل اللغة trunc. التصحيح: نتأكد من طريقة لغتنا قبل أن نقسم عددًا قد يكون سالبًا.</p>
+              </div>
+
+              <p><strong>أين أراها في الـ backend؟</strong> في توزيع المفاتيح على أقسام بعامل الباقي: إن كان الـ hash هو \(-7\) والأقسام \(2\)، نحصل في Python على القسم \(1\) فيصح التوزيع، وفي Java على \(-1\) فيصير رقم القسم سالبًا ويفشل الوصول إليه. وفي الصفحات نستعمل ceil: \(\lceil 95 \div 10 \rceil = 10\)، بينما تعطي floor القيمة \(9\) وتُسقط آخر \(5\) عناصر.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>على خط الأعداد، أيّ العددين أكبر: \(-9\) أم \(-4\)؟ اشرح جوابك بموقعهما على الخط.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>العدد \(-4\) أكبر لأنه أقرب إلى اليمين، فالعدد الأبعد إلى اليسار هو الأصغر. التحقق: من \(-9\) نسير \(5\) خطوات إلى اليمين فنصل إلى \(-4\)، أي \(-9 + 5 = -4\).</p>
+                  <p>راجع: Integers &amp; the Number Line</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q2">
+              <h3 class="topic-block__title">سؤال 2</h3>
+              <p>احسب \(|-12|\) و\(|5 - 9|\)، ثم أوجد المسافة بين \(-5\) و\(12\) على خط الأعداد.</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>\(|-12| = 12\)، وبما أن \(5 - 9 = -4\) فإن \(|5 - 9| = 4\). والمسافة بين \(-5\) و\(12\) هي \(|-5 - 12| = |-17| = 17\). التحقق: من \(-5\) إلى الصفر \(5\) خطوات ثم \(12\) خطوة إلى \(12\)، والمجموع \(17\).</p>
+                  <p>راجع: Absolute Value</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q3">
+              <h3 class="topic-block__title">سؤال 3</h3>
+              <p>عندك \(101\) عنصرًا وحجم الصفحة \(25\). أيّ طريقة تختار لحساب عدد الصفحات: floor أم ceil أم trunc؟ ومتى تعطي floor و trunc جوابين مختلفين؟</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>نختار ceil لأن \(101 \div 25 = 4.04\) وتبقى عناصر تحتاج صفحة إضافية، فالجواب \(5\) صفحات. التحقق: \(4\) صفحات تتسع لـ \(100\) عنصر فقط، و\(5\) صفحات تتسع لـ \(125\). أما floor و trunc فتعطيان \(4\) معًا، ولا تختلفان إلا عند الأعداد السالبة مثل \(-4.04\).</p>
+                  <p>راجع: Floor, Ceiling &amp; Truncation</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">تصنيف انحراف الزمن في دلاء</h2>
+
+          <div class="article-content">
+            <p>خدمة مراقبة تسجّل انحراف وصول كل حدث عن موعده المتوقع بالـ ms: القيمة السالبة تعني أن الحدث وصل مبكرًا، والموجبة أنه تأخر. تريد الخدمة تجميع الانحرافات في دلاء عرض كل منها \(10\,\text{ms}\)، ويُحسب رقم الدلو بقسمة الانحراف على \(10\) ثم تحويل الناتج إلى عدد كامل.</p>
+
+            <div class="table-wrap table-wrap--fit">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>الحدث</th>
+                    <th>الانحراف</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الأول</td>
+                    <td>\(-25\,\text{ms}\)</td>
+                  </tr>
+                  <tr>
+                    <td>الثاني</td>
+                    <td>\(-3\,\text{ms}\)</td>
+                  </tr>
+                  <tr>
+                    <td>الثالث</td>
+                    <td>\(8\,\text{ms}\)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol>
+              <li>احسب رقم الدلو لكل حدث مرة بـ floor ومرة بـ trunc.</li>
+              <li>تحقق بطريقة ثانية: إذا وقع حدثان في دلو واحد فلا بد أن يكون البعد بينهما أقل من \(10\). استعمل القيمة المطلقة لفحص الحدثين الثاني والثالث تحت كل طريقة.</li>
+              <li>عقلية المهندس: أيّ الطريقتين تختار ولماذا؟ وماذا يتغير لو كانت كل الانحرافات موجبة؟</li>
+            </ol>
+
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>اقسم كل انحراف على \(10\). تأخذ floor العدد الصحيح الواقع على يسار الناتج، وتحذف trunc الجزء الكسري فقط.</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <p><strong>الخطوة الأولى:</strong> نقسم كل انحراف على \(10\) ثم نطبّق الطريقتين.</p>
+                <div class="table-wrap table-wrap--fit">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>الحدث</th>
+                        <th>الناتج</th>
+                        <th>floor</th>
+                        <th>trunc</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>الأول</td>
+                        <td>\(-2.5\)</td>
+                        <td>\(-3\)</td>
+                        <td>\(-2\)</td>
+                      </tr>
+                      <tr>
+                        <td>الثاني</td>
+                        <td>\(-0.3\)</td>
+                        <td>\(-1\)</td>
+                        <td>\(0\)</td>
+                      </tr>
+                      <tr>
+                        <td>الثالث</td>
+                        <td>\(0.8\)</td>
+                        <td>\(0\)</td>
+                        <td>\(0\)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p><strong>الخطوة الثانية:</strong> مع trunc يقع الحدثان الثاني والثالث معًا في الدلو \(0\). البعد بينهما:</p>
+                <div class="math-block">\[ |-3 - 8| = |-11| = 11 \]</div>
+                <p>وهو أكبر من \(10\)، فلا يجوز أن يتشاركا دلوًا عرضه \(10\,\text{ms}\). مع floor يقعان في دلوين مختلفين هما \(-1\) و\(0\)، وكل دلو \(k\) يغطي المجال من \(10k\) إلى ما قبل \(10k + 10\): فالدلو \(-3\) يغطي من \(-30\) إلى ما قبل \(-20\) ويحوي \(-25\)، والدلو \(-1\) يحوي \(-3\)، والدلو \(0\) يحوي \(8\).</p>
+                <p><strong>عقلية المهندس:</strong> نختار floor لأن عرض كل الدلاء يبقى \(10\,\text{ms}\). أما trunc فتجعل الدلو \(0\) يستوعب كل انحراف بين \(-10\) و\(10\) دون الطرفين، أي مجالًا عرضه \(20\,\text{ms}\)، فتختلط الانحرافات المبكرة بالمتأخرة. لو كانت كل الانحرافات موجبة لتساوت الطريقتان ولما ظهرت المشكلة؛ ولو تغيّر عرض الدلو لتغيّرت الأرقام وبقي الاستنتاج نفسه.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>الـ Integer يشمل الأعداد السالبة والصفر والموجبة، والأكبر دائمًا هو الأقرب إلى اليمين على خط الأعداد.</li>
+              <li>الـ Absolute Value هي البعد عن الصفر فلا تكون سالبة، وبُعد عددين أحدهما عن الآخر هو \(|a - b|\).</li>
+              <li>الطرق الثلاث تحوّل العدد إلى Integer باتجاهات مختلفة: floor لأسفل، و ceil لأعلى، و trunc بحذف الكسر نحو الصفر. وهي تتفق في الموجب وتختلف في السالب، ولهذا يختلف الـ Remainder بين لغات البرمجة.</li>
+              <li>الخطوة التالية: بعد الأعداد السالبة ننتقل إلى الضرب المتكرر: القوى والجذور والكتابة العلمية.</li>
+              <li>عقلية المهندس: قبل أن تقرّب ناتجًا أو تقسم عددًا قد يكون سالبًا، حدّد الاتجاه الذي تريده ثم اسأل لغتك عمّا تفعله فعلًا.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="05-ratio-percent-rates.html">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">Ratio, Percent &amp; Rates - النسبة والمئوية والمعدلات</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="07-powers-roots-scientific-notation.html">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">Powers, Roots &amp; Scientific Notation - القوى والجذور والكتابة العلمية</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>

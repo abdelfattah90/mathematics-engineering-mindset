@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Units &amp; Data Sizes - الوحدات وأحجام البيانات</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body data-toc>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__back" href="../index.html#math-8"><span>الخطة</span></a>
+        <span class="topbar__title" data-sync-title></span>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero">
+        <div class="container">
+          <div class="hero__eyebrow">M1 · Basic Mathematics · 8</div>
+          <h1 class="hero__title">Units &amp; Data Sizes - الوحدات وأحجام البيانات</h1>
+          <p class="hero__lead">
+            كل رقم تقرؤه في عملك يحمل وحدة تحدد معناه: زمن الاستجابة بأجزاء من الثانية، وحجم الملف بمضاعفات ثابتة، وسرعة الشبكة بوحدة تشبه وحدة الحجم لكنها ليست هي. نتعلم هنا كيف ننتقل بين الوحدات بخطوات مضمونة، ولماذا يختلف KB عن KiB، وكيف نقدّر زمن نقل ملف قبل أن نجرّبه.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-section" id="explanation" data-toc="deep">
+        <div class="container">
+          <div class="content-section__eyebrow">شرح وتطبيق</div>
+          <h2 class="content-section__title">شرح وتطبيق كل موضوع</h2>
+
+          <div class="article-content">
+            <div class="topic-block" id="time-metric-units">
+              <h3 class="topic-block__title">Time &amp; Metric Units - وحدات الزمن والوحدات المترية</h3>
+              <p>سجل يقول إن زمن الاستجابة \(250\) وسجل آخر يقول \(0.25\)، والخدمة واحدة. الفرق ليس في الخدمة بل في الوحدة التي كُتب بها الرقم، فالرقم وحده لا يعني شيئًا حتى نعرف ما يقيسه.</p>
+              <p>الفكرة: <strong>Metric Prefix</strong> كلمة قصيرة تسبق اسم الوحدة وتضربها في عدد ثابت، فنكتفي بوحدة أساسية واحدة ونصنع منها وحدات أكبر وأصغر بالبادئات.</p>
+              <p>ماذا تتوقع؟ الرمز \(\text{ms}\) مكوَّن من البادئة milli والثانية. هل \(250\,\text{ms}\) أكبر من ثانية أم أصغر منها؟ فكّر قبل أن تتابع.</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>اكتب الزمن \(250\,\text{ms}\) بالثواني.</p>
+                  <ol>
+                    <li>البادئة milli تعني جزءًا من ألف، فالمللي ثانية الواحدة هي \(\frac{1}{1{,}000}\,\text{s}\).</li>
+                    <li>نضرب الرقم في قيمة البادئة: \(250 \times \frac{1}{1{,}000} = \frac{250}{1{,}000} = 0.25\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: \(0.25\,\text{s}\). التحقق: أربع مرات \(250\,\text{ms}\) تساوي \(1{,}000\,\text{ms}\) أي ثانية واحدة، فالزمن \(250\,\text{ms}\) هو ربع ثانية.</p>
+                </div>
+              </div>
+
+              <p>هل طابق جوابك توقعك؟ الرقم \(250\) يبدو كبيرًا، لكنه يقيس بوحدة صغيرة جدًا، فالزمن أقل من ثانية.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>القيمة بالوحدة الأساسية تساوي الرقم مضروبًا في قيمة البادئة.</p>
+              </div>
+
+              <p>لماذا تعمل؟ لأن البادئة ليست وحدة جديدة بل عدد مختصر ملصق بالوحدة، فكلمة kilo تعني حرفيًا ألف مرة. وكل ما نفعله عند قراءة الرقم مع بادئته هو ضرب بسيط لا أكثر.</p>
+
+              <p>تذكير: Power يعني ضرب العدد في نفسه عددًا من المرات، فمثلًا \(10^{3} = 10 \times 10 \times 10 = 1{,}000\)، والأس السالب يعني القسمة: \(10^{-3} = \frac{1}{10^{3}} = \frac{1}{1{,}000}\). وهذه قيم البادئات الأربع التي نحتاجها.</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>البادئة</th>
+                      <th>الرمز</th>
+                      <th>القيمة</th>
+                      <th>المعنى</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>kilo</td>
+                      <td>k</td>
+                      <td>\(10^{3}\)</td>
+                      <td>ألف مرة</td>
+                    </tr>
+                    <tr>
+                      <td>mega</td>
+                      <td>M</td>
+                      <td>\(10^{6}\)</td>
+                      <td>مليون مرة</td>
+                    </tr>
+                    <tr>
+                      <td>giga</td>
+                      <td>G</td>
+                      <td>\(10^{9}\)</td>
+                      <td>مليار مرة</td>
+                    </tr>
+                    <tr>
+                      <td>milli</td>
+                      <td>m</td>
+                      <td>\(10^{-3}\)</td>
+                      <td>جزء من ألف</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>تذكير: Scientific Notation تكتب العدد على صورة رقم مضروب في قوة للعدد \(10\)، وبادئات الوحدات هي القوى نفسها، فمثلًا \(80\,\text{ms} = 80 \times 10^{-3}\,\text{s} = 8 \times 10^{-2}\,\text{s}\).</p>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>حالة الحرف تغيّر المعنى: \(\text{m}\) الصغيرة تعني milli و\(\text{M}\) الكبيرة تعني mega، والفرق بين قيمتيهما \(10^{9}\) مرة.</p>
+              </div>
+
+              <p>أما الزمن فليس عشريًا مثل البادئات، فوحداته الشائعة تتبع الرقمين \(60\) و\(24\).</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>الوحدة</th>
+                      <th>ما تساويه</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>دقيقة</td>
+                      <td>\(1\,\text{min} = 60\,\text{s}\)</td>
+                    </tr>
+                    <tr>
+                      <td>ساعة</td>
+                      <td>\(1\,\text{h} = 60\,\text{min} = 3{,}600\,\text{s}\)</td>
+                    </tr>
+                    <tr>
+                      <td>يوم</td>
+                      <td>\(1\,\text{day} = 24\,\text{h} = 86{,}400\,\text{s}\)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: قراءة \(1.5\,\text{h}\) على أنها ساعة و\(50\) دقيقة، فتخرج \(110\) دقائق وهو رقم خاطئ. التصحيح: ما بعد الفاصلة جزء من الساعة لا عدد دقائق، فنصف الساعة \(0.5\,\text{h} = 0.5 \times 60 = 30\,\text{min}\) والزمن الصحيح \(90\,\text{min}\).</p>
+              </div>
+
+              <p><strong>أين أراها في الـ backend؟</strong> إعداد timeout قيمته \(30\) قد يعني ثلاثين ثانية في مكتبة وثلاثين مللي ثانية في أخرى، والفرق بينهما \(1{,}000\) مرة. لذلك نقرأ الوحدة في التوثيق قبل أن نثق بالرقم، وتُسمّى الحقول بوحدتها مثل duration_ms.</p>
+            </div>
+
+            <div class="topic-block" id="unit-conversion">
+              <h3 class="topic-block__title">Unit Conversion - تحويل الوحدات</h3>
+              <p>وظيفة مجدولة استغرقت \(90\) دقيقة، ونظام المراقبة يريد المدة بالثواني. هل نضرب في \(60\) أم نقسم عليه؟ التخمين هنا يعطي أخطاء متكررة.</p>
+              <p>الفكرة: <strong>Unit Conversion</strong> هو تغيير وحدة الرقم دون تغيير الكمية نفسها، ويتم بالضرب في كسر قيمته واحد، فتختفي الوحدة القديمة وتظهر الجديدة.</p>
+              <p>تذكير: Ratio يقارن كميتين بالقسمة. والكسر الذي نحتاجه هنا يقارن وحدتين لزمن واحد، فـ \(60\,\text{s}\) و\(1\,\text{min}\) هما المقدار نفسه، وقيمة الكسر \(\frac{60\,\text{s}}{1\,\text{min}}\) تساوي \(1\).</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>حوّل \(90\,\text{min}\) إلى ثوانٍ.</p>
+                  <ol>
+                    <li>نريد التخلص من \(\text{min}\) وإبقاء \(\text{s}\)، فنختار الكسر الذي تقع فيه \(\text{min}\) في المقام: \(\frac{60\,\text{s}}{1\,\text{min}}\).</li>
+                    <li>نضرب: \(90\,\text{min} \times \frac{60\,\text{s}}{1\,\text{min}}\). تظهر \(\text{min}\) في البسط والمقام فتُلغى، ويبقى \(90 \times 60\,\text{s}\).</li>
+                    <li>نحسب: \(90 \times 60 = 5{,}400\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: \(5{,}400\,\text{s}\). التحقق بطريقة ثانية: \(90\,\text{min}\) هي ساعة ونصف، أي \(3{,}600 + 1{,}800 = 5{,}400\,\text{s}\).</p>
+                </div>
+              </div>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>اضرب الرقم في كسر يساوي \(1\) تكون وحدته القديمة في المقام والجديدة في البسط. إن لم تُلغ الوحدة القديمة فقد قلبت الكسر.</p>
+              </div>
+
+              <p>لماذا تعمل؟ لأن الضرب في \(1\) لا يغيّر الكمية، وكتابة \(1\) على صورة \(\frac{60\,\text{s}}{1\,\text{min}}\) تغيّر شكل الرقم لا قيمته. والوحدات تُعامل كالأعداد: ما ظهر منها في البسط والمقام معًا يُلغى.</p>
+              <p>وتعمل الطريقة نفسها مع البادئات، فنعود إلى مثال الجزء السابق بالاتجاه المعاكس:</p>
+              <div class="math-block">\[ 0.25\,\text{s} \times \frac{1{,}000\,\text{ms}}{1\,\text{s}} = 250\,\text{ms} \]</div>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: ضرب \(90\,\text{min}\) في الكسر المقلوب \(\frac{1\,\text{min}}{60\,\text{s}}\)، فيخرج \(1.5\) بوحدة \(\frac{\text{min}^{2}}{\text{s}}\) لا تعني شيئًا. التصحيح: اقلب الكسر حتى تُلغى \(\text{min}\)، ثم اختبر المعقولية: الثانية أصغر من الدقيقة، فعند الانتقال إلى وحدة أصغر يجب أن يكبر الرقم.</p>
+              </div>
+
+              <p><strong>أين أراها في الـ backend؟</strong> قد يصل زمن من إعداد بالدقائق وتحتاجه مكتبة بالمللي ثانية، أو يرسل عميل زمنًا بالثواني وتحفظه قاعدة البيانات بالمللي ثانية. كتابة الكسر على الورق قبل كتابة الكود تمنع خطأ الألف مرة.</p>
+            </div>
+
+            <div class="topic-block" id="bits-bytes-data-sizes">
+              <h3 class="topic-block__title">Bits, Bytes &amp; Data Sizes - البت والبايت وأحجام البيانات</h3>
+              <p>مزوّد الإنترنت يعلن سرعة، ومدير الملفات يعلن حجم الملف، والرقمان يُكتبان بحروف متشابهة لكنهما لا يقيسان الشيء نفسه. وإذا قسمنا أحدهما على الآخر مباشرة خرج رقم خاطئ.</p>
+              <p>الفكرة: <strong>Bit</strong> هو أصغر وحدة معلومات، ويحمل إجابة واحدة من اثنتين نكتبها \(0\) أو \(1\). أما <strong>Byte</strong> فهو مجموعة من ثمانية بتات، ورمزه \(\text{B}\) الكبيرة، وسنكتب bit كاملة حتى لا تختلط بالبايت.</p>
+              <p>تذكير: Rate نسبة بين كميتين من نوعين مختلفين، فسرعة الشبكة هي عدد البتات في كل ثانية، وتعني \(\text{Mbit/s}\) ملايين البتات في الثانية. أما حجم الملف فيُقاس بالبايت.</p>
+              <p>ماذا تتوقع؟ ملف حجمه \(500\,\text{MB}\) واتصال سرعته \(100\,\text{Mbit/s}\). كثيرون يقسمون \(500\) على \(100\) ويقولون خمس ثوانٍ. فكّر: هل هذا صحيح؟</p>
+
+              <div class="example">
+                <span class="example__label">مثال محلول</span>
+                <div class="example__body">
+                  <p>احسب أقل زمن لنقل ملف حجمه \(500\,\text{MB}\) عبر اتصال سرعته \(100\,\text{Mbit/s}\).</p>
+                  <ol>
+                    <li>الحجم بالبايتات والسرعة بالبتات، فنوحّد الوحدة أولًا. كل \(8\) بتات تساوي بايتًا واحدًا، فنضرب في الكسر: \(100\,\text{Mbit/s} \times \frac{1\,\text{B}}{8\,\text{bit}} = \frac{100}{8}\,\text{MB/s} = 12.5\,\text{MB/s}\).</li>
+                    <li>كل ثانية تنقل \(12.5\,\text{MB}\)، فنسأل كم مرة يتسع \(12.5\) في \(500\): \(500 \div 12.5 = 40\).</li>
+                  </ol>
+                  <p class="example__answer">الجواب: \(40\,\text{s}\) على الأقل، لا خمس ثوانٍ. التحقق بطريقة ثانية: نحوّل الملف إلى بتات فيصير \(500 \times 8 = 4{,}000\,\text{Mbit}\)، ثم \(4{,}000 \div 100 = 40\,\text{s}\).</p>
+                </div>
+              </div>
+
+              <p>هل طابق جوابك توقعك؟ الخمس ثوانٍ تتجاهل أن الرقمين بوحدتين مختلفتين، والفرق بينهما ثمانية أضعاف. ونقول «على الأقل» لأن الحساب يفترض أن الخط يعمل بأقصى سرعته طوال الوقت.</p>
+
+              <div class="callout callout--definition">
+                <span class="callout__label">قاعدة</span>
+                <p>البايت الواحد يساوي ثمانية بتات. للانتقال من البتات إلى البايتات نقسم على \(8\)، وللعكس نضرب في \(8\).</p>
+                <div class="math-block">\[ 1\,\text{B} = 8\,\text{bit} \]</div>
+              </div>
+
+              <p>لماذا تعمل؟ لأن البايت علبة تتسع لثمانية بتات، فخط ينقل ثمانية بتات في الثانية ينقل بايتًا واحدًا فقط. لذلك يظهر رقم السرعة بالبتات أكبر بثمانية أضعاف من رقمها بالبايتات.</p>
+
+              <p>ثم تأتي البادئات على البايت، ولها عائلتان. الأولى تستعمل قيم البادئات المترية كما هي، والثانية يظهر فيها الحرف i وتستعمل \(1{,}024\) بدل \(1{,}000\).</p>
+
+              <div class="table-wrap table-wrap--fit">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>الوحدة</th>
+                      <th>عدد البايتات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\(\text{KB}\)</td>
+                      <td>\(1{,}000\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\text{KiB}\)</td>
+                      <td>\(1{,}024\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\text{MB}\)</td>
+                      <td>\(1{,}000{,}000\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\text{MiB}\)</td>
+                      <td>\(1{,}024 \times 1{,}024 = 1{,}048{,}576\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\text{GB}\)</td>
+                      <td>\(1{,}000{,}000{,}000\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\text{GiB}\)</td>
+                      <td>\(1{,}024 \times 1{,}024 \times 1{,}024 = 1{,}073{,}741{,}824\)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="callout callout--note">
+                <span class="callout__label">ملاحظة</span>
+                <p>سبب اختيار \(1{,}024\) يرتبط بالنظام الثنائي الذي نصل إليه في مرحلة لاحقة. يكفي الآن أن نعرف أنه الرقم المستعمل كلما ظهر الحرف i.</p>
+              </div>
+
+              <div class="callout callout--warning">
+                <span class="callout__label">انتبه</span>
+                <p>الخطأ: معاملة \(\text{GB}\) و\(\text{GiB}\) كأنهما حجم واحد، أي افتراض أن \(1\,\text{GiB}\) يساوي \(1{,}000{,}000{,}000\) بايت. النتيجة الخاطئة أن نقدّر الحجم بأقل من حقيقته، لأن \(1\,\text{GiB} = 1{,}073{,}741{,}824\,\text{B}\) وهو أكبر بنحو \(7.4\%\). التصحيح: انظر إلى الحرف i قبل أن تحسب؛ بدونه يعني \(1{,}000\) وبه يعني \(1{,}024\).</p>
+              </div>
+
+              <p><strong>أين أراها في الـ backend؟</strong> حد رفع الملفات في الـ API قد يُكتب \(10\,\text{MB}\) أو \(10\,\text{MiB}\)، وبينهما فرق نحو \(5\%\). وتُقاس سرعات الشبكة بالبت بينما تُقاس أحجام الملفات وفواتير التخزين بالبايت.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="quiz">
+        <div class="container">
+          <div class="content-section__eyebrow">اختبر نفسك</div>
+          <h2 class="content-section__title">أسئلة نظرية</h2>
+          <p class="content-section__description">
+            حاول أن تجيب بنفسك قبل أن تفتح الإجابة تحت كل سؤال.
+          </p>
+
+          <div class="article-content">
+            <div class="topic-block" id="q1">
+              <h3 class="topic-block__title">سؤال 1</h3>
+              <p>ما معنى البادئة milli؟ وكم مرة يزيد الزمن \(250\,\text{s}\) على الزمن \(250\,\text{ms}\)؟</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>البادئة milli تعني جزءًا من ألف، فـ \(250\,\text{ms} = 250 \times 0.001 = 0.25\,\text{s}\). وبالقسمة \(250 \div 0.25 = 1{,}000\)، فالزمن \(250\,\text{s}\) أكبر ألف مرة. التحقق: \(250\,\text{s} = 250 \times 1{,}000 = 250{,}000\,\text{ms}\).</p>
+                  <p>راجع: Time &amp; Metric Units - وحدات الزمن والوحدات المترية</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q2">
+              <h3 class="topic-block__title">سؤال 2</h3>
+              <p>اكتب الكسر الذي يساوي \(1\) ثم حوّل \(45\,\text{min}\) إلى ثوانٍ. وكيف تتأكد أنك اخترت اتجاه الكسر الصحيح؟</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>الكسر هو \(\frac{60\,\text{s}}{1\,\text{min}}\)، فـ \(45 \times 60 = 2{,}700\,\text{s}\). الاتجاه صحيح لأن \(\text{min}\) أُلغيت وبقيت \(\text{s}\). التحقق بطريقة ثانية: \(45\,\text{min}\) ثلاثة أرباع الساعة، و\(\frac{3}{4} \times 3{,}600 = 2{,}700\).</p>
+                  <p>راجع: Unit Conversion - تحويل الوحدات</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="topic-block" id="q3">
+              <h3 class="topic-block__title">سؤال 3</h3>
+              <p>زميلتك تقدّر أن نقل ملف حجمه \(250\,\text{MB}\) عبر اتصال سرعته \(200\,\text{Mbit/s}\) يحتاج \(10\) ثوانٍ. متى يكون تقديرها صحيحًا ومتى لا؟</p>
+              <details class="reveal">
+                <summary>الإجابة</summary>
+                <div class="reveal__body">
+                  <p>يصح التقدير إن كان \(\text{MB}\) يعني مليون بايت، لأن \(200 \div 8 = 25\,\text{MB/s}\) و\(250 \div 25 = 10\,\text{s}\). ولا يصح إن كان الحجم \(250\,\text{MiB}\)، لأنه \(250 \times 1{,}048{,}576 = 262{,}144{,}000\) بايت، فيصير الزمن نحو \(10.5\,\text{s}\). وفي الحالتين هو حد أدنى، لأن الشبكة الفعلية تضيف تأخيرًا.</p>
+                  <p>راجع: Bits, Bytes &amp; Data Sizes - البت والبايت وأحجام البيانات</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="container">
+          <div class="content-section__eyebrow">تمرين شامل</div>
+          <h2 class="content-section__title">Response Time Budget - ميزانية زمن الاستجابة</h2>
+
+          <div class="article-content">
+            <p>خدمة تُرجع قائمة منتجات بصيغة JSON إلى تطبيق جوال. نريد أن يصل الرد كاملًا خلال الحد المسموح، ونفترض أن زمن النقل وزمن المعالجة هما العاملان الوحيدان في الحساب.</p>
+
+            <div class="table-wrap table-wrap--fit">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>المعطى</th>
+                    <th>القيمة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>حجم الرد</td>
+                    <td>\(3\,\text{MB}\)</td>
+                  </tr>
+                  <tr>
+                    <td>سرعة اتصال الجوال</td>
+                    <td>\(16\,\text{Mbit/s}\)</td>
+                  </tr>
+                  <tr>
+                    <td>زمن المعالجة في الخادم</td>
+                    <td>\(120\,\text{ms}\)</td>
+                  </tr>
+                  <tr>
+                    <td>الحد المسموح للزمن الكلي</td>
+                    <td>\(1{,}500\,\text{ms}\)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol>
+              <li>احسب زمن نقل الرد بالثواني، ثم الزمن الكلي بالمللي ثانية.</li>
+              <li>تحقق بطريقة ثانية: حوّل سرعة الاتصال إلى \(\text{MB/s}\) بدل تحويل الحجم إلى بتات.</li>
+              <li>عقلية المهندس: هل يتحقق الحد؟ ماذا يتغير لو ضغطنا الرد إلى نصف حجمه؟ وماذا لو نزلت السرعة إلى \(8\,\text{Mbit/s}\)؟</li>
+            </ol>
+
+            <details class="reveal reveal--hint">
+              <summary>تلميح</summary>
+              <div class="reveal__body">
+                <p>الحجم بالبايتات والسرعة بالبتات، فوحّدهما أولًا بالضرب في \(8\) أو القسمة عليه، ثم اقسم الحجم على السرعة.</p>
+              </div>
+            </details>
+
+            <details class="reveal">
+              <summary>الحل</summary>
+              <div class="reveal__body">
+                <p>الخطوة الأولى: نحوّل الحجم إلى بتات ثم نقسمه على السرعة، ونضيف زمن المعالجة.</p>
+                <div class="math-block">
+                  \[ \begin{aligned} 3\,\text{MB} \times 8 &amp;= 24\,\text{Mbit} \\ 24\,\text{Mbit} \div 16\,\text{Mbit/s} &amp;= 1.5\,\text{s} = 1{,}500\,\text{ms} \\ 1{,}500\,\text{ms} + 120\,\text{ms} &amp;= 1{,}620\,\text{ms} \end{aligned} \]
+                </div>
+                <p>الخطوة الثانية: السرعة بالبايتات هي \(16 \div 8 = 2\,\text{MB/s}\)، فالنقل يحتاج \(3 \div 2 = 1.5\,\text{s}\). النتيجة نفسها، فالحساب سليم.</p>
+                <p>الخطوة الثالثة: الزمن الكلي \(1{,}620\,\text{ms}\) يتجاوز الحد بمقدار \(120\,\text{ms}\)، فالحد لا يتحقق. بعد الضغط إلى \(1.5\,\text{MB}\) يصير النقل \(12 \div 16 = 0.75\,\text{s}\) أي \(750\,\text{ms}\)، والكلي \(870\,\text{ms}\) فيتحقق الحد. أما عند \(8\,\text{Mbit/s}\) فالرد الأصلي يحتاج \(24 \div 8 = 3\,\text{s}\) أي كليًا \(3{,}120\,\text{ms}\)، والرد المضغوط يحتاج \(12 \div 8 = 1.5\,\text{s}\) أي كليًا \(1{,}620\,\text{ms}\) فيفشل أيضًا.</p>
+                <p><strong>عقلية المهندس:</strong> زمن النقل يتناسب مع الحجم ويتناسب عكسيًا مع السرعة، فتصغير الحجم إلى النصف يعادل مضاعفة السرعة، وقد ظهر ذلك في تساوي زمن نقل الرد الأصلي على \(16\,\text{Mbit/s}\) مع زمن نقل الرد المضغوط على \(8\,\text{Mbit/s}\)، وكلاهما \(1{,}500\,\text{ms}\). زمن المعالجة \(120\,\text{ms}\) صغير أمام النقل، فالرافعة الحقيقية هي الحجم. ونتيجتنا حد أدنى، فنترك هامشًا للتأخير الفعلي للشبكة.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="summary">
+        <div class="container">
+          <div class="content-section__eyebrow">الخلاصة</div>
+          <h2 class="content-section__title">أهم ما يجب تذكّره</h2>
+
+          <div class="summary-card">
+            <ul class="summary-card__list">
+              <li>الرقم بلا وحدة لا معنى له، وكل Metric Prefix عدد ثابت ملصق بالوحدة، أما الزمن فيتبع \(60\) و\(24\) لا العدد \(10\).</li>
+              <li>تحويل الوحدات هو الضرب في كسر يساوي \(1\)، وإن لم تُلغ الوحدة القديمة فاقلب الكسر.</li>
+              <li>البايت ثمانية بتات: الشبكة تُقاس بالبت والملفات بالبايت، والحرف i يفصل \(1{,}024\) عن \(1{,}000\).</li>
+              <li>بهذه الصفحة اكتملت أدوات الأعداد، وفي الصفحة التالية نجمعها في منهج واحد لحل المسائل والتحقق من الجواب.</li>
+              <li>عقلية المهندس: قبل أن تثق برقم اسأل «بأي وحدة؟» واكتب الوحدات في الحساب، فتنكشف أخطاء الألف والثمانية قبل أن تصل إلى الإنتاج.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-nav" aria-label="التنقل بين صفحات القسم">
+        <div class="container page-nav__inner">
+          <a class="page-nav__link page-nav__link--prev" href="07-powers-roots-scientific-notation.html">
+            <span class="page-nav__label">السابق</span>
+            <span class="page-nav__title">Powers, Roots &amp; Scientific Notation - القوى والجذور والكتابة العلمية</span>
+          </a>
+          <a class="page-nav__link page-nav__link--next" href="09-problem-solving-edge-cases.html">
+            <span class="page-nav__label">التالي</span>
+            <span class="page-nav__title">Problem Solving &amp; Edge Cases - حل المسائل والتفكير الرياضي</span>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../assets/stage.js"></script>
+  </body>
+</html>

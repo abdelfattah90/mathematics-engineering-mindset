@@ -156,6 +156,9 @@
   const CDN = 'https://cdnjs.cloudflare.com/ajax/libs/'
   const HLJS_BASE = CDN + 'highlight.js/11.9.0/'
   const KATEX_BASE = CDN + 'KaTeX/0.16.9/'
+  // currentScript is null inside async callbacks, so the script's own URL is captured here
+  const SELF_SRC = document.currentScript && document.currentScript.src
+  const KATEX_LOCAL = SELF_SRC ? new URL('vendor/katex/', SELF_SRC).href : ''
   const HLJS_EXTRA = ['dockerfile', 'nginx', 'http', 'dart', 'protobuf', 'x86asm'] // خارج الحزمة الأساسية
 
   function loadScript(src) {
@@ -181,14 +184,26 @@
     }
   }
 
+  // Local copy first (works offline), CDN as the fallback
+  async function loadKatex() {
+    for (const base of [KATEX_LOCAL, KATEX_BASE].filter(Boolean)) {
+      try {
+        if (!window.katex) await loadScript(base + 'katex.min.js')
+        if (!window.renderMathInElement) await loadScript(base + 'contrib/auto-render.min.js')
+        document.head.appendChild(make('link', '', { rel: 'stylesheet', href: base + 'katex.min.css' }))
+        return
+      } catch (_) {
+        /* try the next source */
+      }
+    }
+    throw new Error('KaTeX unavailable')
+  }
+
   async function renderMath() {
     if (!document.body.hasAttribute('data-toc')) return
     if (!/\\[([]/.test(document.body.textContent)) return // لا \( ولا \[ في الصفحة
     try {
-      const css = make('link', '', { rel: 'stylesheet', href: KATEX_BASE + 'katex.min.css' })
-      document.head.appendChild(css)
-      if (!window.katex) await loadScript(KATEX_BASE + 'katex.min.js')
-      if (!window.renderMathInElement) await loadScript(KATEX_BASE + 'contrib/auto-render.min.js')
+      await loadKatex()
       window.renderMathInElement(document.body, {
         delimiters: [
           { left: '\\[', right: '\\]', display: true },
@@ -202,8 +217,48 @@
     }
   }
 
+  // Safety net for the RTL/digits problem: any Latin or number run the author left as plain text is wrapped in
+  // <bdi dir="ltr"> so its internal order survives inside Arabic text. It must run after KaTeX (which owns \( \)).
+  // Brackets stay inside a run only when attached to it (f(x), O(n log n)); a run never ends with punctuation
+  // or a dash, so "English - Arabic" keeps its separator between the two parts.
+  const LTR_RUN =
+    /(?:[-\u2212+](?=\d))?[A-Za-z0-9\u0370-\u03ff](?:[A-Za-z0-9\u0370-\u03ff .,+\-\u2212\u2013\u2014\u00b7\u2022\u00d7\u00f7\u00b1=/%^:;_'\u2019&*<>|!\u00b2\u00b3\u2190-\u21ff\u2200-\u22ff\u2308-\u230b]|\([^()\u0600-\u06ff]*\)|\[[^[\]\u0600-\u06ff]*\]|\{[^{}\u0600-\u06ff]*\})*/g
+  const LTR_TAIL = /[\s.,:;+\-\u2212\u2013\u2014\u00b7\u2022=\u00d7\u00f7/^&|<>*]+$/
+  const LTR_SKIP = 'script,style,textarea,pre,code,svg,bdi,.katex,.katex-display,[dir="ltr"]'
+
+  function isolateLtrRuns(root) {
+    const nodes = []
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT)
+    for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+      const v = n.nodeValue
+      if (!/[A-Za-z0-9\u0370-\u03ff]/.test(v) || /\\[([]/.test(v)) continue // raw TeX means KaTeX did not run
+      if (n.parentElement && n.parentElement.closest(LTR_SKIP)) continue
+      nodes.push(n)
+    }
+    nodes.forEach((n) => {
+      const text = n.nodeValue
+      const frag = document.createDocumentFragment()
+      let last = 0
+      for (const m of text.matchAll(LTR_RUN)) {
+        const core = m[0].replace(LTR_TAIL, '')
+        if (!core) continue
+        if (m.index > last) frag.append(text.slice(last, m.index))
+        const bdi = make('bdi', '', { dir: 'ltr' })
+        bdi.textContent = core
+        frag.append(bdi)
+        last = m.index + core.length
+      }
+      if (last === 0) return
+      if (last < text.length) frag.append(text.slice(last))
+      n.replaceWith(frag)
+    })
+  }
+
   highlightCode()
-  renderMath()
+  renderMath().finally(() => {
+    if (!document.body.hasAttribute('data-toc')) return
+    ;[$('main'), $('.toc')].filter(Boolean).forEach(isolateLtrRuns)
+  })
 
   /* ------------------------------------------------------------------
      4) المحتويات + شريط التقدّم + تمييز القسم الحالي
