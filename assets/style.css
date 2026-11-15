@@ -273,7 +273,7 @@ main>.content-section:nth-of-type(odd) {
    4) Top bar + TOC + reading progress
 ========================================================== */
 .topbar {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
   background: rgba(255, 255, 255, 0.92);
